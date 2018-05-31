@@ -1,0 +1,8 @@
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppNative\lab.AppNative\lab.AppNative\bin\Debug\lab.AppNative.dll
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppNative\lab.AppNative\lab.AppNative\bin\Debug\lab.AppNative.pdb
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppNative\lab.AppNative\lab.AppNative\bin\Debug\Mono.Android.dll
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppNative\lab.AppNative\lab.AppNative\bin\Debug\Mono.Android.pdb
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppNative\lab.AppNative\lab.AppNative\bin\Debug\Mono.Android.xml
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppNative\lab.AppNative\lab.AppNative\obj\Debug\lab.AppNative.csprojResolveAssemblyReference.cache
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppNative\lab.AppNative\lab.AppNative\obj\Debug\lab.AppNative.dll
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppNative\lab.AppNative\lab.AppNative\obj\Debug\lab.AppNative.pdb

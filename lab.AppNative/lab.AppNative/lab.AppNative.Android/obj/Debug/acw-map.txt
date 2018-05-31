@@ -1,0 +1,4 @@
+lab.AppNative.Droid.MainActivity, lab.AppNative.Android;md5cc88007fb7cb133642bbbc5b712dd4fb.MainActivity
+lab.AppNative.Droid.MainActivity, lab.AppNative.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5cc88007fb7cb133642bbbc5b712dd4fb.MainActivity
+lab.AppNative.Droid.MainActivity;md5cc88007fb7cb133642bbbc5b712dd4fb.MainActivity
+lab.appnative.droid.MainActivity;md5cc88007fb7cb133642bbbc5b712dd4fb.MainActivity

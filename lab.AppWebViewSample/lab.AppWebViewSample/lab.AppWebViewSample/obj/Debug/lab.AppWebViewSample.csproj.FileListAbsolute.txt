@@ -1,0 +1,7 @@
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppWebViewSample\lab.AppWebViewSample\lab.AppWebViewSample\bin\Debug\lab.AppWebViewSample.dll
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppWebViewSample\lab.AppWebViewSample\lab.AppWebViewSample\bin\Debug\lab.AppWebViewSample.pdb
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppWebViewSample\lab.AppWebViewSample\lab.AppWebViewSample\obj\Debug\lab.AppWebViewSample.dll
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppWebViewSample\lab.AppWebViewSample\lab.AppWebViewSample\obj\Debug\lab.AppWebViewSample.pdb
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppWebViewSample\lab.AppWebViewSample\lab.AppWebViewSample\bin\Debug\Mono.Android.dll
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppWebViewSample\lab.AppWebViewSample\lab.AppWebViewSample\bin\Debug\Mono.Android.pdb
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppWebViewSample\lab.AppWebViewSample\lab.AppWebViewSample\bin\Debug\Mono.Android.xml

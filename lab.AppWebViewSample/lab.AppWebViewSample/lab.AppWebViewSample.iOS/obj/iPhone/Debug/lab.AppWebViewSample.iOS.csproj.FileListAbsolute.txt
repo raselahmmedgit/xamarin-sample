@@ -1,0 +1,14 @@
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppWebViewSample\lab.AppWebViewSample\lab.AppWebViewSample.iOS\bin\iPhone\Debug\lab.AppWebViewSample.iOS.exe
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppWebViewSample\lab.AppWebViewSample\lab.AppWebViewSample.iOS\bin\iPhone\Debug\lab.AppWebViewSample.iOS.pdb
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppWebViewSample\lab.AppWebViewSample\lab.AppWebViewSample.iOS\bin\iPhone\Debug\lab.AppWebViewSample.dll
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppWebViewSample\lab.AppWebViewSample\lab.AppWebViewSample.iOS\bin\iPhone\Debug\lab.AppWebViewSample.pdb
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppWebViewSample\lab.AppWebViewSample\lab.AppWebViewSample.iOS\obj\iPhone\Debug\ibtool\_BundleResourceWithLogicalName.items
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppWebViewSample\lab.AppWebViewSample\lab.AppWebViewSample.iOS\obj\iPhone\Debug\actool\_PartialAppManifest.items
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppWebViewSample\lab.AppWebViewSample\lab.AppWebViewSample.iOS\obj\iPhone\Debug\actool\_BundleResourceWithLogicalName.items
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppWebViewSample\lab.AppWebViewSample\lab.AppWebViewSample.iOS\obj\iPhone\Debug\optimized\
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppWebViewSample\lab.AppWebViewSample\lab.AppWebViewSample.iOS\obj\iPhone\Debug\lab.AppWebViewSample.iOS.csprojResolveAssemblyReference.cache
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppWebViewSample\lab.AppWebViewSample\lab.AppWebViewSample.iOS\obj\iPhone\Debug\lab.AppWebViewSample.iOS.exe
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppWebViewSample\lab.AppWebViewSample\lab.AppWebViewSample.iOS\obj\iPhone\Debug\lab.AppWebViewSample.iOS.pdb
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppWebViewSample\lab.AppWebViewSample\lab.AppWebViewSample.iOS\bin\iPhone\Debug\Mono.Android.dll
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppWebViewSample\lab.AppWebViewSample\lab.AppWebViewSample.iOS\bin\iPhone\Debug\Mono.Android.pdb
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppWebViewSample\lab.AppWebViewSample\lab.AppWebViewSample.iOS\bin\iPhone\Debug\Mono.Android.xml

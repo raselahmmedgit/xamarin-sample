@@ -1,0 +1,4 @@
+lab.AppWebViewSample.Droid.MainActivity, lab.AppWebViewSample.Android;md5a394a46b688783f0dae09a5aca69787f.MainActivity
+lab.AppWebViewSample.Droid.MainActivity, lab.AppWebViewSample.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5a394a46b688783f0dae09a5aca69787f.MainActivity
+lab.AppWebViewSample.Droid.MainActivity;md5a394a46b688783f0dae09a5aca69787f.MainActivity
+lab.appwebviewsample.droid.MainActivity;md5a394a46b688783f0dae09a5aca69787f.MainActivity
