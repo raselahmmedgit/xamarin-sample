@@ -1,0 +1,11 @@
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App\App\App.iOS\bin\iPhone\Debug\App.iOS.exe
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App\App\App.iOS\bin\iPhone\Debug\App.iOS.pdb
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App\App\App.iOS\bin\iPhone\Debug\App.dll
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App\App\App.iOS\bin\iPhone\Debug\App.pdb
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App\App\App.iOS\obj\iPhone\Debug\ibtool\_BundleResourceWithLogicalName.items
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App\App\App.iOS\obj\iPhone\Debug\actool\_PartialAppManifest.items
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App\App\App.iOS\obj\iPhone\Debug\actool\_BundleResourceWithLogicalName.items
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App\App\App.iOS\obj\iPhone\Debug\optimized\
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App\App\App.iOS\obj\iPhone\Debug\App.iOS.csprojResolveAssemblyReference.cache
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App\App\App.iOS\obj\iPhone\Debug\App.iOS.exe
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App\App\App.iOS\obj\iPhone\Debug\App.iOS.pdb

@@ -17,9 +17,11 @@ C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppWebViewSample\lab
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppWebViewSample\lab.AppWebViewSample\lab.AppWebViewSample.Android\obj\Debug\res\drawable-xxxhdpi\icon.png
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppWebViewSample\lab.AppWebViewSample\lab.AppWebViewSample.Android\obj\Debug\R.cs.flag
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppWebViewSample\lab.AppWebViewSample\lab.AppWebViewSample.Android\obj\Debug\uploadflags.txt
-C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppWebViewSample\lab.AppWebViewSample\lab.AppWebViewSample\bin\Debug\lab.AppWebViewSample.dll
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppWebViewSample\lab.AppWebViewSample\lab.AppWebViewSample.Android\bin\Debug\lab.AppWebViewSample.dll.mdb
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppWebViewSample\lab.AppWebViewSample\lab.AppWebViewSample.Android\bin\Debug\lab.AppWebViewSample.Android.dll.mdb
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppWebViewSample\lab.AppWebViewSample\lab.AppWebViewSample.Android\obj\Debug\android\assets\lab.AppWebViewSample.Android.dll.mdb
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppWebViewSample\lab.AppWebViewSample\lab.AppWebViewSample.Android\obj\Debug\android\assets\lab.AppWebViewSample.dll.mdb
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppWebViewSample\lab.AppWebViewSample\lab.AppWebViewSample.Android\bin\Debug\lab.AppWebViewSample.Android.dll
-C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppWebViewSample\lab.AppWebViewSample\lab.AppWebViewSample\bin\Debug\lab.AppWebViewSample.dll
 bin\Debug\lab.AppWebViewSample.dll.mdb
 bin\Debug\Mono.Android.pdb
 bin\Debug\mscorlib.pdb

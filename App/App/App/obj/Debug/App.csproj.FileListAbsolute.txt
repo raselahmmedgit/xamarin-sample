@@ -1,0 +1,5 @@
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App\App\App\bin\Debug\App.dll
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App\App\App\bin\Debug\App.pdb
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App\App\App\obj\Debug\App.dll
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App\App\App\obj\Debug\App.pdb
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App\App\App\obj\Debug\App.csprojResolveAssemblyReference.cache

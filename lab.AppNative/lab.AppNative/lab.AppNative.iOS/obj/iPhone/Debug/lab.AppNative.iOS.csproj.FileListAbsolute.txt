@@ -1,0 +1,14 @@
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppNative\lab.AppNative\lab.AppNative.iOS\bin\iPhone\Debug\lab.AppNative.iOS.exe
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppNative\lab.AppNative\lab.AppNative.iOS\bin\iPhone\Debug\lab.AppNative.iOS.pdb
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppNative\lab.AppNative\lab.AppNative.iOS\bin\iPhone\Debug\lab.AppNative.dll
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppNative\lab.AppNative\lab.AppNative.iOS\bin\iPhone\Debug\Mono.Android.dll
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppNative\lab.AppNative\lab.AppNative.iOS\bin\iPhone\Debug\lab.AppNative.pdb
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppNative\lab.AppNative\lab.AppNative.iOS\bin\iPhone\Debug\Mono.Android.pdb
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppNative\lab.AppNative\lab.AppNative.iOS\bin\iPhone\Debug\Mono.Android.xml
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppNative\lab.AppNative\lab.AppNative.iOS\obj\iPhone\Debug\ibtool\_BundleResourceWithLogicalName.items
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppNative\lab.AppNative\lab.AppNative.iOS\obj\iPhone\Debug\actool\_PartialAppManifest.items
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppNative\lab.AppNative\lab.AppNative.iOS\obj\iPhone\Debug\actool\_BundleResourceWithLogicalName.items
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppNative\lab.AppNative\lab.AppNative.iOS\obj\iPhone\Debug\optimized\
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppNative\lab.AppNative\lab.AppNative.iOS\obj\iPhone\Debug\lab.AppNative.iOS.csprojResolveAssemblyReference.cache
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppNative\lab.AppNative\lab.AppNative.iOS\obj\iPhone\Debug\lab.AppNative.iOS.exe
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\lab.AppNative\lab.AppNative\lab.AppNative.iOS\obj\iPhone\Debug\lab.AppNative.iOS.pdb
