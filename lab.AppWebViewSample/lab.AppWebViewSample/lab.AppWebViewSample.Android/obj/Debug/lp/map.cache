@@ -1,2 +1,6 @@
 lab.AppWebViewSample
 System.Runtime
+Newtonsoft.Json
+System.Net.Http.Primitives
+System.Resources.ResourceManager
+System.Reflection.Extensions

@@ -2,7 +2,7 @@
 <xs:schema xmlns:app="http://schemas.android.com/apk/res-auto" attributeFormDefault="qualified" targetNamespace="http://schemas.android.com/apk/res-auto" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>v25</xs:documentation>
-    <xs:documentation>6/1/2018 4:10:00 PM</xs:documentation>
+    <xs:documentation>6/4/2018 3:55:04 PM</xs:documentation>
   </xs:annotation>
   <xs:attribute name="buttonSize">
     <xs:annotation>

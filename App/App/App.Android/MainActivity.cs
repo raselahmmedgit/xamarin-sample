@@ -10,6 +10,9 @@ using NotificationCompat = Android.Support.V4.App.NotificationCompat;
 using TaskStackBuilder = Android.Support.V4.App.TaskStackBuilder;
 using Android.Gms.Common;
 using Android.Util;
+using System.Collections.Generic;
+using System.Net;
+using System.IO;
 
 namespace App.Droid
 {
@@ -37,7 +40,13 @@ namespace App.Droid
 
             button.Click += ButtonOnClick;
 
-            IsPlayServicesAvailable();
+            //ListView listView = FindViewById<ListView>(Resource.Id.listViewStudent);
+
+            var dataList = GetStudentList();
+
+            //listView.Adapter = GetStudentList();
+
+            //IsPlayServicesAvailable();
         }
 
         #region Local
@@ -102,6 +111,44 @@ namespace App.Droid
                 return true;
             }
         }
+        #endregion
+
+        #region Api Call
+
+        private List<Student> GetStudentList()
+        {
+            List<Student> studentList = new List<Student>();
+
+            string url = "http://localhost:47641/api/default";
+
+            var request = HttpWebRequest.Create(url);
+            request.ContentType = "application/json";
+            request.Method = "GET";
+
+            using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
+            {
+                if (response.StatusCode != HttpStatusCode.OK)
+                {
+                    Console.Out.WriteLine("Error fetching data. Server returned status code: {0}", response.StatusCode);
+                }
+                
+                using (StreamReader reader = new StreamReader(response.GetResponseStream()))
+                {
+                    var content = reader.ReadToEnd();
+                    if (string.IsNullOrWhiteSpace(content))
+                    {
+                        Console.Out.WriteLine("Response contained empty body...");
+                    }
+                    else
+                    {
+                        Console.Out.WriteLine("Response Body: \r\n {0}", content);
+                    }
+                }
+            }
+
+            return studentList;
+        }
+
         #endregion
     }
 }

@@ -1,0 +1,12 @@
+﻿@using Microsoft.AspNet.Identity
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Api</h1>
+    @if (Request.IsAuthenticated)
+    {
+        <p>Welcome!! @User.Identity.GetUserName()</p>
+    }
+</div>

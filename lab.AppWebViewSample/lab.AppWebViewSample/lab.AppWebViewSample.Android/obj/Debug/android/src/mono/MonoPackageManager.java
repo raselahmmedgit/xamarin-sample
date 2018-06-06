@@ -108,6 +108,7 @@ class MonoPackageManager_Resources {
 		/* We need to ensure that "lab.AppWebViewSample.Android.dll" comes first in this list. */
 		"lab.AppWebViewSample.Android.dll",
 		"lab.AppWebViewSample.dll",
+		"Newtonsoft.Json.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};

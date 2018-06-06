@@ -1,0 +1,4 @@
+App.Api.Droid.MainActivity, App.Api.Android;md5a8cd4ac384375202c6d7cf44b29fdcc8.MainActivity
+App.Api.Droid.MainActivity, App.Api.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5a8cd4ac384375202c6d7cf44b29fdcc8.MainActivity
+App.Api.Droid.MainActivity;md5a8cd4ac384375202c6d7cf44b29fdcc8.MainActivity
+app.api.droid.MainActivity;md5a8cd4ac384375202c6d7cf44b29fdcc8.MainActivity
