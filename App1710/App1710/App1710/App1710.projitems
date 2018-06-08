@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{68CF5463-5589-4923-82FD-E5CB13BAB77B}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>App1710</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)MainPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)ApiHelper\ApiExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiHelper\Client\ApiClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiHelper\Client\ClientBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiHelper\Client\IApiClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiHelper\HttpClientInstance.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiHelper\ITokenContainer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiHelper\Model\ApiModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiHelper\Response\ApiResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiHelper\Response\ErrorStateResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiHelper\TokenContainer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiService\Client\LoginClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiService\Model\RegisterModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiService\Model\TokenResponseModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiService\Model\UserModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiService\Response\RegisterResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiService\Response\TokenResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)AppCore\AppConstant.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AppCore\AppMessage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SignUpPage.xaml.cs">
+      <DependentUpon>SignUpPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)LoginPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SignUpPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

@@ -33,7 +33,9 @@ C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\bi
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\bin\Newtonsoft.Json.dll
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\bin\Owin.dll
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\bin\System.Net.Http.Formatting.dll
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\bin\System.Web.Cors.dll
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\bin\System.Web.Helpers.dll
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\bin\System.Web.Http.Cors.dll
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\bin\System.Web.Http.dll
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\bin\System.Web.Http.WebHost.dll
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\bin\System.Web.Mvc.dll
@@ -44,6 +46,9 @@ C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\bi
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\bin\System.Web.WebPages.Razor.dll
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\bin\WebGrease.dll
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\bin\System.Net.Http.Formatting.xml
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\bin\System.Web.Http.xml
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\bin\System.Web.Http.Cors.xml
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\bin\System.Web.Helpers.xml
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\bin\System.Web.Mvc.xml
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\bin\System.Web.Optimization.xml
@@ -53,8 +58,6 @@ C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\bi
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\bin\System.Web.WebPages.Razor.xml
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\bin\Antlr3.Runtime.pdb
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\bin\Newtonsoft.Json.xml
-C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\bin\System.Net.Http.Formatting.xml
-C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\bin\System.Web.Http.xml
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\bin\System.Web.Http.WebHost.xml
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\bin\EntityFramework.xml
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\bin\EntityFramework.SqlServer.xml
@@ -70,9 +73,5 @@ C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\bi
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\obj\Debug\App.WebApi.csprojResolveAssemblyReference.cache
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\obj\Debug\App.WebApi.dll
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\obj\Debug\App.WebApi.pdb
-C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\bin\System.Web.Cors.dll
-C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\bin\System.Web.Http.Cors.dll
-C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\bin\System.Web.Http.Cors.xml
