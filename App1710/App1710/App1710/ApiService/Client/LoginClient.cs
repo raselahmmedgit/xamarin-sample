@@ -28,11 +28,14 @@ namespace App1710.ApiService.Client
             if (!response.IsSuccessStatusCode)
             {
                 var errorContent = await DecodeContent<dynamic>(response);
+                string error = Convert.ToString(errorContent["error"]);
+                string error_description = Convert.ToString(errorContent["error_description"]);
                 tokenResponse.ErrorState = new ErrorStateResponse
                 {
+                    Message = error_description,
                     ModelState = new Dictionary<string, string[]>
                     {
-                        {errorContent["error"], new string[] {errorContent["error_description"]}}
+                        {error, new string[] { error_description }}
                     }
                 };
                 return tokenResponse;
