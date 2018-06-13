@@ -22,6 +22,7 @@ namespace Levelnis.Learning.CallingWebApiFromMvc.Api
             {
                 TokenEndpointPath = new PathString("/api/token"),
                 Provider = new ApplicationOAuthProvider(),
+                //AuthorizeEndpointPath = new PathString("/api/unauthorized"), //new
                 AccessTokenExpireTimeSpan = TimeSpan.FromDays(14),
                 AllowInsecureHttp = true
             };

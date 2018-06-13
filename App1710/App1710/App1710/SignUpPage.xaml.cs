@@ -1,4 +1,7 @@
-﻿using App1710.ApiService.Model;
+﻿using App1710.ApiHelper;
+using App1710.ApiHelper.Client;
+using App1710.ApiService.Client;
+using App1710.ApiService.Model;
 using App1710.AppCore;
 using Newtonsoft.Json;
 using RestSharp;
@@ -19,14 +22,26 @@ namespace App1710
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class SignUpPage : ContentPage
 	{
-		public SignUpPage ()
+        private readonly ILoginClient _iLoginClient;
+        private readonly ITokenContainer _iTokenContainer;
+
+        public SignUpPage ()
 		{
 			InitializeComponent ();
-		}
+            _iTokenContainer = new TokenContainer();
+            if (_iTokenContainer.IsApiCurrentToken())
+            {
+                Navigation.InsertPageBefore(new LoginPage(), this);
+                Navigation.PopAsync();
+            }
+            
+            var apiClient = new ApiClient(HttpClientInstance.Instance, _iTokenContainer);
+            _iLoginClient = new LoginClient(apiClient);
+        }
 
         async void OnLoginButtonClicked(object sender, EventArgs e)
         {
-            App.IsUserLoggedIn = false;
+            _iTokenContainer.ClearApiCurrentToken();
             Navigation.InsertPageBefore(new LoginPage(), this);
             await Navigation.PopAsync();
         }
@@ -34,6 +49,8 @@ namespace App1710
 
         async void OnSignUpButtonClicked(object sender, EventArgs e)
         {
+            _iTokenContainer.ClearApiCurrentToken();
+
             var registerModel = new RegisterModel()
             {
                 Email = emailEntry.Text,
@@ -43,15 +60,14 @@ namespace App1710
 
             // Sign up logic goes here
 
-            var appMessage = await CreateUserAsync(registerModel);
+            var appMessage = await SignUpAsync(registerModel);
 
             if (appMessage.IsSuccess)
             {
                 var rootPage = Navigation.NavigationStack.FirstOrDefault();
                 if (rootPage != null)
                 {
-                    App.IsUserLoggedIn = true;
-                    Navigation.InsertPageBefore(new MainPage(), Navigation.NavigationStack.First());
+                    Navigation.InsertPageBefore(new LoginPage(), Navigation.NavigationStack.First());
                     await Navigation.PopToRootAsync();
                 }
             }
@@ -61,7 +77,7 @@ namespace App1710
             }
         }
 
-        async Task<AppMessage> CreateUserAsync(RegisterModel registerModel)
+        async Task<AppMessage> SignUpAsync(RegisterModel registerModel)
         {
             AppMessage appMessage = IsValid(registerModel);
 
@@ -76,10 +92,26 @@ namespace App1710
                     Email = registerModel.Email
                 };
 
+                try
+                {
+                    var responseStatus = await CreateUserAsync(model);
+                    appMessage = appMessage.SetSuccess("Sign up successfully.");
+                }
+                catch (Exception ex)
+                {
+                    appMessage = appMessage.SetError("Sign up failed.");
+                }
+
                 #endregion
             }
 
             return appMessage ;
+        }
+
+        private async Task<bool> CreateUserAsync(RegisterModel model)
+        {
+            var response = await _iLoginClient.Register(model);
+            return response.StatusIsSuccessful;
         }
 
         AppMessage IsValid(RegisterModel registerModel)

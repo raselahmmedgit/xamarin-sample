@@ -49,9 +49,13 @@ namespace App1710.ApiHelper.Client
 
         private void AddToken()
         {
-            if (_iTokenContainer.ApiToken != null)
+            if (_iTokenContainer.IsApiCurrentToken())
             {
-                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _iTokenContainer.ApiToken.ToString());
+                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _iTokenContainer.ApiCurrentToken.ToString());
+            }
+            else
+            {
+                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", null);
             }
         }
     }

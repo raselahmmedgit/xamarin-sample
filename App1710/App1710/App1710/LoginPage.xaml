@@ -13,6 +13,9 @@
             <Entry x:Name="passwordEntry" IsPassword="true" />
             <Button Text="Login" Clicked="OnLoginButtonClicked" />
             <Label x:Name="messageLabel" />
+
+            <Button Text="Api Student" Clicked="OnApiStudentListButtonClicked" />
+
         </StackLayout>
     </ContentPage.Content>
 

@@ -12,6 +12,9 @@
             <Label Text="Welcome to Xamarin.Forms!" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
+            <Button Text="Api Student" Clicked="OnApiStudentListButtonClicked" />
+            <Button Text="Push Notification" Clicked="OnPushNotificationButtonClicked" />
+            <Label x:Name="messageLabel" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

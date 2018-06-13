@@ -1,20 +1,38 @@
-﻿namespace App1710.ApiHelper
+﻿using Xamarin.Forms;
+
+namespace App1710.ApiHelper
 {
     public class TokenContainer : ITokenContainer
     {
-        private const string ApiTokenKey = "ApiToken";
+        private const string ApiCurrentTokenKey = "ApiToken";
 
-        public object ApiToken { get; set; }
+        public object ApiCurrentToken
+        {
+            get
+            {
+                return Application.Current.Properties.ContainsKey(ApiCurrentTokenKey) ? Application.Current.Properties[ApiCurrentTokenKey] : null;
+            }
+            set
+            {
+                if (Application.Current.Properties != null)
+                {
+                    if (!Application.Current.Properties.ContainsKey(ApiCurrentTokenKey)) {
+                        Application.Current.Properties[ApiCurrentTokenKey] = value;
+                        Application.Current.SavePropertiesAsync();
+                    }
+                }
+            }
+        }
 
-        //public object ApiToken
-        //{
-        //    get { return Current.Session != null ? Current.Session[ApiTokenKey] : null; }
-        //    set { if (Current.Session != null) Current.Session[ApiTokenKey] = value; }
-        //}
+        public bool IsApiCurrentToken()
+        {
+            return this.ApiCurrentToken == null ? false : true;
+        }
 
-        //private static HttpContextBase Current
-        //{
-        //    get { return new HttpContextWrapper(HttpContext.Current); }
-        //}
+        public void ClearApiCurrentToken()
+        {
+            Application.Current.Properties.Clear();
+            Application.Current.SavePropertiesAsync();
+        }
     }
 }

@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using App1710.ApiHelper.Response;
 using App1710.ApiHelper.Model;
 using Newtonsoft.Json;
+using System;
 
 namespace App1710.ApiHelper.Client
 {
@@ -14,6 +15,15 @@ namespace App1710.ApiHelper.Client
         protected ClientBase(IApiClient iApiClient)
         {
             _iApiClient = iApiClient;
+        }
+
+        protected async Task<TResponse> GetJsonListDecodedContent<TResponse, TContentResponse>(string uri, params KeyValuePair<string, string>[] requestParameters)
+            where TResponse : ApiListResponse<TContentResponse>, new()
+        {
+            using (var apiResponse = await _iApiClient.GetFormEncodedContent(uri, requestParameters))
+            {
+                return await DecodeJsonListResponse<TResponse, TContentResponse>(apiResponse);
+            }
         }
 
         protected async Task<TResponse> GetJsonDecodedContent<TResponse, TContentResponse>(string uri, params KeyValuePair<string, string>[] requestParameters)
@@ -58,11 +68,47 @@ namespace App1710.ApiHelper.Client
             return contentResponse;
         }
 
+        private static async Task<TResponse> DecodeJsonListResponse<TResponse, TDecode>(HttpResponseMessage apiResponse) where TResponse : ApiListResponse<TDecode>, new()
+        {
+            var response = await CreateJsonResponse<TResponse>(apiResponse);
+
+            try
+            {
+                var decodeData = JsonConvert.DeserializeObject<TDecode>(response.ResponseResult);
+                response.DataList = decodeData;
+            }
+            catch (Exception)
+            {
+                response = new TResponse
+                {
+                    StatusIsSuccessful = false,
+                    ErrorState = new ErrorStateResponse() { Message = "Unauthorized." },
+                    ResponseCode = System.Net.HttpStatusCode.Unauthorized
+                };
+            }
+
+            return response;
+        }
+
         private static async Task<TResponse> DecodeJsonResponse<TResponse, TDecode>(HttpResponseMessage apiResponse) where TResponse : ApiResponse<TDecode>, new()
         {
             var response = await CreateJsonResponse<TResponse>(apiResponse);
-            var decodeData = JsonConvert.DeserializeObject<TDecode>(response.ResponseResult);
-            response.Data = decodeData;
+
+            try
+            {
+                var decodeData = JsonConvert.DeserializeObject<TDecode>(response.ResponseResult);
+                response.Data = decodeData;
+            }
+            catch (Exception)
+            {
+                response = new TResponse
+                {
+                    StatusIsSuccessful = false,
+                    ErrorState = new ErrorStateResponse() { Message = "Unauthorized." },
+                    ResponseCode = System.Net.HttpStatusCode.Unauthorized
+                };
+            }
+            
             return response;
         }
     }

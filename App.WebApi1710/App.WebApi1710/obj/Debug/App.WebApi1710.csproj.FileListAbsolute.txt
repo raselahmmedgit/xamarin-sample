@@ -75,6 +75,6 @@ C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi1710\App.WebAp
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi1710\App.WebApi1710\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi1710\App.WebApi1710\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi1710\App.WebApi1710\bin\System.Web.Http.Owin.xml
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi1710\App.WebApi1710\obj\Debug\App.WebApi1710.csprojResolveAssemblyReference.cache
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi1710\App.WebApi1710\obj\Debug\App.WebApi1710.dll
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi1710\App.WebApi1710\obj\Debug\App.WebApi1710.pdb
-C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi1710\App.WebApi1710\obj\Debug\App.WebApi1710.csprojResolveAssemblyReference.cache

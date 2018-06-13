@@ -1,3 +1,4 @@
+using App1710.ApiHelper;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -7,13 +8,15 @@ namespace App1710
 {
 	public partial class App : Application
 	{
-        public static bool IsUserLoggedIn { get; set; }
+        private readonly ITokenContainer _iTokenContainer;
 
         public App ()
 		{
 			InitializeComponent();
 
-            if (!IsUserLoggedIn)
+            _iTokenContainer = new TokenContainer();
+
+            if (!_iTokenContainer.IsApiCurrentToken())
             {
                 MainPage = new NavigationPage(new LoginPage());
             }

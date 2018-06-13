@@ -1,4 +1,5 @@
-﻿using System.Net;
+﻿using System.Collections.Generic;
+using System.Net;
 
 namespace App1710.ApiHelper.Response
 {
@@ -13,5 +14,10 @@ namespace App1710.ApiHelper.Response
     public abstract class ApiResponse<T> : ApiResponse
     {
         public T Data { get; set; }
+    }
+
+    public abstract class ApiListResponse<T> : ApiResponse
+    {
+        public T DataList { get; set; }
     }
 }

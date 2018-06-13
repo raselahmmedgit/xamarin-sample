@@ -24,9 +24,13 @@
     <Compile Include="$(MSBuildThisFileDirectory)ApiHelper\Response\ErrorStateResponse.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ApiHelper\TokenContainer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ApiService\Client\LoginClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiService\Client\StudentClient.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ApiService\Model\RegisterModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiService\Model\StudentModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ApiService\Model\TokenResponseModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ApiService\Model\UserModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiService\Response\CreateStudentResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiService\Response\StudentResponse.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ApiService\Response\RegisterResponse.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ApiService\Response\TokenResponse.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
@@ -41,6 +45,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)PushNotificationPage.xaml.cs">
+      <DependentUpon>PushNotificationPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)SignUpPage.xaml.cs">
       <DependentUpon>SignUpPage.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -54,6 +62,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)SignUpPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)PushNotificationPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>

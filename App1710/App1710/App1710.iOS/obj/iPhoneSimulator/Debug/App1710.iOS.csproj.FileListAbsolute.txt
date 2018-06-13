@@ -10,6 +10,8 @@ C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App1710\App1710\App1710.
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App1710\App1710\App1710.iOS\bin\iPhoneSimulator\Debug\System.Security.Cryptography.Algorithms.dll
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App1710\App1710\App1710.iOS\bin\iPhoneSimulator\Debug\System.Security.Cryptography.Encoding.dll
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App1710\App1710\App1710.iOS\bin\iPhoneSimulator\Debug\System.Security.Cryptography.X509Certificates.dll
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App1710\App1710\App1710.iOS\bin\iPhoneSimulator\Debug\Plugin.LocalNotifications.Abstractions.dll
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App1710\App1710\App1710.iOS\bin\iPhoneSimulator\Debug\Plugin.LocalNotifications.dll
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App1710\App1710\App1710.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Core.dll
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App1710\App1710\App1710.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Core.pdb
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App1710\App1710\App1710.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Platform.dll
@@ -57,8 +59,8 @@ C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App1710\App1710\App1710.
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App1710\App1710\App1710.iOS\obj\iPhoneSimulator\Debug\coremlc\_PartialAppManifest.items
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App1710\App1710\App1710.iOS\obj\iPhoneSimulator\Debug\coremlc\_BundleResourceWithLogicalName.items
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App1710\App1710\App1710.iOS\obj\iPhoneSimulator\Debug\optimized\
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App1710\App1710\App1710.iOS\obj\iPhoneSimulator\Debug\App1710.iOS.csprojAssemblyReference.cache
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App1710\App1710\App1710.iOS\obj\iPhoneSimulator\Debug\App1710.iOS.csproj.CoreCompileInputs.cache
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App1710\App1710\App1710.iOS\obj\iPhoneSimulator\Debug\App1710.iOS.csproj.CopyComplete
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App1710\App1710\App1710.iOS\obj\iPhoneSimulator\Debug\App1710.iOS.exe
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App1710\App1710\App1710.iOS\obj\iPhoneSimulator\Debug\App1710.iOS.pdb
-C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App1710\App1710\App1710.iOS\obj\iPhoneSimulator\Debug\App1710.iOS.csprojAssemblyReference.cache

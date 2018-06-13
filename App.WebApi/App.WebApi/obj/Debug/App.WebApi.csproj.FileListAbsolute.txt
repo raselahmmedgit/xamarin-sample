@@ -73,5 +73,6 @@ C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\bi
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\obj\Debug\App.WebApi.csprojResolveAssemblyReference.cache
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\obj\Debug\App.WebApi.dll
 C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App.WebApi\App.WebApi\obj\Debug\App.WebApi.pdb

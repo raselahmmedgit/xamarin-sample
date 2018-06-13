@@ -1,6 +1,8 @@
 FormsViewGroup
 Newtonsoft.Json.Bson
 Newtonsoft.Json
+Plugin.LocalNotifications.Abstractions
+Plugin.LocalNotifications
 RestSharp
 System.Net.Http.Formatting
 System.Runtime
@@ -35,3 +37,4 @@ System.Collections
 System.Runtime.Numerics
 System.Globalization
 System.Text.Encoding.Extensions
+System.Resources.ResourceManager

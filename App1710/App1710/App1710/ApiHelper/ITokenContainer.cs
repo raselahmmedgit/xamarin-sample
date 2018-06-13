@@ -2,6 +2,10 @@
 {
     public interface ITokenContainer
     {
-        object ApiToken { get; set; }
+        object ApiCurrentToken { get; set; }
+
+        bool IsApiCurrentToken();
+
+        void ClearApiCurrentToken();
     }
 }

@@ -23,6 +23,7 @@ namespace App1710
 	public partial class LoginPage : ContentPage
 	{
         private readonly ILoginClient _iLoginClient;
+        private readonly IStudentClient _iStudentClient;
         private readonly ITokenContainer _iTokenContainer;
 
         public LoginPage ()
@@ -32,6 +33,7 @@ namespace App1710
             _iTokenContainer = new TokenContainer();
             var apiClient = new ApiClient(HttpClientInstance.Instance, _iTokenContainer);
             _iLoginClient = new LoginClient(apiClient);
+            _iStudentClient = new StudentClient(apiClient);
         }
 
         async void OnSignUpButtonClicked(object sender, EventArgs e)
@@ -50,7 +52,6 @@ namespace App1710
             var appMessage = await LoginUserAsync(userModel);
             if (appMessage.IsSuccess)
             {
-                App.IsUserLoggedIn = true;
                 Navigation.InsertPageBefore(new MainPage(), this);
                 await Navigation.PopAsync();
             }
@@ -74,11 +75,12 @@ namespace App1710
                 try
                 {
                     var isLogin = await IsLoginUserAsync(userModel.Email, userModel.Password);
-                    appMessage = appMessage.SetSuccess("Sign up successfully.");
+
+                    appMessage = appMessage.SetSuccess("Login successfully.");
                 }
                 catch (Exception ex)
                 {
-                    appMessage = appMessage.SetError("Sign up failed.");
+                    appMessage = appMessage.SetError("Login failed.");
                 }
 
                 #endregion
@@ -95,7 +97,7 @@ namespace App1710
             var response = await _iLoginClient.Login(email, password);
             if (response.StatusIsSuccessful)
             {
-                _iTokenContainer.ApiToken = response.Data;
+                _iTokenContainer.ApiCurrentToken = response.Data;
             }
 
             return response.StatusIsSuccessful;
@@ -119,6 +121,30 @@ namespace App1710
             }
 
             return appMessage = appMessage.SetSuccess();
+        }
+
+        async void OnApiStudentListButtonClicked(object sender, EventArgs e)
+        {
+            var appMessage = new AppMessage();
+            try
+            {
+                var studentResponse = await _iStudentClient.GetStudent(1);
+
+                if (studentResponse.StatusIsSuccessful)
+                {
+                    await DisplayAlert("Student", ("Name: " + studentResponse.Data.StudentName), "Ok");
+                }
+                else
+                {
+                    await DisplayAlert("Error!", studentResponse.ErrorState.Message, "Ok");
+                }
+            }
+            catch (Exception ex)
+            {
+                appMessage = appMessage.SetError();
+                messageLabel.Text = appMessage.Message;
+            }
+            await Navigation.PopAsync();
         }
     }
 }
