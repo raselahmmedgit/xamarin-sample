@@ -1,10 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Paths>
   <Jars>
-    <Jar>obj\Debug\lp\0\jl\formsviewgroup.jar</Jar>
-    <Jar>obj\Debug\lp\8\jl\arch-core-common.jar</Jar>
-    <Jar>obj\Debug\lp\9\jl\arch-lifecycle-common.jar</Jar>
-    <Jar>obj\Debug\lp\12\jl\support-annotations.jar</Jar>
     <Jar>C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App1710\App1710\App1710.Android\obj\Debug\lp\0\jl\formsviewgroup.jar</Jar>
     <Jar>C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App1710\App1710\App1710.Android\obj\Debug\lp\10\jl\bin\classes.jar</Jar>
     <Jar>C:\Users\placovu_usr_04\Documents\GitHub\xamarin-sample\App1710\App1710\App1710.Android\obj\Debug\lp\11\jl\bin\classes.jar</Jar>

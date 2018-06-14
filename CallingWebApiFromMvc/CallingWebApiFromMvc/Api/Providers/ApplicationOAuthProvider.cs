@@ -7,6 +7,8 @@
     using Microsoft.Owin.Security;
     using Microsoft.Owin.Security.Cookies;
     using Microsoft.Owin.Security.OAuth;
+    using System.Linq;
+    using System.Data.Entity;
 
     public class ApplicationOAuthProvider : OAuthAuthorizationServerProvider
     {
@@ -19,7 +21,29 @@
         public override async Task GrantResourceOwnerCredentials(OAuthGrantResourceOwnerCredentialsContext context)
         {
             var userManager = context.OwinContext.GetUserManager<ApplicationUserManager>();
+
+            #region Login: Code will be change.
+
+            //var userNameEncpt = "/g+LmvXNQ35Ct8yFyeUYrRz6mF1MsORkfWN5bTVz1UA=";
+            //var userList = await userManager.Users.Where(x => x.Email == userNameEncpt).ToListAsync();
+            //if (userList.Any() == false)
+            //{
+            //    context.SetError("invalid_grant", "Sorry, OnTrack Health doesn't recognize that email.");
+            //    return;
+            //}
+            //var isActiveUserList = userList.Any(x => x.IsDeleted == false);
+            //if (isActiveUserList == false)
+            //{
+            //    context.SetError("invalid_grant", "Your account is not active anymore.");
+            //    return;
+            //}
+
+            //var userName = userList.FirstOrDefault().Id;
+
+            #endregion
+
             var user = await userManager.FindAsync(context.UserName, context.Password);
+
             if (user == null)
             {
                 context.SetError("invalid_grant", "The user name or password is incorrect.");
