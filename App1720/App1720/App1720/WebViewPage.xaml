@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1720.WebViewPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="userNameToolbarItem" Text="Hello!" Priority="0" Order="Primary" />
+        <ToolbarItem Text="Home" Priority="1" Order="Secondary" />
+        <ToolbarItem Text="Sign Out" Priority="2" Order="Secondary" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="Main Page" Clicked="OnHomeButtonClicked" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
