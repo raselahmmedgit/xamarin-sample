@@ -5,7 +5,8 @@
              x:Class="App1720.MainPage">
     <ContentPage.Content>
         <StackLayout>
+            <Button Text="Main Page" Clicked="OnHomeButtonClicked" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"></Button>
+            <!--<WebView x:Name="ontrackHealthWebView" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Navigating="webOnNavigating" Navigated="webOnEndNavigating" ></WebView>-->
         </StackLayout>
     </ContentPage.Content>
-
 </ContentPage>
