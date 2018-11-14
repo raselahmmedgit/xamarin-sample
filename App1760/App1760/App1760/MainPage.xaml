@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App1760"
+             x:Class="App1760.MainPage">
+
+    <StackLayout>
+        <Button Text="Local Push Notification(Xam.Plugins.Notifier)" Clicked="OnLocalPushNotificationButtonClicked" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"></Button>
+        <Button Text="Maps(By Address)" Clicked="OnMapsButtonClicked" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"></Button>
+    </StackLayout>
+
+</ContentPage>

@@ -23,13 +23,63 @@ namespace App1730
             }
         }
 
+        // Number of times the button is tapped (starts with first tap):
+        private int count = 1;
+
         public MainPage()
 		{
 			InitializeComponent();
 
-            var RuntimePlatform = Device.RuntimePlatform;
-            var Idiom = Device.Idiom;
+            DeviceRuntimePlatform();
+
         }
+
+        async void DeviceRuntimePlatform()
+        {
+            string runtimePlatform = string.Empty;
+
+            switch (Device.RuntimePlatform)
+            {
+                case Device.iOS:
+                    runtimePlatform = Device.RuntimePlatform;
+                    break;
+                case Device.Android:
+                    runtimePlatform = Device.RuntimePlatform;
+                    break;
+                case Device.UWP:
+                    runtimePlatform = Device.RuntimePlatform;
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        #region iOS Local Push Notification
+
+        async void iOSLocalPushNotification()
+        {
+            
+        }
+
+        #endregion
+
+        #region Android Local Push Notification
+
+        async void AndroidLocalPushNotification()
+        {
+
+        }
+
+        #endregion
+
+        #region UWP Local Push Notification
+
+        async void UWPLocalPushNotification()
+        {
+
+        }
+
+        #endregion
 
         async void OnPushNotificationButtonClicked(object sender, EventArgs e)
         {

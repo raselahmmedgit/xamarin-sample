@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1770.MenuPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="menu_icon.png" Order="Primary" />
+        <ToolbarItem Text="Profile" Priority="1" Order="Secondary" />
+        <ToolbarItem Text="Sign Out" Priority="2" Order="Secondary" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout x:Name="PageContent" Focused="PageContent_Focused" Unfocused="PageContent_Unfocused">
+            <StackLayout x:Name="ContentMenu" IsVisible="False">
+                <Button x:Name="btnMenu1" Text="Menu One" Clicked="btnMenu1_Clicked" BackgroundColor="#ddd" />
+                <Button x:Name="btnMenu2" Text="Menu Two" Clicked="btnMenu2_Clicked" BackgroundColor="#ddd" />
+                <Button x:Name="btnMenu3" Text="Menu Three" Clicked="btnMenu3_Clicked" BackgroundColor="#ddd" />
+            </StackLayout>
+            <StackLayout x:Name="ContentBody" Padding="10">
+                <Label Text="Welcome to Xamarin.Forms!" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+
+                <Button x:Name="btnShowMenu" Text="Show Menu" Clicked="btnShowMenu_Clicked" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

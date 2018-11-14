@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1780.MenuPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="menu_icon.png" Clicked="ToolbarItem_Clicked" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout x:Name="PageContent" BackgroundColor="Yellow">
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Tapped="PageContentTapGestureRecognizer_Tapped"/>
+            </StackLayout.GestureRecognizers>
+            <StackLayout x:Name="ContentMenu" IsVisible="False" Opacity="0.5">
+                <Button x:Name="btnMenu1" Text="Menu One" Clicked="btnMenu1_Clicked" BackgroundColor="#ddd" />
+                <Button x:Name="btnMenu2" Text="Menu Two" Clicked="btnMenu2_Clicked" BackgroundColor="#ddd" />
+                <Button x:Name="btnMenu3" Text="Menu Three" Clicked="btnMenu3_Clicked" BackgroundColor="#ddd" />
+            </StackLayout>
+            <StackLayout x:Name="ContentBody" Padding="10">
+                <Label Text="Welcome to Xamarin.Forms!" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+                <Button x:Name="btnShowMenu" Text="Show Menu" Clicked="btnShowMenu_Clicked" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

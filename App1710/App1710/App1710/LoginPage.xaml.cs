@@ -74,7 +74,7 @@ namespace App1710
 
                 try
                 {
-                    var isLogin = await IsLoginUserAsync(userModel.Email, userModel.Password);
+                    //var isLogin = await IsLoginUserAsync(userModel.Email, userModel.Password);
 
                     appMessage = appMessage.SetSuccess("Login successfully.");
                 }

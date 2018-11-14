@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1780.OtherPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="MenuToolbarItem" Icon="menu_open_icon.png" Clicked="ToolbarItem_Clicked" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout x:Name="PageContent" BackgroundColor="#ffffff">
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Tapped="PageContentTapGestureRecognizer_Tapped"/>
+            </StackLayout.GestureRecognizers>
+            <StackLayout x:Name="ContentMenu" IsVisible="False" BackgroundColor="#ddd" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <StackLayout x:Name="ContentMenuStackLayout" Padding="10" >
+                    <!--<Button x:Name="btnMenu1" Text="Home" Clicked="btnMenu1_Clicked" BackgroundColor="#f2f2f2" Margin="0" BorderRadius="0" Image="settings_icon.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" FontSize="18" ContentLayout="Left,0" />
+                    <Button x:Name="btnMenu2" Text="Schedule" Clicked="btnMenu2_Clicked" BackgroundColor="#f2f2f2" Margin="0" BorderRadius="0" Image="schedule_icon.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" FontSize="18" />
+                    <Button x:Name="btnMenu3" Text="Physician" Clicked="btnMenu3_Clicked" BackgroundColor="#f2f2f2" Margin="0" BorderRadius="0" Image="physician_icon.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" FontSize="18" />
+                    <Button x:Name="btnMenu4" Text="Location" Clicked="btnMenu4_Clicked" BackgroundColor="#f2f2f2" Margin="0" BorderRadius="0" Image="location_icon.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" FontSize="18" />
+                    <Button x:Name="btnMenu5" Text="Resources" Clicked="btnMenu5_Clicked" BackgroundColor="#f2f2f2" Margin="0" BorderRadius="0" Image="resources_icon.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" FontSize="18" />
+                    <Button x:Name="btnMenu6" Text="Change Password" Clicked="btnMenu6_Clicked" BackgroundColor="#f2f2f2" Margin="0" BorderRadius="0" Image="settings_icon.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" FontSize="18" />
+                    <Button x:Name="btnMenu7" Text="Sign Out" Clicked="btnMenu7_Clicked" BackgroundColor="#f2f2f2" Margin="0" BorderRadius="0" Image="settings_icon.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" FontSize="18" />-->
+
+                    <ListView x:Name="ContentMenuListView">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell Tapped="ViewCell_Tapped" ClassId="{Binding Id}">
+
+                                    <!--<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="#f2f2f2" Margin="0,0,0,5" Padding="5">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="80"></RowDefinition>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition  Width="*"/>
+                                                <ColumnDefinition  Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Image Source="{Binding Image}" Grid.Column="0" Grid.Row="0" HeightRequest="60" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"></Image>
+                                            <Label FontSize="18" VerticalTextAlignment="Center" TextColor="#000" YAlign="Start" Text="{Binding Name}" Grid.Column="1" Grid.Row="0" HeightRequest="60"></Label>
+                                        </Grid>
+                                    </StackLayout>-->
+
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="#f2f2f2" Margin="0,0,0,5" Padding="5">
+                                        <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="80" Padding="5">
+                                            <Image Source="{Binding Image}"></Image>
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" HeightRequest="80" Padding="5">
+                                            <Label FontSize="18" VerticalTextAlignment="Center" TextColor="#000" YAlign="Start" Text="{Binding Name}"></Label>
+                                        </StackLayout>
+                                    </StackLayout>
+
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+                </StackLayout>
+            </StackLayout>
+            <StackLayout x:Name="ContentBody" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <ScrollView x:Name="ContentBodyScrollView">
+                    <StackLayout Padding="10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <Grid x:Name="ContentBodyGrid">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <StackLayout IsVisible="True" Grid.Row="1" Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                <Label x:Name="messageLabel" IsVisible="False" BackgroundColor="#f2dede" FontSize="14" TextColor="#a94442" />
+                                <Entry x:Name="nameEntry" Placeholder="Name" PlaceholderColor="#bababa" BackgroundColor="#fff" FontSize="14"/>
+                                <Entry x:Name="emailEntry" Placeholder="Email" PlaceholderColor="#bababa" BackgroundColor="#fff" FontSize="14"/>
+                                <Entry x:Name="addressEntry" Placeholder="Address" PlaceholderColor="#bababa" BackgroundColor="#fff" FontSize="14"/>
+                                <Entry x:Name="mobileEntry" Placeholder="Mobile" PlaceholderColor="#bababa" BackgroundColor="#fff" FontSize="14"/>
+                                <Entry x:Name="phoneEntry" Placeholder="Phone" PlaceholderColor="#bababa" BackgroundColor="#fff" FontSize="14"/>
+                                <Entry x:Name="sexEntry" Placeholder="Sex" PlaceholderColor="#bababa" BackgroundColor="#fff" FontSize="14"/>
+                                <Entry x:Name="websiteEntry" Placeholder="Web site" PlaceholderColor="#bababa" BackgroundColor="#fff" FontSize="14"/>
+                                <Entry x:Name="companyEntry" Placeholder="Company" PlaceholderColor="#bababa" BackgroundColor="#fff" FontSize="14"/>
+                                <Entry x:Name="companyAdressEntry" Placeholder="Company Adress" PlaceholderColor="#bababa" BackgroundColor="#fff" FontSize="14"/>
+                                <Entry x:Name="companyMobileEntry" Placeholder="Company Mobile" PlaceholderColor="#bababa" BackgroundColor="#fff" FontSize="14"/>
+                                <Entry x:Name="companyPhoneEntry" Placeholder="Company Phone" PlaceholderColor="#bababa" BackgroundColor="#fff" FontSize="14"/>
+                                <Entry x:Name="companyWebsiteEntry" Placeholder="Company Website" PlaceholderColor="#bababa" BackgroundColor="#fff" FontSize="14"/>
+                                <Entry x:Name="currentPasswordEntry" IsPassword="True" Placeholder="Current Password" PlaceholderColor="#bababa" BackgroundColor="#fff" FontSize="14"/>
+                                <Entry x:Name="newPasswordEntry" IsPassword="True" Placeholder="New Password" PlaceholderColor="#bababa" BackgroundColor="#fff" FontSize="14"/>
+                                <Entry x:Name="confirmNewPasswordEntry" IsPassword="True" Placeholder="Confirm New Password" PlaceholderColor="#bababa" BackgroundColor="#fff" FontSize="14"/>
+                                <Button x:Name="btnSave" Text="Save" BackgroundColor="#337ab7" BorderColor="#2e6da4" FontSize="14" TextColor="White" HeightRequest="50" VerticalOptions="Start" />
+                            </StackLayout>
+
+                        </Grid>
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

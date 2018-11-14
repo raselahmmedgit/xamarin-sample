@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App1770"
+             x:Class="App1770.MainPage">
+
+
+
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout x:Name="loaderStackLayout" IsVisible="False" Padding="12">
+                <ActivityIndicator IsRunning="True" Color ="#800000"/>
+            </StackLayout>
+            <Button x:Name="btnToast" Text="Toasts" Clicked="btnToastButton_Clicked" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+            <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+            <Button x:Name="btnUserDialogsToast" Text="UserDialogs Toasts" Clicked="btnUserDialogsToastButton_Clicked" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+
+            <Button x:Name="btnLoader" Text="Loader" Clicked="btnLoaderButton_Clicked" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+
+            <Button x:Name="btnMenu" Text="Menu" Clicked="btnMenuButton_Clicked" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+
+        </StackLayout>
+    </ContentPage.Content>
+    
+    
+
+</ContentPage>

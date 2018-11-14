@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App1780"
+             x:Class="App1780.MainPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Home" Order="Secondary"  />
+        <ToolbarItem Text="Schedule" Order="Secondary" />
+        <ToolbarItem Text="Physician" Order="Secondary" />
+        <ToolbarItem Text="Location" Order="Secondary" />
+        <ToolbarItem Text="Resources" Order="Secondary" />
+        <ToolbarItem Text="Change Password" Order="Secondary" />
+        <ToolbarItem Text="Sign Out" Order="Secondary" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout x:Name="PageContent" BackgroundColor="Red">
+            
+            <StackLayout x:Name="ContentBody" Padding="10">
+                <Label Text="Welcome to Xamarin.Forms!" VerticalOptions="CenterAndExpand" TextColor="#fff" HorizontalOptions="CenterAndExpand" />
+
+                <Button x:Name="btnShowMenu" Text="Show Menu" Clicked="btnShowMenu_Clicked" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

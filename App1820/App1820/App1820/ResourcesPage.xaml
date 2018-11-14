@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1820.ResourcesPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#ffffff" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Grid x:Name="ContentHeader">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <StackLayout x:Name="PracticeStackLayout" Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="#68B6F2" HeightRequest="20" Padding="10,10,0,15" Margin="0,0,0,0" Spacing="0">
+                    <Label x:Name="PracticeName" Text="Robotic Prolapse Surgery" TextColor="#ffffff" FontSize="18"  />
+                </StackLayout>
+                <StackLayout x:Name="PageStackLayout" Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="#d7d7d7" HeightRequest="24" Padding="10" Margin="0,-6,0,0" Spacing="0">
+                    <Label x:Name="PageName" Text="Resources Page" TextColor="#154360" FontSize="16"  />
+                    <!--<Label x:Name="ProcedureName" Text="Robotic Prolapse Surgery" TextColor="#154360 " FontSize="16" />-->
+                </StackLayout>
+            </Grid>
+            <Grid x:Name="ContentBody">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <ScrollView x:Name="ContentBodyScrollView" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                    <StackLayout Padding="10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <Label Text="Welcome to Resources Page!" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+                    </StackLayout>
+                </ScrollView>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
