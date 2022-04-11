@@ -1,0 +1,14 @@
+<Project>
+  <PropertyGroup>
+      <Authors>EPAM Systems</Authors>
+      <Owners>EPAM Systems</Owners>
+      <Copyright>EPAM Systems, Inc.</Copyright>
+      <LangVersion>latestmajor</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+      <XamarinFormsVersion>4.8.0.1269</XamarinFormsVersion>
+      <PrismVersion>7.2.0.1054</PrismVersion>
+  </PropertyGroup>
+
+</Project>

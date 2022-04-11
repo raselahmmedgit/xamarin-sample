@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:forms="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             xmlns:components="clr-namespace:Covi.Features.ChangeLanguage.Components;assembly=Covi"
+             xmlns:controls="clr-namespace:Covi.Features.Controls;assembly=Covi"
+             xmlns:resources="clr-namespace:Covi.Features.ChangeLanguage.Resources;assembly=Covi"
+             xmlns:componentsManagement="clr-namespace:Covi.Features.ComponentsManagement;assembly=Covi"
+             xmlns:local="clr-namespace:Covi.Features.SettingsChangeLanguage"
+             mc:Ignorable="d"
+             x:Class="Covi.Features.SettingsChangeLanguage.SettingsChangeLanguagePage"
+             Style="{StaticResource SingleContentPageStyle}">
+    <ContentPage.Content>
+        <Grid x:DataType="local:SettingsChangeLanguageViewModel">
+            <forms:SvgCachedImage Grid.Row="0"
+                                    Aspect="Fill"
+                                    WidthRequest="{StaticResource SmallBackgroundRectangleWidth}"
+                                    HeightRequest="{StaticResource SmallBackgroundRectangleHeight}"
+                                    HorizontalOptions="End"
+                                    VerticalOptions="Start"/>
+
+            <Grid RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="1"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <ContentView Style="{StaticResource SingleContentPageHeaderStyle}">
+                    <Label Text=""
+                           Style="{StaticResource TextPageHeadlineH3}"/>
+                </ContentView>
+                <BoxView Grid.Row="1"
+                         HeightRequest="1"
+                         Margin="24,0"
+                         Color="{StaticResource HeaderSeparatorColor3}"/>
+
+                <ScrollView Orientation="Vertical" Style="{StaticResource ContentPageCollectionStyle}"
+                            Grid.Row="2">
+                    <Grid Padding="16,0">
+                        <components:SelectLanguageView
+                            BindingContext="{Binding SelectLanguageViewModel}"
+                            Padding="0,0,0,16"/>
+                    </Grid>
+                </ScrollView>
+            </Grid>
+
+            <controls:BusyIndicatorView Grid.Row="0"
+                                        FadeBackground="True"
+                                        IsActive="{Binding IsBusy}"/>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

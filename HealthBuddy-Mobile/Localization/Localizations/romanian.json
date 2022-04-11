@@ -1,0 +1,29 @@
+{
+    "localeName": "ro",
+    "items": {
+        "AboutUs": "Covi\\Features\\AboutUs\\Resources\\Localization.ro.resx",
+        "Account": "Covi\\Features\\Account\\Resources\\Localization.ro.resx",
+        "AccountFeaturesInformation": "Covi\\Features\\AccountFeaturesInformation\\Resources\\Localization.ro.resx",
+        "ChangeLanguage": "Covi\\Features\\ChangeLanguage\\Resources\\Localization.ro.resx",
+        "Chat": "Covi\\Features\\Chat\\Resources\\Localization.ro.resx",
+        "CreateProfile": "Covi\\Features\\CreateProfile\\Resources\\Localization.ro.resx",
+        "ExpiredToken": "Covi\\Features\\ExpiredToken\\Resources\\Localization.ro.resx",
+        "Filters": "Covi\\Features\\Filters\\Resources\\Localization.ro.resx",
+        "ForceUpdate": "Covi\\Features\\ForceUpdate\\Resources\\Localization.ro.resx",
+        "Maintenance": "Covi\\Features\\Maintenance\\Resources\\Localization.ro.resx",
+        "Menu": "Covi\\Features\\Menu\\Resources\\Localization.ro.resx",
+        "NewsArticle": "Covi\\Features\\NewsArticle\\Resources\\Localization.ro.resx",
+        "Newsfeed": "Covi\\Features\\Newsfeed\\Resources\\Localization.ro.resx",
+        "OnBoarding": "Covi\\Features\\OnBoarding\\Resources\\Localization.ro.resx",
+        "Polls": "Covi\\Features\\Polls\\Resources\\Localization.ro.resx",
+        "PrivacyPolicy": "Covi\\Features\\PrivacyPolicy\\Resources\\Localization.ro.resx",
+        "Rumours": "Covi\\Features\\Rumours\\Resources\\Localization.ro.resx",
+        "Settings": "Covi\\Features\\Settings\\Resources\\Localization.ro.resx",
+        "SettingsChangeLanguage": "Covi\\Features\\SettingsChangeLanguage\\Resources\\Localization.ro.resx",
+        "UserDeleteAccount": "Covi\\Features\\UserDeleteAccount\\Resources\\Localization.ro.resx",
+        "UserLogIn": "Covi\\Features\\UserLogIn\\Resources\\Localization.ro.resx",
+        "UserLogOut": "Covi\\Features\\UserLogOut\\Resources\\Localization.ro.resx",
+        "Welcome": "Covi\\Features\\Welcome\\Resources\\Localization.ro.resx",
+        "Covi": "Covi\\Resources\\Localization.ro.resx"
+    }
+}

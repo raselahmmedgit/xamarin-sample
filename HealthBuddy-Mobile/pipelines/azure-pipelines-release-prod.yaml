@@ -1,0 +1,61 @@
+trigger:
+- none
+
+resources:
+  pipelines:
+  - pipeline: mobilerelease  # Name of the pipeline resource
+    source: HealthBuddy-Mobile-Build-Prod # Name of the triggering pipeline
+    trigger: 
+      branches:
+      - master
+
+variables:
+  - group: Mobile.Production
+
+jobs:
+- deployment: Android
+  displayName: Appcenter Android
+  environment: Appcenter
+  pool: 
+    vmImage: 'internal-macos-10.15'
+  strategy:
+    runOnce:
+      deploy:
+        steps:
+
+        - download: mobilerelease
+          artifact: android
+          
+        - task: AppCenterDistribute@3
+          displayName: 'Deploy *.apk to Visual Studio App Center'
+          inputs:
+            serverEndpoint: 'HealthBuddy AppCenter Android Prod'
+            appSlug: '$(appCenter__android_appSlug)'
+            appFile: '$(Pipeline.Workspace)/**/android/*-Signed.apk'
+            symbolsIncludeParentDirectory: false
+            releaseNotesInput: 'Build: $(Build.BuildNumber)'
+            distributionGroupId: '$(appCenter__distributionGroupId)'
+            isSilent: false
+
+
+- deployment: iOS
+  displayName: Appcenter iOS
+  environment: Appcenter
+  pool: 
+    vmImage: 'internal-macos-10.15'
+  strategy:
+    runOnce:
+      deploy:
+        steps:       
+        - download: mobilerelease
+          artifact: ios
+        - task: AppCenterDistribute@3
+          displayName: 'Deploy *.ipa to Visual Studio App Center'
+          inputs:
+            serverEndpoint: 'HealthBuddy AppCenter iOS Prod'
+            appSlug: '$(appCenter__iOS_appSlug)'
+            appFile: '$(Pipeline.Workspace)/**/ios/**/*.ipa'
+            symbolsIncludeParentDirectory: false
+            releaseNotesInput: 'Build: $(Build.BuildNumber)'
+            distributionGroupId: '$(appCenter__distributionGroupId)'
+            isSilent: false

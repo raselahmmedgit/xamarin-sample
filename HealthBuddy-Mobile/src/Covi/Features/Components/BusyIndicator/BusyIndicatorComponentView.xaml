@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:Covi.Features.Controls"
+             xmlns:materialFrame="clr-namespace:Sharpnado.MaterialFrame;assembly=Sharpnado.MaterialFrame"
+             xmlns:local="clr-namespace:Covi.Features.Components.BusyIndicator"
+             x:Class="Covi.Features.Components.BusyIndicator.BusyIndicatorComponentView">
+    <ContentView.Content>
+        <Grid Padding="0,96,0,0">
+            <controls:BusyIndicatorView IsActive="{Binding IsBusy}"
+                                        FadeBackground="{Binding FadeBackground}"/>
+        </Grid>
+    </ContentView.Content>
+</ContentView>
+

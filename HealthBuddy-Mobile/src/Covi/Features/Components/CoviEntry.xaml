@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView
+    x:Name="Root"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    x:Class="Covi.Features.Components.CoviEntry">
+    <ContentView.Content>
+
+        <StackLayout Orientation="Vertical"
+                     HorizontalOptions="Fill"
+                     VerticalOptions="Start">
+            <Grid>
+                <pancakeView:PancakeView
+                             Grid.Row="0"
+                             CornerRadius="5"
+                             BackgroundColor="Transparent"
+                             x:Name="EntryFrame"
+                             Padding="0"
+                             Margin="0,0,0,1"
+                             BorderThickness="1"
+                             BorderColor="{StaticResource EntryPlaceholderColor}">
+                    <pancakeView:PancakeView.Shadow>
+                        <pancakeView:DropShadow
+                            Color="Transparent"
+                            BlurRadius="0"
+                            Opacity="0"/>
+                    </pancakeView:PancakeView.Shadow>
+                    <Entry x:Name="Entry"
+                           HeightRequest="60"
+                           Visual="Material"
+                           BindingContext="{x:Reference Root}"
+                           IsPassword="{Binding HidePassword}"
+                           ReturnType="{Binding ReturnType}"
+                           ReturnCommand="{Binding ReturnCommand}"
+                           ReturnCommandParameter="{Binding ReturnCommandParameters}"
+                           Text="{Binding Text}"
+                           Placeholder="{Binding Placeholder}"
+                           BackgroundColor="Transparent"
+                           PlaceholderColor="{StaticResource EntryPlaceholderColor}"
+                           TextColor="{StaticResource EntryOnBackgroundColor}"
+                           HorizontalOptions="Fill"
+                           VerticalOptions="Start"
+                           FontFamily="OpenSansRegulr"
+                           FontSize="16"/>
+                </pancakeView:PancakeView>
+
+                <ffimageloadingsvg:SvgCachedImage x:Name="PasswordEye"
+                                                  Style="{StaticResource IconImageStyle}"
+                                                  BindingContext="{x:Reference Root}"
+                                                  IsVisible="{Binding ShowPasswordEye}"
+                                                  Grid.Row="0"
+                                                  Source="show_password.svg"
+                                                  Margin="16, 0, 16, 0"
+                                                  HorizontalOptions="End">
+                    <ffimageloadingsvg:SvgCachedImage.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </ffimageloadingsvg:SvgCachedImage.GestureRecognizers>
+                </ffimageloadingsvg:SvgCachedImage>
+            </Grid>
+
+            <StackLayout x:Name="ErrorTextControl"
+                         IsVisible="False"
+                         Orientation="Horizontal">
+                <ffimageloadingsvg:SvgCachedImage Style="{StaticResource IconImageStyle}"
+                                                  Source="error.svg"/>
+                <Label x:Name="ErrorTextLabel"
+                       BindingContext="{x:Reference Root}"
+                       Text="{Binding ErrorText}"
+                       IsVisible="False"
+                       Style="{StaticResource TextValidationError}"/>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

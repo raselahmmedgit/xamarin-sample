@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:forms="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             xmlns:resources="clr-namespace:Covi.Features.PrivacyPolicy.Resources;assembly=Covi"
+             xmlns:local="clr-namespace:Covi.Features.PrivacyPolicy"
+             xmlns:controls="clr-namespace:Covi.Features.Controls;assembly=Covi"
+             xmlns:images="clr-namespace:Covi.Features.ImagesScaling"
+             xmlns:infoView="clr-namespace:Covi.Features.Components.InfoView;assembly=Covi"
+             xmlns:htmlLabel="clr-namespace:Covi.Features.Controls.HtmlLabel;assembly=Covi"
+             mc:Ignorable="d"
+             x:Class="Covi.Features.PrivacyPolicy.PrivacyPolicyPage"
+             Style="{StaticResource SingleContentPageStyle}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <images:ImageScaleConverter x:Key="ImageScaleConverter"
+                                        ImageWidth="375"
+                                        ImageHeight="135"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid x:DataType="local:PrivacyPolicyViewModel">
+            <forms:SvgCachedImage Grid.Row="0"
+                                  Aspect="Fill"
+                                  Source="resource://Covi.Resources.Images.background_rectangle.svg"
+                                  Style="{StaticResource BackgroundImageStyle}"
+                                  HorizontalOptions="EndAndExpand"
+                                  VerticalOptions="StartAndExpand"/>
+            <Grid RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="1"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <ContentView Style="{StaticResource SingleContentPageHeaderStyle}">
+                    <Label Text="{x:Static resources:Localization.PrivacyPolicy_Header_Title_Text}"
+                               Style="{StaticResource TextPageHeadlineH3}"/>
+                </ContentView>
+                <BoxView Grid.Row="1"
+                         HeightRequest="1"
+                         Margin="16,0"
+                         Color="{StaticResource HeaderSeparatorColor}"/>
+                <Grid IsVisible="{Binding HasError}"
+                      Style="{StaticResource ContentPageCollectionStyle}"
+                      Grid.Row="2">
+                    <infoView:InfoComponentView BindingContext="{Binding InfoViewModel}"/>
+                </Grid>
+                <ScrollView
+                    IsVisible="{Binding HasError, Converter={StaticResource InvertedBoolConverter}}"
+                    Style="{StaticResource ContentPageCollectionStyle}"
+                    Grid.Row="2"
+                    IsClippedToBounds="True"
+                    VerticalOptions="FillAndExpand">
+                    <Grid VerticalOptions="FillAndExpand"
+                          Style="{StaticResource NestedContentContainerStyle}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <forms:SvgCachedImage Grid.Row="0"
+                                                  Source="{Binding LogoImageSource, Converter={StaticResource ImageScaleConverter}}"
+                                                  HeightRequest="{StaticResource ImageHeight}"
+                                                  HorizontalOptions="Center"/>
+
+                        <Label Grid.Row="1"
+                               Text="{Binding Title}"
+                               Style="{StaticResource TextHeadlineH2}"
+                               Margin="0, 16, 0, 0"/>
+
+                        <htmlLabel:HtmlLabel Text="{Binding PrivacyPolicyText}"
+                                                 Grid.Row="2"
+                                                 Margin="0, 32, 0,0 "
+                                                 VerticalOptions="FillAndExpand"
+                                                 IsVisible="{Binding PrivacyPolicyText, Converter={StaticResource NotEmptyStringToBoolConverter}}"
+                                                 Style="{StaticResource TextTitleRegular16}"
+                                                 BackgroundColor="Transparent"/>
+                    </Grid>
+                </ScrollView>
+                <controls:BusyIndicatorView Grid.Row="2"
+                                            IsActive="{Binding IsBusy}"/>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

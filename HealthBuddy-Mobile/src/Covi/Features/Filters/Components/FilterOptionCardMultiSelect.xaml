@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:platformSpecific="clr-namespace:Covi.PlatformSpecific"
+             xmlns:converters="clr-namespace:Covi.Converters"
+             mc:Ignorable="d"
+             x:Class="Covi.Features.Filters.Components.FilterOptionCardMultiSelect">
+     <ContentView.Resources>
+        <ResourceDictionary>
+            <converters:BoolToColorConverter x:Key="SwitchColorConverter">
+                <converters:BoolToColorConverter.ColorIfFalse>
+                    <OnPlatform x:TypeArguments="Color">
+                        <OnPlatform.Platforms>
+                            <On Platform="iOS" Value="{StaticResource RadioButtonColor}" />
+                            <On Platform="Android" Value="LightGray" />
+                        </OnPlatform.Platforms>
+                    </OnPlatform>
+                </converters:BoolToColorConverter.ColorIfFalse>
+                <converters:BoolToColorConverter.ColorIfTrue>
+                    <OnPlatform x:TypeArguments="Color">
+                        <OnPlatform.Platforms>
+                            <On Platform="iOS" Value="{StaticResource OnPrimaryColor}" />
+                            <On Platform="Android" Value="{StaticResource BackgroundColor}" />
+                        </OnPlatform.Platforms>
+                    </OnPlatform>
+                </converters:BoolToColorConverter.ColorIfTrue>
+            </converters:BoolToColorConverter>
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <ContentView.Content>
+        <Grid
+            RowSpacing="0"
+            HorizontalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="1"/>
+            </Grid.RowDefinitions>
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer
+                    NumberOfTapsRequired="1"
+                    Command="{Binding FilterTappedCommand}"
+                ></TapGestureRecognizer>
+            </Grid.GestureRecognizers>
+
+            <Grid Grid.Row="0"
+                  Padding="0,16,0,16">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="{Binding DisplayName, Mode=OneTime}"
+                       Grid.Column="0"
+                       VerticalOptions="Center"
+                       Style="{StaticResource TapableText16}" />
+                
+                <Switch x:Name="FilterOptionSwitcher"
+                        Grid.Column="1"
+                        VerticalOptions="Center"
+                        OnColor="{StaticResource PrimaryColor}"
+                        ThumbColor="{Binding IsChecked, Converter={StaticResource SwitchColorConverter}}"
+                        IsToggled="{Binding IsChecked, Mode=TwoWay}">
+                </Switch>
+
+            </Grid>
+
+            <platformSpecific:DashedLine
+                Grid.Row="1"
+                IsVisible="{Binding IsLast, Converter={StaticResource InvertedBoolConverter}, Mode=OneWay}"
+                Style="{StaticResource DashedLineStyle}"/>
+
+        </Grid>
+    </ContentView.Content>
+</ContentView>

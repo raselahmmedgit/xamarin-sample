@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>2.0</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+  <data name="CreateProfileValidationException_Username_HasSpecialSymbolErrorText" xml:space="preserve">
+    <value>Поле "Логин" может содержать только буквы латинского алфавита и цифры</value>
+  </data>
+  <data name="CreateProfile_ConfirmPassword_Label_Text" xml:space="preserve">
+    <value>Подтвердите пароль</value>
+  </data>
+  <data name="CreateProfile_Confirm_Password_Text" xml:space="preserve">
+    <value>Подтвердить пароль</value>
+  </data>
+  <data name="CreateProfile_Expander_Header_Text" xml:space="preserve">
+    <value>More info</value>
+  </data>
+  <data name="CreateProfile_Expander_Main_Text" xml:space="preserve">
+    <value>If you’re an official health care worker, please switch on this option. This will enable you to generate your codes to send to your patients so as they can change their status.</value>
+  </data>
+  <data name="CreateProfile_Medical_EmptyErrorMessage_Text" xml:space="preserve">
+    <value>Medical Id should not be empty</value>
+  </data>
+  <data name="CreateProfile_Medical_Entry_Placeholder_Text" xml:space="preserve">
+    <value>Health ID</value>
+  </data>
+  <data name="CreateProfile_Medical_Title_Text" xml:space="preserve">
+    <value>Health ID</value>
+  </data>
+  <data name="CreateProfile_Next_Button_Text" xml:space="preserve">
+    <value>Продолжить</value>
+  </data>
+  <data name="CreateProfile_OfficialHealthCare_Label_Text" xml:space="preserve">
+    <value>I am an official health care worker</value>
+  </data>
+  <data name="CreateProfile_PageName_Text" xml:space="preserve">
+    <value>Create profile</value>
+  </data>
+  <data name="CreateProfile_PasswordRequirements_Text" xml:space="preserve">
+    <value>Пароль должен содержать:</value>
+  </data>
+  <data name="CreateProfile_Password_Label_Text" xml:space="preserve">
+    <value>Пароль</value>
+  </data>
+  <data name="CreateProfile_Password_Text" xml:space="preserve">
+    <value>Пароль</value>
+  </data>
+  <data name="CreateProfile_Requirement_1_Text" xml:space="preserve">
+    <value>8 символов</value>
+  </data>
+  <data name="CreateProfile_Requirement_2_Text" xml:space="preserve">
+    <value>1 прописную букву</value>
+  </data>
+  <data name="CreateProfile_Requirement_3_Text" xml:space="preserve">
+    <value>1 строчную букву</value>
+  </data>
+  <data name="CreateProfile_Requirement_4_Text" xml:space="preserve">
+    <value>1 спецсимвол и цифру</value>
+  </data>
+  <data name="CreateProfile_Requirement_Filled_Username_Text" xml:space="preserve">
+    <value>Поле "Логин" не должно быть пустым.</value>
+  </data>
+  <data name="CreateProfile_Requirement_Same_Passwords_Text" xml:space="preserve">
+    <value>Поля "Пароль" и "Подтвердить пароль" должны совпадать.</value>
+  </data>
+  <data name="CreateProfile_Title_Text" xml:space="preserve">
+    <value>Создайте анонимный профиль</value>
+  </data>
+  <data name="CreateProfile_Username_Entry_Placeholder_Text" xml:space="preserve">
+    <value>Логин</value>
+  </data>
+  <data name="CreateProfile_Username_Label_Text" xml:space="preserve">
+    <value>Выберите логин</value>
+  </data>
+  <data name="SignUp_AlreadyHaveAnAccount_Text" xml:space="preserve">
+    <value>Already have an account?</value>
+  </data>
+  <data name="SignUp_LoginBtn_Text" xml:space="preserve">
+    <value>Log in</value>
+  </data>
+</root>

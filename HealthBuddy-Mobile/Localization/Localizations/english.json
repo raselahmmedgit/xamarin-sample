@@ -1,0 +1,29 @@
+{
+    "localeName": "default",
+    "items": {
+        "AboutUs": "Covi\\Features\\AboutUs\\Resources\\Localization.resx",
+        "Account": "Covi\\Features\\Account\\Resources\\Localization.resx",
+        "AccountFeaturesInformation": "Covi\\Features\\AccountFeaturesInformation\\Resources\\Localization.resx",
+        "ChangeLanguage": "Covi\\Features\\ChangeLanguage\\Resources\\Localization.resx",
+        "Chat": "Covi\\Features\\Chat\\Resources\\Localization.resx",
+        "CreateProfile": "Covi\\Features\\CreateProfile\\Resources\\Localization.resx",
+        "ExpiredToken": "Covi\\Features\\ExpiredToken\\Resources\\Localization.resx",
+        "Filters": "Covi\\Features\\Filters\\Resources\\Localization.resx",
+        "ForceUpdate": "Covi\\Features\\ForceUpdate\\Resources\\Localization.resx",
+        "Maintenance": "Covi\\Features\\Maintenance\\Resources\\Localization.resx",
+        "Menu": "Covi\\Features\\Menu\\Resources\\Localization.resx",
+        "NewsArticle": "Covi\\Features\\NewsArticle\\Resources\\Localization.resx",
+        "Newsfeed": "Covi\\Features\\Newsfeed\\Resources\\Localization.resx",
+        "OnBoarding": "Covi\\Features\\OnBoarding\\Resources\\Localization.resx",
+        "Polls": "Covi\\Features\\Polls\\Resources\\Localization.resx",
+        "PrivacyPolicy": "Covi\\Features\\PrivacyPolicy\\Resources\\Localization.resx",
+        "Rumours": "Covi\\Features\\Rumours\\Resources\\Localization.resx",
+        "Settings": "Covi\\Features\\Settings\\Resources\\Localization.resx",
+        "SettingsChangeLanguage": "Covi\\Features\\SettingsChangeLanguage\\Resources\\Localization.resx",
+        "UserDeleteAccount": "Covi\\Features\\UserDeleteAccount\\Resources\\Localization.resx",
+        "UserLogIn": "Covi\\Features\\UserLogIn\\Resources\\Localization.resx",
+        "UserLogOut": "Covi\\Features\\UserLogOut\\Resources\\Localization.resx",
+        "Welcome": "Covi\\Features\\Welcome\\Resources\\Localization.resx",
+        "Covi": "Covi\\Resources\\Localization.resx"
+    }
+}

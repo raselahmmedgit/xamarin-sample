@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Covi.Features.UserDeleteAccount.DeleteAccountPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:completedView="clr-namespace:Covi.Features.Components.CompletedView;assembly=Covi"
+    xmlns:components="clr-namespace:Covi.Features.UserDeleteAccount.Components;assembly=Covi"
+    xmlns:controls="clr-namespace:Covi.Features.Controls;assembly=Covi"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:resources="clr-namespace:Covi.Features.UserDeleteAccount.Resources;assembly=Covi"
+    Style="{StaticResource SingleContentPageStyle}"
+    mc:Ignorable="d">
+    <ContentPage.Triggers>
+        <DataTrigger
+            Binding="{Binding IsCompletedState, Converter={StaticResource InvertedBoolConverter}}"
+            TargetType="ContentPage"
+            Value="true">
+
+            <Setter Property="d:NavigationPage.HasNavigationBar" Value="true" />
+
+        </DataTrigger>
+        <DataTrigger
+            Binding="{Binding IsCompletedState, Converter={StaticResource InvertedBoolConverter}}"
+            TargetType="ContentPage"
+            Value="false">
+
+            <Setter Property="d:NavigationPage.HasNavigationBar" Value="false" />
+
+        </DataTrigger>
+    </ContentPage.Triggers>
+    <ContentPage.Content>
+
+        <Grid>
+            <components:DeleteAccountView Grid.Row="0" IsVisible="{Binding IsDeleteDataConfirmationState, FallbackValue=false, TargetNullValue=false}" />
+
+            <completedView:CompletedView
+                Grid.Row="0"
+                DescriptionText="{x:Static resources:Localization.UserDeleteAccount_ThankYou_Text}"
+                IsVisible="{Binding IsCompletedState, FallbackValue=false, TargetNullValue=false}"
+                TitleText="{x:Static resources:Localization.UserDeleteAccount_ThankYou_Title_Text}" />
+
+            <controls:BusyIndicatorView
+                Grid.Row="0"
+                FadeBackground="True"
+                IsActive="{Binding IsBusy}" />
+
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

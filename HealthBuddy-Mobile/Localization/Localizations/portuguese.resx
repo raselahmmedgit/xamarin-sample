@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutUs@AboutUs_Header_Title_Text" xml:space="preserve">
+    <value>Sobre nós</value>
+  </data>
+  <data name="AboutUs@Menu_AboutUs_ItemText" xml:space="preserve">
+    <value>Sobre nós</value>
+  </data>
+  <data name="Account@CreateProfileValidationException_DuplicateUserName_ErrorText" xml:space="preserve">
+    <value>Já existe um usuário com esse nome </value>
+  </data>
+  <data name="Account@CreateProfileValidationException_PasswordRequiresDigit_ErrorText" xml:space="preserve">
+    <value>Password must have at least one digit (&apos;0&apos;-&apos;9&apos;).</value>
+  </data>
+  <data name="Account@CreateProfileValidationException_PasswordRequiresNonAlphanumeric_ErrorText" xml:space="preserve">
+    <value>A senha deve possuir pelo menos um caractere alfanumérico </value>
+  </data>
+  <data name="Account@CreateProfileValidationException_PasswordRequiresUpper_ErrorText" xml:space="preserve">
+    <value>A senha deve possuir pelo menos uma letra (&apos;A&apos;-&apos;Z&apos;) maiúscula.</value>
+  </data>
+  <data name="Account@CreateProfileValidationException_PasswordTooShort_ErrorText" xml:space="preserve">
+    <value>A senha deve possuir ao menos 8 carácteres.</value>
+  </data>
+  <data name="Account@CreateProfileValidationException_Password_ErrorText" xml:space="preserve">
+    <value>O campo Senha é necessário.</value>
+  </data>
+  <data name="Account@CreateProfileValidationException_Username_ErrorText" xml:space="preserve">
+    <value>O campo Nome de usuário é obrigatório.</value>
+  </data>
+  <data name="Account@LoginException_InvalidGrant_ErrorText" xml:space="preserve">
+    <value>Nome de usuário ou senha não reconhecidos.</value>
+  </data>
+  <data name="AccountFeaturesInformation@AccountInfo_Btn_Text" xml:space="preserve">
+    <value>Próxima etapa</value>
+  </data>
+  <data name="AccountFeaturesInformation@AccountInfo_Title_Text" xml:space="preserve">
+    <value>Criando seu perfil HealthBuddy</value>
+  </data>
+  <data name="AccountFeaturesInformation@RegisteredProfile_Instruction_Text1" xml:space="preserve">
+    <value>As informações que você fornecer permanecerão privadas, confidenciais e seguras</value>
+  </data>
+  <data name="AccountFeaturesInformation@RegisteredProfile_Instruction_Text2" xml:space="preserve">
+    <value>Só você pode acessar as informações do seu perfil</value>
+  </data>
+  <data name="AccountFeaturesInformation@RegisteredProfile_Instruction_Text3" xml:space="preserve">
+    <value>Anote seu nome de usuário e senha. Se você esquecer, não será possível recuperá-lo no aplicativo e também não podemos ajudá-lo</value>
+  </data>
+  <data name="AccountFeaturesInformation@RegisteredProfile_Instruction_Text4" xml:space="preserve">
+    <value>Estamos usando o Bluetooth para verificar se você está em contato com alguém infectado para que possamos notificá-lo</value>
+  </data>
+  <data name="AccountFeaturesInformation@AnonymProfile_Instruction_Text1" xml:space="preserve">
+    <value>Nesta versão você somente receberá informações de saúde</value>
+  </data>
+  <data name="AccountFeaturesInformation@AnonymProfile_Instruction_Text2" xml:space="preserve">
+    <value>Você pode atualizar para a versão avançada deste aplicativo a qualquer momento criando uma conta</value>
+  </data>
+  <data name="ChangeLanguage@ChangeLanguage_AlertDescription_Text" xml:space="preserve">
+    <value>Para aplicar as alterações, por favor reinicie o aplicativo.</value>
+  </data>
+  <data name="ChangeLanguage@ChangeLanguage_Label_Text" xml:space="preserve">
+    <value>Por favor escolha seu idioma</value>
+  </data>
+  <data name="ChangeLanguage@Confirm_Btn_Text" xml:space="preserve">
+    <value>Confirmar</value>
+  </data>
+  <data name="Chat@Chat_Input_Placeholder_Text" xml:space="preserve">
+    <value>Insira o texto aqui…</value>
+  </data>
+  <data name="Chat@Chat_Title_Text" xml:space="preserve">
+    <value>Chat</value>
+  </data>
+  <data name="CreateProfile@CreateProfileValidationException_Username_HasSpecialSymbolErrorText" xml:space="preserve">
+    <value>Somente letras do alfabeto latino e números são permitidos no nome de usuário.</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_ConfirmPassword_Label_Text" xml:space="preserve">
+    <value>Confirmar senha</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Confirm_Password_Text" xml:space="preserve">
+    <value>Confirmar senha</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Expander_Header_Text" xml:space="preserve">
+    <value>Mais informações</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Expander_Main_Text" xml:space="preserve">
+    <value>Se você é um profissional de saúde oficial, ative esta opção. Isso permitirá que você gere seus códigos para enviar aos seus pacientes para que eles possam alterar seu status.</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Medical_EmptyErrorMessage_Text" xml:space="preserve">
+    <value>A identificação médica não deve estar vazia</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Medical_Entry_Placeholder_Text" xml:space="preserve">
+    <value>Health ID</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Medical_Title_Text" xml:space="preserve">
+    <value>Health ID</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Next_Button_Text" xml:space="preserve">
+    <value>Próxima etapa</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_OfficialHealthCare_Label_Text" xml:space="preserve">
+    <value>Eu sou um profissional de saúde oficial</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_PageName_Text" xml:space="preserve">
+    <value>Criar perfil</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_PasswordRequirements_Text" xml:space="preserve">
+    <value>Sua senha deve conter pelo menos:</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Password_Label_Text" xml:space="preserve">
+    <value>Senha</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Password_Text" xml:space="preserve">
+    <value>Senha</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Requirement_1_Text" xml:space="preserve">
+    <value>8 caracteres</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Requirement_2_Text" xml:space="preserve">
+    <value>1 letra maiúscula</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Requirement_3_Text" xml:space="preserve">
+    <value>1 letra minúscula</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Requirement_4_Text" xml:space="preserve">
+    <value>1 símbolo especial e um dígito</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Requirement_Filled_Username_Text" xml:space="preserve">
+    <value>O nome do usuário não deve estar vazio.</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Requirement_Same_Passwords_Text" xml:space="preserve">
+    <value>A senha e a confirmação de senha devem ser iguais.</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Title_Text" xml:space="preserve">
+    <value>Crie seu perfil anônimo</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Username_Entry_Placeholder_Text" xml:space="preserve">
+    <value>Usuário</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Username_Label_Text" xml:space="preserve">
+    <value>Escolha um nome de usuário</value>
+  </data>
+  <data name="CreateProfile@SignUp_AlreadyHaveAnAccount_Text" xml:space="preserve">
+    <value>Já tem uma conta?</value>
+  </data>
+  <data name="CreateProfile@SignUp_LoginBtn_Text" xml:space="preserve">
+    <value>Entrar</value>
+  </data>
+  <data name="Filters@Filters_PageName_Text" xml:space="preserve">
+    <value>Filtros</value>
+  </data>
+  <data name="Filters@Filter_AllSelected_Text" xml:space="preserve">
+    <value>Tudo</value>
+  </data>
+  <data name="Filters@Filter_NoneSelected_Text" xml:space="preserve">
+    <value>Nenhum</value>
+  </data>
+  <data name="Filters@Filters_Save_Text" xml:space="preserve">
+    <value>Salvar</value>
+  </data>
+  <data name="Filters@Filters_Apply_Text" xml:space="preserve">
+    <value>Aplicar</value>
+  </data>
+  <data name="Filters@Filters_Reset_Text" xml:space="preserve">
+    <value>Redefinir</value>
+  </data>
+  <data name="Filters@Filters_ResetAll_Text" xml:space="preserve">
+    <value>Redefinir tudo</value>
+  </data>
+  <data name="Menu@Menu_Title_Text" xml:space="preserve">
+    <value>MAIS</value>
+  </data>
+  <data name="Menu@Menu_HeaderTitle_Text" xml:space="preserve">
+    <value>Mais</value>
+  </data>
+  <data name="NewsArticle@NewsArticle_Title_Text" xml:space="preserve">
+    <value>Artigo</value>
+  </data>
+  <data name="Newsfeed@Newsfeed_Title_Text" xml:space="preserve">
+    <value>Início</value>
+  </data>
+  <data name="Newsfeed@Newsfeed_Filter_Result_Text" xml:space="preserve">
+    <value>Resultados ({0})</value>
+  </data>
+  <data name="Newsfeed@Newsfeed_Filter_Text" xml:space="preserve">
+    <value>Filtros</value>
+  </data>
+  <data name="Newsfeed@Newsfeed_NoItems_Text" xml:space="preserve">
+    <value>Não há nenhuma notícia no momento. Volte mais tarde e esperamos ter algo para compartilhar com você.</value>
+  </data>
+  <data name="OnBoarding@BluetoothNotification_Denied_ErrorText" xml:space="preserve">
+    <value>A permissão para usar o bluetooth foi negada. Por favor, conceda permissão para usar o bluetooth nas configurações do aplicativo para continuar.</value>
+  </data>
+  <data name="OnBoarding@BluetoothNotification_Disabled_ErrorText" xml:space="preserve">
+    <value>O Bluetooth não está disponível no momento. O bluetooth não é compatível com o seu dispositivo ou está desativado. Por favor, verifique as configurações de bluetooth do dispositivo.</value>
+  </data>
+  <data name="OnBoarding@BluetoothNotification_Error_Title" xml:space="preserve">
+    <value>Erro no Bluetooth</value>
+  </data>
+  <data name="OnBoarding@BluetoothNotification_NotSupported_WarningText" xml:space="preserve">
+    <value>Seu dispositivo tem algumas limitações de hardware e pode ser invisível para outros dispositivos via Bluetooth.</value>
+  </data>
+  <data name="OnBoarding@BluetoothNotification_Warning_Title" xml:space="preserve">
+    <value>Aviso por Bluetooth.</value>
+  </data>
+  <data name="OnBoarding@OnBoardind_MadeForYou_SubTitle" xml:space="preserve">
+    <value>Sob medida para você</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Connectivity_ErrorText" xml:space="preserve">
+    <value>Para que este aplicativo funcione e ajude a salvar vidas, conecte-se com bluetooth</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Connectivity_Instruction1" xml:space="preserve">
+    <value>100% anônimo
+Não sabemos o seu nome ou localização </value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Connectivity_Instruction2" xml:space="preserve">
+    <value>Este aplicativo usa bluetooth para rastrear se você esteve em contato com alguém que está infectado</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Connectivity_Instruction4_AndroidOnly" xml:space="preserve">
+    <value>Só usaremos o bluetooth, e não a localização, quando você der permissão</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Connectivity_SubTitle" xml:space="preserve">
+    <value>Conecte-se com Bluetooth</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Connectivity_Title" xml:space="preserve">
+    <value>Conectividade</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_MadeForYou_Instruction1" xml:space="preserve">
+    <value>Recomendações personalizadas para sua categoria de perfil</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_MadeForYou_Instruction2" xml:space="preserve">
+    <value>Riscos específicos da área, recomendações e regras de comportamento</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_MadeForYou_Instruction3" xml:space="preserve">
+    <value>NENHUMA informação privada compartilhada</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_MadeForYou_Title" xml:space="preserve">
+    <value>Feito para você</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Next_Button_Text" xml:space="preserve">
+    <value>Próxima etapa</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Notifications_ErrorText" xml:space="preserve">
+    <value>Para que este aplicativo funcione e ajude a salvar vidas, por favor permita notificações</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Notifications_Instruction1" xml:space="preserve">
+    <value>Sua conta é privada e confidencial. Não temos nenhuma informação pessoal sobre você</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Notifications_Instruction2" xml:space="preserve">
+    <value>Não temos seu endereço de e-mail ou número de celular, então nunca enviaremos e-mails ou mensagens de texto para você</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Notifications_Instruction3" xml:space="preserve">
+    <value>Ao ter as notificações ativadas, o Healthbuddy pode informar se você esteve em contato próximo com alguém que está usando este aplicativo e tem COVID-19.</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Notifications_Title" xml:space="preserve">
+    <value>Notificação importante</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Privacy_Instruction1" xml:space="preserve">
+    <value>Todas as informações transmitidas por criptografia</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Privacy_Instruction2" xml:space="preserve">
+    <value>NENHUMA informação está ligada à sua identidade</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Privacy_Instruction3" xml:space="preserve">
+    <value>NENHUMA informação pessoal sai do seu telefone</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Privacy_SubTitle" xml:space="preserve">
+    <value>Completamente anônimo</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Privacy_Title" xml:space="preserve">
+    <value>Privacidade</value>
+  </data>
+  <data name="Polls@Polls_Title_Text" xml:space="preserve">
+    <value>PESQUISAS</value>
+  </data>
+  <data name="Polls@Polls_HeaderTitle_Text" xml:space="preserve">
+    <value>Pesquisas</value>
+  </data>
+  <data name="Polls@Polls_Restricted_TitleText" xml:space="preserve">
+    <value>Por favor, crie uma conta para participar das pesquisas</value>
+  </data>
+  <data name="Polls@Polls_InfoItem1_Text" xml:space="preserve">
+    <value>Da forma como está, você escolheu a opção apenas de informações.</value>
+  </data>
+  <data name="Polls@Polls_InfoItem2_Text" xml:space="preserve">
+    <value>Para obter acesso às pesquisas e ao seu perfil completo do HealthBuddy avançado, faça o login ou cadastre-se gratuitamente se você não tiver uma conta.</value>
+  </data>
+  <data name="Polls@Polls_CreateAccount_BtnText" xml:space="preserve">
+    <value>Criar conta</value>
+  </data>
+  <data name="Polls@Polls_Input_Placeholder_Text" xml:space="preserve">
+    <value>Digite sua resposta aqui</value>
+  </data>
+  <data name="PrivacyPolicy@Menu_PrivacyPolicy_ItemText" xml:space="preserve">
+    <value>Política de Privacidade</value>
+  </data>
+  <data name="PrivacyPolicy@PrivacyPolicy_Header_Title_Text" xml:space="preserve">
+    <value>Política de Privacidade</value>
+  </data>
+  <data name="Rumours@Menu_Rumours_ItemText" xml:space="preserve">
+    <value>Reportar notícias falsas ou rumores</value>
+  </data>
+  <data name="Rumours@Rumours_CreateAccount_BtnText" xml:space="preserve">
+    <value>Criar conta</value>
+  </data>
+  <data name="Rumours@Rumours_Header_TitleText" xml:space="preserve">
+    <value>Notícias falsas e rumores</value>
+  </data>
+  <data name="Rumours@Rumours_InfoItem1_Text" xml:space="preserve">
+    <value>Da forma como está, você escolheu a opção apenas de informações.</value>
+  </data>
+  <data name="Rumours@Rumours_InfoItem2_Text" xml:space="preserve">
+    <value>Para ter acesso a notícias falsas e rumores e ao seu perfil HealthBuddy Plus completo, faça o login ou cadastre-se gratuitamente se você não tiver uma conta.</value>
+  </data>
+  <data name="Rumours@Rumours_Input_Placeholder_Text" xml:space="preserve">
+    <value>Reportar notícias falsas ou rumores</value>
+  </data>
+  <data name="Rumours@Rumours_Restricted_TitleText" xml:space="preserve">
+    <value>Por favor, crie uma conta para reportar notícias falsas ou rumores</value>
+  </data>
+  <data name="Rumours@Rumours_TabTitle_Text" xml:space="preserve">
+    <value>Rumores</value>
+  </data>
+  <data name="Settings@Menu_Settings_ItemText" xml:space="preserve">
+    <value>Configurações</value>
+  </data>
+  <data name="Settings@Settings_NotificationsTitle" xml:space="preserve">
+    <value>Notificações</value>
+  </data>
+  <data name="Settings@Settings_NotificationsText" xml:space="preserve">
+    <value>As notificações serão enviadas apenas por meio do aplicativo. Você pode ligar/desligar as notificações nas configurações.</value>
+  </data>
+  <data name="Settings@Settings_LanguageDescriptionTitle" xml:space="preserve">
+    <value>Mudar idioma</value>
+  </data>
+  <data name="Settings@Settings_LanguageTitle" xml:space="preserve">
+    <value>Idioma</value>
+  </data>
+  <data name="SettingsChangeLanguage@Confirm_Btn_Text" xml:space="preserve">
+    <value>Confirmar</value>
+  </data>
+  <data name="SettingsChangeLanguage@Menu_Settings_ItemText" xml:space="preserve">
+    <value>Configurações</value>
+  </data>
+  <data name="UserDeleteAccount@Menu_DeleteAccount_ItemText" xml:space="preserve">
+    <value>Excluir conta e dados</value>
+  </data>
+  <data name="UserDeleteAccount@UserDeleteAccount_Action_Description_Text" xml:space="preserve">
+    <value>Quando você exclui sua conta, todos os seus dados são excluídos. Você não pode fazer login ou recuperar a conta excluída. No entanto, você pode criar uma nova conta com as mesmas credenciais, se desejar.</value>
+  </data>
+  <data name="UserDeleteAccount@UserDeleteAccount_Delete_Btn_Text" xml:space="preserve">
+    <value>Excluir conta</value>
+  </data>
+  <data name="UserDeleteAccount@UserDeleteAccount_ThankYou_Text" xml:space="preserve">
+    <value>Sua conta com todos os dados foi deletada</value>
+  </data>
+  <data name="UserDeleteAccount@UserDeleteAccount_ThankYou_Title_Text" xml:space="preserve">
+    <value>Obrigado!</value>
+  </data>
+  <data name="UserDeleteAccount@UserDeleteAccount_Title_Text" xml:space="preserve">
+    <value>Excluir conta e dados</value>
+  </data>
+  <data name="UserLogIn@UserLogIn_Btn_Text" xml:space="preserve">
+    <value>Entrar</value>
+  </data>
+  <data name="UserLogIn@UserLogIn_NameEntry_Placeholder_Text" xml:space="preserve">
+    <value>Usuário</value>
+  </data>
+  <data name="UserLogIn@UserLogIn_PageName_Text" xml:space="preserve">
+    <value>Entrar</value>
+  </data>
+  <data name="UserLogIn@UserLogIn_PasswordEntry_Placeholder_Text" xml:space="preserve">
+    <value>Senha</value>
+  </data>
+  <data name="UserLogIn@UserLogIn_PasswordEntry_Requirements_Text" xml:space="preserve">
+    <value>Nome de usuário ou senha não reconhecidos.</value>
+  </data>
+  <data name="UserLogIn@UserLogIn_Password_EmptyErrorMessage_Text" xml:space="preserve">
+    <value>A senha não deve estar vazia</value>
+  </data>
+  <data name="UserLogIn@UserLogIn_Username_EmptyErrorMessage_Text" xml:space="preserve">
+    <value>O nome do usuário não deve estar vazio</value>
+  </data>
+  <data name="UserLogOut@Menu_LogOut_Dialog_AcceptBtn" xml:space="preserve">
+    <value>Sim</value>
+  </data>
+  <data name="UserLogOut@Menu_LogOut_Dialog_CancelBtn" xml:space="preserve">
+    <value>Não</value>
+  </data>
+  <data name="UserLogOut@Menu_LogOut_Dialog_QuestionText" xml:space="preserve">
+    <value>Você tem certeza que quer sair da conta?</value>
+  </data>
+  <data name="UserLogOut@Menu_Exit_Dialog_QuestionText" xml:space="preserve">
+    <value>Você tem certeza que quer sair?</value>
+  </data>
+  <data name="UserLogOut@Menu_LogOut_Dialog_TitleText" xml:space="preserve">
+    <value>Sair da conta</value>
+  </data>
+  <data name="UserLogOut@Menu_Exit_Dialog_TitleText" xml:space="preserve">
+    <value>Sair</value>
+  </data>
+  <data name="UserLogOut@Menu_LogOut_ItemText" xml:space="preserve">
+    <value>Sair do conta</value>
+  </data>
+  <data name="UserLogOut@Menu_Exit_ItemText" xml:space="preserve">
+    <value>Sair do aplicativo</value>
+  </data>
+  <data name="Welcome@Welcome_Text" xml:space="preserve">
+    <value>Bem-vindo ao HealthBuddy</value>
+  </data>
+  <data name="Welcome@Welcome_CreateAccount_Text" xml:space="preserve">
+    <value>Criar minha conta</value>
+  </data>
+  <data name="Welcome@Welcome_HaveAccount_Text" xml:space="preserve">
+    <value>Tem uma conta? Entrar</value>
+  </data>
+  <data name="Welcome@Welcome_Skip_Text" xml:space="preserve">
+    <value>Pular para informação</value>
+  </data>
+  <data name="Welcome@Welcome_Assistant_Text" xml:space="preserve">
+    <value>Seu assistente virtual para ajuda, informações e conselhos sobre a COVID-19</value>
+  </data>
+  <data name="Covi@Dialog_Accept" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Covi@ErrorDialog_Message_Generic" xml:space="preserve">
+    <value>Algo deu errado. Por favor, tente novamente mais tarde.</value>
+  </data>
+  <data name="Covi@ErrorDialog_Title" xml:space="preserve">
+    <value>Erro</value>
+  </data>
+  <data name="Covi@Exception_NoInternetConnection" xml:space="preserve">
+    <value>Parece que você está tendo problemas de conexão</value>
+  </data>
+  <data name="Covi@Exception_TimedOut_Text" xml:space="preserve">
+    <value>A conexão expirou, tente novamente mais tarde.</value>
+  </data>
+  <data name="Covi@Exception_UnderMaintenance" xml:space="preserve">
+    <value>Em manutenção</value>
+  </data>
+  <data name="Covi@Exception_Unknown" xml:space="preserve">
+    <value>Ops!</value>
+  </data>
+  <data name="Covi@Exception_UpdateRequired" xml:space="preserve">
+    <value>Atualização necessária</value>
+  </data>
+  <data name="Covi@Global_EPAM_Text" xml:space="preserve">
+    <value>Sistemas EPAM</value>
+  </data>
+  <data name="Covi@Global_PoweredBy_Text" xml:space="preserve">
+    <value>Distribuído por</value>
+  </data>
+  <data name="Covi@Component_Info_SomethingWrong_Text" xml:space="preserve">
+    <value>Algo deu errado...</value>
+  </data>
+  <data name="Covi@Component_Info_Retry_Text" xml:space="preserve">
+    <value>Tentar novamente</value>
+  </data>
+  <data name="ExpiredToken@SessionDescriptionTitle_Text" xml:space="preserve">
+    <value>A sessão expirou. Você será redirecionado para a página de login</value>
+  </data>
+  <data name="ExpiredToken@SessionExpiredBtn_Text" xml:space="preserve">
+    <value>Vá para o login</value>
+  </data>
+  <data name="ForceUpdate@UpdateDescriptionTitle_Text" xml:space="preserve">
+    <value>Atualize seu aplicativo agora para ter uma experiência mais tranquila e as funcionalidades mais recentes.</value>
+  </data>
+  <data name="ForceUpdate@UpdateRequiredBtn_Text" xml:space="preserve">
+    <value>Atualize agora</value>
+  </data>
+  <data name="ForceUpdate@UpdateRequiredTitle_Text" xml:space="preserve">
+    <value>Uma nova versão do aplicativo Health Buddy está disponível.</value>
+  </data>
+  <data name="Maintenance@MaintenanceDescriptionTitle_Text" xml:space="preserve">
+    <value>O Health Buddy está atualmente em manutenção. Esperamos estar de volta em algumas horas. Obrigado pela sua paciência.</value>
+  </data>
+  <data name="Polls@Polls_LogIn_BtnText" xml:space="preserve">
+    <value>Tem uma conta? Entrar</value>
+  </data>
+  <data name="Rumours@Rumours_LogIn_BtnText" xml:space="preserve">
+    <value>Tem uma conta? Entrar</value>
+  </data>
+</root>

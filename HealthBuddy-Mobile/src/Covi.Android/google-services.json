@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "959947160646",
+    "firebase_url": "https://healthbuddy-40b88.firebaseio.com",
+    "project_id": "healthbuddy-40b88",
+    "storage_bucket": "healthbuddy-40b88.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:959947160646:android:f81df9569c42c068785e47",
+        "android_client_info": {
+          "package_name": "org.unicef.ecaro.healthbuddy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "959947160646-2jqaorl6fe2mmt9nu555rm394ng0smsu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUReQCgZwzmAqm88s5LJFbK2Wc9ib9QGI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "959947160646-2jqaorl6fe2mmt9nu555rm394ng0smsu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "959947160646-km755i3qh96kqr5r6jmlbnf0u8kjohbg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.unicef.ecaro.healthbuddy",
+                "app_store_id": "1520233204"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

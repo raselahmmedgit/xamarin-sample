@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:forms="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:local="clr-namespace:Covi.Features.Settings;assembly=Covi"
+    xmlns:resources="clr-namespace:Covi.Features.Settings.Resources;assembly=Covi"
+    xmlns:components="clr-namespace:Covi.Features.ComponentsManagement"
+    x:Class="Covi.Features.Settings.SettingsPage"
+    Style="{StaticResource SingleContentPageStyle}">
+    <ContentPage.Content>
+        <Grid x:DataType="local:SettingsViewModel">
+            <forms:SvgCachedImage
+                Grid.Row="0"
+                Aspect="Fill"
+                WidthRequest="{StaticResource SmallBackgroundRectangleWidth}"
+                HeightRequest="{StaticResource SmallBackgroundRectangleHeight}"
+                HorizontalOptions="End"
+                VerticalOptions="Start"/>
+            <Grid RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="1"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <ContentView
+                    Style="{StaticResource SingleContentPageHeaderStyle}">
+                    <Label Text="{x:Static resources:Localization.Menu_Settings_ItemText}"
+                           Style="{StaticResource TextPageHeadlineH3}"/>
+                </ContentView>
+                <BoxView Grid.Row="1"
+                         HeightRequest="1"
+                         Margin="16,0"
+                         Color="{StaticResource HeaderSeparatorColor3}"/>
+                <Grid Grid.Row="2"
+                      RowSpacing="24"
+                      Padding="24">
+                    <components:ComponentsHost RegionManager="{Binding SettingsRegion}"
+                                               Style="{StaticResource ContentPageCollectionStyle}"/>
+                </Grid>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

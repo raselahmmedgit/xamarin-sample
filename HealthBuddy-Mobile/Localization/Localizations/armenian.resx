@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutUs@AboutUs_Header_Title_Text" xml:space="preserve">
+    <value>Մեր մասին</value>
+  </data>
+  <data name="AboutUs@Menu_AboutUs_ItemText" xml:space="preserve">
+    <value>Մեր մասին</value>
+  </data>
+  <data name="Account@CreateProfileValidationException_DuplicateUserName_ErrorText" xml:space="preserve">
+    <value>Օգտանունն արդեն զբաղված է։</value>
+  </data>
+  <data name="Account@CreateProfileValidationException_PasswordRequiresDigit_ErrorText" xml:space="preserve">
+    <value>Գաղտնաբառը պետք է ունենա առնվազն մեկ թվանշան (0 - 9)։</value>
+  </data>
+  <data name="Account@CreateProfileValidationException_PasswordRequiresNonAlphanumeric_ErrorText" xml:space="preserve">
+    <value>Գաղտնաբառը պետք է ունենա առնվազն մեկ ոչ տառաթվային նիշ։</value>
+  </data>
+  <data name="Account@CreateProfileValidationException_PasswordRequiresUpper_ErrorText" xml:space="preserve">
+    <value>Գաղտնաբառը պետք է ունենա առնվազն մեկ մեծատառ (A - Z)։</value>
+  </data>
+  <data name="Account@CreateProfileValidationException_PasswordTooShort_ErrorText" xml:space="preserve">
+    <value>Գաղտնաբառը պետք է լինի առնվազն 8 նիշանի։</value>
+  </data>
+  <data name="Account@CreateProfileValidationException_Password_ErrorText" xml:space="preserve">
+    <value> «Գաղտնաբառ» դաշտը պարտադիր է։</value>
+  </data>
+  <data name="Account@CreateProfileValidationException_Username_ErrorText" xml:space="preserve">
+    <value>«Օգտանուն» դաշտը պարտադիր է։</value>
+  </data>
+  <data name="Account@LoginException_InvalidGrant_ErrorText" xml:space="preserve">
+    <value>Օգտանունը կամ գաղտնաբառը չի ճանաչվել։</value>
+  </data>
+  <data name="AccountFeaturesInformation@AccountInfo_Btn_Text" xml:space="preserve">
+    <value>Հաջորդ քայլը</value>
+  </data>
+  <data name="AccountFeaturesInformation@AccountInfo_Title_Text" xml:space="preserve">
+    <value>Ձեր HealthBuddy պրոֆիլի մասին</value>
+  </data>
+  <data name="AccountFeaturesInformation@RegisteredProfile_Instruction_Text1" xml:space="preserve">
+    <value>Ձեր տրամադրած տեղեկությունները կմնան գաղտնի և պաշտպանված</value>
+  </data>
+  <data name="AccountFeaturesInformation@RegisteredProfile_Instruction_Text2" xml:space="preserve">
+    <value>Միայն դուք կկարողանաք մուտք գործել ձեր պրոֆիլի տվյալները</value>
+  </data>
+  <data name="AccountFeaturesInformation@RegisteredProfile_Instruction_Text3" xml:space="preserve">
+    <value>Գրի առեք ձեր օգտանունը և գաղտնաբառը։ Եթե մոռանաք, չեք կարողանա առբերել հավելվածից, և մենք նույնպես ի վիճակի չենք լինի օգնել ձեզ</value>
+  </data>
+  <data name="AccountFeaturesInformation@RegisteredProfile_Instruction_Text4" xml:space="preserve">
+    <value>Մենք Bluetooth ենք օգտագործում ստուգելու համար, թե արդյոք շփում ունեցել եք որևէ վարակակրի հետ, որպեսզի կարողանանք այդ մասին տեղեկացնել ձեզ</value>
+  </data>
+  <data name="AccountFeaturesInformation@AnonymProfile_Instruction_Text1" xml:space="preserve">
+    <value>Այս տարբերակում կստանաք միայն առողջապահական տեղեկատվություն</value>
+  </data>
+  <data name="AccountFeaturesInformation@AnonymProfile_Instruction_Text2" xml:space="preserve">
+    <value>Ցանկացած պահի կարող եք անցնել այս հավելվածի ընդլայնված հնարավորություններով տարբերակին՝ ստեղծելով հաշիվ</value>
+  </data>
+  <data name="ChangeLanguage@ChangeLanguage_AlertDescription_Text" xml:space="preserve">
+    <value>Փոփոխությունները կիրառելու համար վերագործարկեք հավելվածը։</value>
+  </data>
+  <data name="ChangeLanguage@ChangeLanguage_Label_Text" xml:space="preserve">
+    <value>Ընտրեք ձեր լեզուն</value>
+  </data>
+  <data name="ChangeLanguage@Confirm_Btn_Text" xml:space="preserve">
+    <value>Հաստատել</value>
+  </data>
+  <data name="Chat@Chat_Input_Placeholder_Text" xml:space="preserve">
+    <value>Մուտքագրեք տեքստն այստեղ...</value>
+  </data>
+  <data name="Chat@Chat_Title_Text" xml:space="preserve">
+    <value>ՉԱՏԲՈՏ</value>
+  </data>
+  <data name="CreateProfile@CreateProfileValidationException_Username_HasSpecialSymbolErrorText" xml:space="preserve">
+    <value>«Օգտանուն» դաշտում թույլատրվում են միայն լատինական այբուբենի տառեր և թվեր</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_ConfirmPassword_Label_Text" xml:space="preserve">
+    <value>Հաստատել գաղտնաբառը</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Confirm_Password_Text" xml:space="preserve">
+    <value>Հաստատել գաղտնաբառը</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Expander_Header_Text" xml:space="preserve">
+    <value>Լրացուցիչ տեղեկություններ</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Expander_Main_Text" xml:space="preserve">
+    <value>Եթե դուք առողջապահական բնագավառի պաշտոնական աշխատող եք, խնդրում ենք միացնել այս տարբերակը։ Սա ձեզ հնարավորություն կտա ստեղծելու ձեր կոդերը և դրանք ուղարկելու ձեր հիվանդներին, որպեսզի նրանք կարողանան փոխել իրենց կարգավիճակը։</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Medical_EmptyErrorMessage_Text" xml:space="preserve">
+    <value>«Բժշկական ID» դաշտը չպետք է դատարկ լինի</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Medical_Entry_Placeholder_Text" xml:space="preserve">
+    <value>Առողջական ID</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Medical_Title_Text" xml:space="preserve">
+    <value>Առողջական ID</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Next_Button_Text" xml:space="preserve">
+    <value>Հաջորդ քայլը</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_OfficialHealthCare_Label_Text" xml:space="preserve">
+    <value>Ես առողջապահական բնագավառի պաշտոնական աշխատող եմ</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_PageName_Text" xml:space="preserve">
+    <value>Ստեղծել պրոֆիլ</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_PasswordRequirements_Text" xml:space="preserve">
+    <value>Ձեր գաղտնաբառը պետք է պարունակի առնվազն՝</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Password_Label_Text" xml:space="preserve">
+    <value>Գաղտնաբառ</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Password_Text" xml:space="preserve">
+    <value>Գաղտնաբառ</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Requirement_1_Text" xml:space="preserve">
+    <value>8 նիշ</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Requirement_2_Text" xml:space="preserve">
+    <value>1 մեծատառ</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Requirement_3_Text" xml:space="preserve">
+    <value>1 փոքրատառ</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Requirement_4_Text" xml:space="preserve">
+    <value>1 հատուկ սիմվոլ և թվանշան</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Requirement_Filled_Username_Text" xml:space="preserve">
+    <value>«Օգտանուն» դաշտը չպետք է դատարկ լինի։</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Requirement_Same_Passwords_Text" xml:space="preserve">
+    <value>Գաղտնաբառը և հաստատող գաղտնաբառը պետք է լինեն նույնը։</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Title_Text" xml:space="preserve">
+    <value>Ստեղծեք ձեր անանուն պրոֆիլը</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Username_Entry_Placeholder_Text" xml:space="preserve">
+    <value>Օգտանուն</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Username_Label_Text" xml:space="preserve">
+    <value>Ընտրեք օգտանուն</value>
+  </data>
+  <data name="CreateProfile@SignUp_AlreadyHaveAnAccount_Text" xml:space="preserve">
+    <value>Արդեն ունե՞ք հաշիվ։</value>
+  </data>
+  <data name="CreateProfile@SignUp_LoginBtn_Text" xml:space="preserve">
+    <value>Մուտք գործել</value>
+  </data>
+  <data name="Filters@Filters_PageName_Text" xml:space="preserve">
+    <value>Զտիչներ</value>
+  </data>
+  <data name="Filters@Filter_AllSelected_Text" xml:space="preserve">
+    <value>Բոլորը</value>
+  </data>
+  <data name="Filters@Filter_NoneSelected_Text" xml:space="preserve">
+    <value>Ոչ մեկը</value>
+  </data>
+  <data name="Filters@Filters_Save_Text" xml:space="preserve">
+    <value>Պահպանել</value>
+  </data>
+  <data name="Filters@Filters_Apply_Text" xml:space="preserve">
+    <value>Կիրառել</value>
+  </data>
+  <data name="Filters@Filters_Reset_Text" xml:space="preserve">
+    <value>Հետադարձել</value>
+  </data>
+  <data name="Filters@Filters_ResetAll_Text" xml:space="preserve">
+    <value>Հետադարձել բոլորը</value>
+  </data>
+  <data name="Menu@Menu_Title_Text" xml:space="preserve">
+    <value>ԱՎԵԼԻՆ</value>
+  </data>
+  <data name="Menu@Menu_HeaderTitle_Text" xml:space="preserve">
+    <value>Ավելին</value>
+  </data>
+  <data name="NewsArticle@NewsArticle_Title_Text" xml:space="preserve">
+    <value>Հոդված</value>
+  </data>
+  <data name="Newsfeed@Newsfeed_Title_Text" xml:space="preserve">
+    <value>ՍԿԻԶԲ</value>
+  </data>
+  <data name="Newsfeed@Newsfeed_Filter_Result_Text" xml:space="preserve">
+    <value>Արդյունքներ ({0})</value>
+  </data>
+  <data name="Newsfeed@Newsfeed_Filter_Text" xml:space="preserve">
+    <value>Զտիչներ</value>
+  </data>
+  <data name="Newsfeed@Newsfeed_NoItems_Text" xml:space="preserve">
+    <value>Այս պահին հոդված չկա։ Խնդրում ենք փորձել ավելի ուշ։ Հուսով ենք՝ կկարողանանք տրամադրել ձեզ անհրաժեշտ տեղեկատվությունը։</value>
+  </data>
+  <data name="OnBoarding@BluetoothNotification_Denied_ErrorText" xml:space="preserve">
+    <value>Bluetooth օգտագործելու թույլտվությունը մերժվել է։ Շարունակելու համար Bluetooth-ի օգտագործման թույլտվություն տվեք հավելվածի կարգավորումներում։</value>
+  </data>
+  <data name="OnBoarding@BluetoothNotification_Disabled_ErrorText" xml:space="preserve">
+    <value>Bluetooth-ը ներկայումս անհասանելի է։ Կա՛մ Bluetooth-ը չի աջակցվում ձեր սարքի կողմից, կա՛մ այն անջատված է։ Խնդրում ենք ստուգել սարքի Bluetooth կարգավորումները։</value>
+  </data>
+  <data name="OnBoarding@BluetoothNotification_Error_Title" xml:space="preserve">
+    <value>Bluetooth-ի սխալ։</value>
+  </data>
+  <data name="OnBoarding@BluetoothNotification_NotSupported_WarningText" xml:space="preserve">
+    <value>Ձեր սարքն ունի սարքակազմի որոշ ապարատային սահմանափակումներ, և հնարավոր է, որ անտեսանելի լինի այլ սարքերի համար Bluetooth-ի միջոցով։</value>
+  </data>
+  <data name="OnBoarding@BluetoothNotification_Warning_Title" xml:space="preserve">
+    <value>Bluetooth-ի վերաբերյալ նախազգուշացում։</value>
+  </data>
+  <data name="OnBoarding@OnBoardind_MadeForYou_SubTitle" xml:space="preserve">
+    <value>Հարմարեցված է ձեզ</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Connectivity_ErrorText" xml:space="preserve">
+    <value>Որպեսզի այս հավելվածն աշխատի և օգնի կյանքեր փրկել, խնդրում ենք միանալ Bluetooth-ով</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Connectivity_Instruction1" xml:space="preserve">
+    <value>100% անանուն
+Մենք չգիտենք ձեր անունը կամ գտնվելու վայրը</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Connectivity_Instruction2" xml:space="preserve">
+    <value>Այս հավելվածը Bluetooth է օգտագործում հետևելու համար՝ արդյոք շփում ունեցել եք որևէ վարակակրի հետ</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Connectivity_Instruction4_AndroidOnly" xml:space="preserve">
+    <value>Երբ թույլտվություն տաք, մենք կօգտագործենք միայն Bluetooth-ը, ոչ թե գտնվելու վայրը</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Connectivity_SubTitle" xml:space="preserve">
+    <value>Միացեք Bluetooth-ով</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Connectivity_Title" xml:space="preserve">
+    <value>Միացնելիություն</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_MadeForYou_Instruction1" xml:space="preserve">
+    <value>Ձեր պրոֆիլի կատեգորիային հարմարեցված առաջարկություններ</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_MadeForYou_Instruction2" xml:space="preserve">
+    <value>Բնագավառին հատուկ ռիսկեր, առաջարկություններ և վարքականոններ</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_MadeForYou_Instruction3" xml:space="preserve">
+    <value>ՈՐԵՎԷ գաղտնի տեղեկություն չի փոխանցվում</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_MadeForYou_Title" xml:space="preserve">
+    <value>Ստեղծված է ձեզ համար</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Next_Button_Text" xml:space="preserve">
+    <value>Հաջորդ քայլը</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Notifications_ErrorText" xml:space="preserve">
+    <value>Որպեսզի այս հավելվածն աշխատի և օգնի կյանքեր փրկել, խնդրում ենք թույլ տալ ծանուցումներ</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Notifications_Instruction1" xml:space="preserve">
+    <value>Ձեր հաշիվն անձնական և գաղտնի է։ Մենք ձեր մասին որևէ անձնական տեղեկություն չունենք</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Notifications_Instruction2" xml:space="preserve">
+    <value>Մենք չունենք ձեր էլփոստի հասցեն կամ բջջային համարը, ուստի երբեք էլեկտրոնային նամակ կամ տեքստային հաղորդագրություն չենք ուղարկի ձեզ</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Notifications_Instruction3" xml:space="preserve">
+    <value>Ծանուցումները կուղարկվեն միայն հավելվածի միջոցով։ Կարող եք ծանուցումներն անջատել Կարգավորումներում</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Notifications_Title" xml:space="preserve">
+    <value>Կարևոր տեղեկություններ</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Privacy_Instruction1" xml:space="preserve">
+    <value>Բոլոր տեղեկությունները հաղորդվում են գաղտնագրված եղանակով</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Privacy_Instruction2" xml:space="preserve">
+    <value>ՈՐԵՎԷ տեղեկություն չի նույնականացնում ձեր անձը</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Privacy_Instruction3" xml:space="preserve">
+    <value>ՈՐԵՎԷ անձնական տվյալ չի փոխանցվում ձեր հեռախոսից</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Privacy_SubTitle" xml:space="preserve">
+    <value>Ամբողջովին անանուն</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Privacy_Title" xml:space="preserve">
+    <value>Գաղտնիություն</value>
+  </data>
+  <data name="Polls@Polls_Title_Text" xml:space="preserve">
+    <value>ՀԱՐՑՈՒՄՆԵՐ</value>
+  </data>
+  <data name="Polls@Polls_HeaderTitle_Text" xml:space="preserve">
+    <value>Հարցումներ</value>
+  </data>
+  <data name="Polls@Polls_Restricted_TitleText" xml:space="preserve">
+    <value>Միայն գրանցված օգտատերերը կարող են մասնակցել հարցումներին</value>
+  </data>
+  <data name="Polls@Polls_InfoItem1_Text" xml:space="preserve">
+    <value>Ներկա դրությամբ դուք ընտրել եք միայն տեղեկատվության տարբերակը</value>
+  </data>
+  <data name="Polls@Polls_InfoItem2_Text" xml:space="preserve">
+    <value>Եթե հաշիվ չունեք, հարցումներից և ձեր ամբողջական HealthBuddy ընդլայնված պրոֆիլից օգտվելու հնարավորություն ստանալու համար մուտք գործեք համակարգ կամ գրանցվեք անվճար</value>
+  </data>
+  <data name="Polls@Polls_CreateAccount_BtnText" xml:space="preserve">
+    <value>Ստեղծել պրոֆիլ</value>
+  </data>
+  <data name="Polls@Polls_Input_Placeholder_Text" xml:space="preserve">
+    <value>Մուտքագրեք ձեր պատասխանն այստեղ</value>
+  </data>
+  <data name="PrivacyPolicy@Menu_PrivacyPolicy_ItemText" xml:space="preserve">
+    <value>Գաղտնիության քաղաքականություն</value>
+  </data>
+  <data name="PrivacyPolicy@PrivacyPolicy_Header_Title_Text" xml:space="preserve">
+    <value>Գաղտնիության քաղաքականություն</value>
+  </data>
+  <data name="Rumours@Menu_Rumours_ItemText" xml:space="preserve">
+    <value>Հաղորդել կեղծ լուրերի կամ ասեկոսեների մասին</value>
+  </data>
+  <data name="Rumours@Rumours_CreateAccount_BtnText" xml:space="preserve">
+    <value>Ստեղծել պրոֆիլ</value>
+  </data>
+  <data name="Rumours@Rumours_Header_TitleText" xml:space="preserve">
+    <value>Կեղծ լուրեր կամ ասեկոսեներ</value>
+  </data>
+  <data name="Rumours@Rumours_InfoItem1_Text" xml:space="preserve">
+    <value>Ներկա դրությամբ դուք ընտրել եք միայն տեղեկատվության տարբերակը</value>
+  </data>
+  <data name="Rumours@Rumours_InfoItem2_Text" xml:space="preserve">
+    <value>Եթե հաշիվ չունեք, կեղծ լուրերի և ասեկոսեների տարբերակից և ձեր ամբողջական HealthBuddy Plus պրոֆիլից օգտվելու հնարավորություն ստանալու համար մուտք գործեք համակարգ կամ գրանցվեք անվճար</value>
+  </data>
+  <data name="Rumours@Rumours_Input_Placeholder_Text" xml:space="preserve">
+    <value>Կեղծ լուրերի կամ ասեկոսեների մասին հաղորդեք այստեղ</value>
+  </data>
+  <data name="Rumours@Rumours_Restricted_TitleText" xml:space="preserve">
+    <value>Միայն գրանցված օգտատերերը կարող են հաղորդել կեղծ լուրերի կամ ասեկոսեների մասին</value>
+  </data>
+  <data name="Rumours@Rumours_TabTitle_Text" xml:space="preserve">
+    <value>ԱՍԵԿՈՍԵՆԵՐ</value>
+  </data>
+  <data name="Settings@Menu_Settings_ItemText" xml:space="preserve">
+    <value>Կարգավորումներ</value>
+  </data>
+  <data name="Settings@Settings_NotificationsTitle" xml:space="preserve">
+    <value>Ծանուցումներ</value>
+  </data>
+  <data name="Settings@Settings_NotificationsText" xml:space="preserve">
+    <value>Ծանուցումները կուղարկվեն միայն հավելվածի միջոցով։ Կարող եք ծանուցումները միացնել կամ անջատել Կարգավորումներում։</value>
+  </data>
+  <data name="Settings@Settings_LanguageDescriptionTitle" xml:space="preserve">
+    <value>Փոխել լեզուն</value>
+  </data>
+  <data name="Settings@Settings_LanguageTitle" xml:space="preserve">
+    <value>Լեզու</value>
+  </data>
+  <data name="SettingsChangeLanguage@Confirm_Btn_Text" xml:space="preserve">
+    <value>Հաստատել</value>
+  </data>
+  <data name="SettingsChangeLanguage@Menu_Settings_ItemText" xml:space="preserve">
+    <value>Կարգավորումներ</value>
+  </data>
+  <data name="UserDeleteAccount@Menu_DeleteAccount_ItemText" xml:space="preserve">
+    <value>Ջնջել հաշիվը և տվյալները</value>
+  </data>
+  <data name="UserDeleteAccount@UserDeleteAccount_Action_Description_Text" xml:space="preserve">
+    <value>Ձեր հաշիվը ջնջելու դեպքում բոլոր տվյալները կջնջվեն։ Դուք չեք կարողանա մուտք գործել կամ առբերել ջնջված հաշիվը։ Բայց, եթե ցանկանաք, կարող եք նոր հաշիվ ստեղծել մուտքի նույն տվյալներով։</value>
+  </data>
+  <data name="UserDeleteAccount@UserDeleteAccount_Delete_Btn_Text" xml:space="preserve">
+    <value>Ջնջել հաշիվը</value>
+  </data>
+  <data name="UserDeleteAccount@UserDeleteAccount_ThankYou_Text" xml:space="preserve">
+    <value>Ձեր հաշիվը բոլոր տվյալներով ջնջվել է</value>
+  </data>
+  <data name="UserDeleteAccount@UserDeleteAccount_ThankYou_Title_Text" xml:space="preserve">
+    <value>Շնորհակալություն։</value>
+  </data>
+  <data name="UserDeleteAccount@UserDeleteAccount_Title_Text" xml:space="preserve">
+    <value>Ջնջել հաշիվը և տվյալները</value>
+  </data>
+  <data name="UserLogIn@UserLogIn_Btn_Text" xml:space="preserve">
+    <value>Մտնել</value>
+  </data>
+  <data name="UserLogIn@UserLogIn_NameEntry_Placeholder_Text" xml:space="preserve">
+    <value>Օգտանուն</value>
+  </data>
+  <data name="UserLogIn@UserLogIn_PageName_Text" xml:space="preserve">
+    <value>Մտնել</value>
+  </data>
+  <data name="UserLogIn@UserLogIn_PasswordEntry_Placeholder_Text" xml:space="preserve">
+    <value>Գաղտնաբառ</value>
+  </data>
+  <data name="UserLogIn@UserLogIn_PasswordEntry_Requirements_Text" xml:space="preserve">
+    <value>Օգտանունը կամ գաղտնաբառը չի ճանաչվել</value>
+  </data>
+  <data name="UserLogIn@UserLogIn_Password_EmptyErrorMessage_Text" xml:space="preserve">
+    <value>«Գաղտնաբառ» դաշտը չպետք է դատարկ լինի</value>
+  </data>
+  <data name="UserLogIn@UserLogIn_Username_EmptyErrorMessage_Text" xml:space="preserve">
+    <value>«Օգտանուն» դաշտը չպետք է դատարկ լինի</value>
+  </data>
+  <data name="UserLogOut@Menu_LogOut_Dialog_AcceptBtn" xml:space="preserve">
+    <value>Այո</value>
+  </data>
+  <data name="UserLogOut@Menu_LogOut_Dialog_CancelBtn" xml:space="preserve">
+    <value>Ոչ</value>
+  </data>
+  <data name="UserLogOut@Menu_LogOut_Dialog_QuestionText" xml:space="preserve">
+    <value>Իրո՞ք ուզում եք դուրս գալ։</value>
+  </data>
+  <data name="UserLogOut@Menu_Exit_Dialog_QuestionText" xml:space="preserve">
+    <value>Իրո՞ք ուզում եք ելնել։</value>
+  </data>
+  <data name="UserLogOut@Menu_LogOut_Dialog_TitleText" xml:space="preserve">
+    <value>Դուրս գալ</value>
+  </data>
+  <data name="UserLogOut@Menu_Exit_Dialog_TitleText" xml:space="preserve">
+    <value>Ելք</value>
+  </data>
+  <data name="UserLogOut@Menu_LogOut_ItemText" xml:space="preserve">
+    <value>Դուրս գալ</value>
+  </data>
+  <data name="UserLogOut@Menu_Exit_ItemText" xml:space="preserve">
+    <value>Ելք հավելվածից</value>
+  </data>
+  <data name="Welcome@Welcome_Text" xml:space="preserve">
+    <value>Բարի գալուստ HealthBuddy</value>
+  </data>
+  <data name="Welcome@Welcome_CreateAccount_Text" xml:space="preserve">
+    <value>Ստեղծել իմ հաշիվը</value>
+  </data>
+  <data name="Welcome@Welcome_HaveAccount_Text" xml:space="preserve">
+    <value>Հաշիվ ունե՞ք։ Մտնել</value>
+  </data>
+  <data name="Welcome@Welcome_Skip_Text" xml:space="preserve">
+    <value>Բաց թողնել և անցնել հիմնական տարբերակին</value>
+  </data>
+  <data name="Welcome@Welcome_Assistant_Text" xml:space="preserve">
+    <value>Ձեր վիրտուալ ընկերը COVID-19-ի վերաբերյալ տեղեկատվությամբ և խորհրդատվությամբ</value>
+  </data>
+  <data name="Covi@Dialog_Accept" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Covi@ErrorDialog_Message_Generic" xml:space="preserve">
+    <value>Ինչ-որ սխալ տեղի ունեցավ։ Խնդրում ենք կրկին փորձել ավելի ուշ։</value>
+  </data>
+  <data name="Covi@ErrorDialog_Title" xml:space="preserve">
+    <value>Սխալ</value>
+  </data>
+  <data name="Covi@Exception_NoInternetConnection" xml:space="preserve">
+    <value>Կարծես՝ կապի խնդիրներ ունեք</value>
+  </data>
+  <data name="Covi@Exception_TimedOut_Text" xml:space="preserve">
+    <value>Միացման համար հատկացված ժամանակը սպառվել է, փորձեք ավելի ուշ։</value>
+  </data>
+  <data name="Covi@Exception_UnderMaintenance" xml:space="preserve">
+    <value>Տեխնիկական սպասարկման մեջ</value>
+  </data>
+  <data name="Covi@Exception_Unknown" xml:space="preserve">
+    <value>Կներեք։</value>
+  </data>
+  <data name="Covi@Exception_UpdateRequired" xml:space="preserve">
+    <value>Թարմացում է պահանջվում</value>
+  </data>
+  <data name="Covi@Global_EPAM_Text" xml:space="preserve">
+    <value>EPAM համակարգեր</value>
+  </data>
+  <data name="Covi@Global_PoweredBy_Text" xml:space="preserve">
+    <value>Ծրագրային ապահովումը տրամադրել է՝</value>
+  </data>
+  <data name="Covi@Component_Info_SomethingWrong_Text" xml:space="preserve">
+    <value>Ինչ-որ սխալ տեղի ունեցավ...</value>
+  </data>
+  <data name="Covi@Component_Info_Retry_Text" xml:space="preserve">
+    <value>Նորից փորձել</value>
+  </data>
+  <data name="ExpiredToken@SessionDescriptionTitle_Text" xml:space="preserve">
+    <value>Աշխատաշրջանի ժամկետն ավարտվել է։ Դուք կվերաուղղորդվեք դեպի Մուտքի էջ</value>
+  </data>
+  <data name="ExpiredToken@SessionExpiredBtn_Text" xml:space="preserve">
+    <value>Բացել Մուտքի էջը</value>
+  </data>
+  <data name="ForceUpdate@UpdateDescriptionTitle_Text" xml:space="preserve">
+    <value>Թարմացրեք հավելվածը հիմա՝ սահուն աշխատանք ապահովելու և ամենավերջին գործառական հնարավորություններն ունենալու համար։</value>
+  </data>
+  <data name="ForceUpdate@UpdateRequiredBtn_Text" xml:space="preserve">
+    <value>Թարմացնել հիմա</value>
+  </data>
+  <data name="ForceUpdate@UpdateRequiredTitle_Text" xml:space="preserve">
+    <value>Առկա է Health Buddy հավելվածի նոր տարբերակ։</value>
+  </data>
+  <data name="Maintenance@MaintenanceDescriptionTitle_Text" xml:space="preserve">
+    <value>Health Buddy-ն ներկա պահին չի գործում տեխնիկական սպասարկման պատճառով։ Ակնկալում ենք վերադառնալ մեկ-երկու ժամից։ Շնորհակալություն համբերության համար։</value>
+  </data>
+  <data name="Polls@Polls_LogIn_BtnText" xml:space="preserve">
+    <value>Հաշիվ ունե՞ք։ Մտնել</value>
+  </data>
+  <data name="Rumours@Rumours_LogIn_BtnText" xml:space="preserve">
+    <value>Հաշիվ ունե՞ք։ Մտնել</value>
+  </data>
+</root>

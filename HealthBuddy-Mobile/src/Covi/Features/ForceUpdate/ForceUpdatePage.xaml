@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:forms="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             xmlns:resources="clr-namespace:Covi.Features.ForceUpdate.Resources;assembly=Covi"
+             xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:local="clr-namespace:Covi.Features.ForceUpdate"
+             mc:Ignorable="d"
+             x:Class="Covi.Features.ForceUpdate.ForceUpdatePage"
+             Style="{StaticResource SingleContentPageStyle}">
+    <ContentPage.Content>
+        <Grid x:DataType="local:ForceUpdateViewModel">
+            <forms:SvgCachedImage Grid.Row="0"
+                                  Aspect="Fill"
+                                  Source="resource://Covi.Resources.Images.background_rectangle.svg"
+                                  Style="{StaticResource BackgroundImageStyle}"
+                                  HorizontalOptions="End"
+                                  VerticalOptions="Start"/>
+            <Grid Margin="0,100,0,0"
+                  Padding="16,16">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <pancakeView:PancakeView CornerRadius="30"
+                                         BackgroundColor="{StaticResource SurfaceColor}"
+                                         Grid.Row="0">
+                    <Grid Margin="24,48">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <forms:SvgCachedImage Grid.Row="0"
+                                                Source="resource://Covi.Features.ForceUpdate.Resources.Images.update_logo.svg"
+                                                HorizontalOptions="Center"
+                                                HeightRequest="135"/>
+                        <Label Grid.Row="1"
+                                Style="{StaticResource TextTitleBold18}"
+                                Text="{x:Static resources:Localization.UpdateRequiredTitle_Text}"
+                                HorizontalTextAlignment="Center"
+                                Margin="0,24,0,0"/>
+
+                        <Label Grid.Row="2"
+                               Style="{StaticResource TextTitleRegular18}"
+                               Text="{Binding Description}"
+                               HorizontalTextAlignment="Center"
+                               Margin="0,8,0,0"/>
+                    </Grid>
+                </pancakeView:PancakeView>
+                <Button Margin="8,8"
+                        Grid.Row="1"
+                        VerticalOptions="End"
+                        Command="{Binding ButtonCommand}"
+                        Text="{x:Static resources:Localization.UpdateRequiredBtn_Text}"
+                        Style="{StaticResource HeroButtonStyle}"/>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

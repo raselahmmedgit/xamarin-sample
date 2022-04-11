@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:materialFrame="clr-namespace:Sharpnado.MaterialFrame;assembly=Sharpnado.MaterialFrame"
+             xmlns:controls="clr-namespace:Covi.Features.Controls;assembly=Covi"
+             xmlns:resources="clr-namespace:Covi.Features.UserProfile.Resources;assembly=Covi"
+             mc:Ignorable="d"
+             xmlns:local="clr-namespace:Covi.Features.UserProfile.Components.ChangeStatus"
+             x:Class="Covi.Features.UserProfile.Components.ChangeStatus.ChangeStatusView">
+    <ContentView.Content>
+        <materialFrame:MaterialFrame
+            x:DataType="local:ChangeStatusViewModel"
+            Style="{StaticResource ContentContainerMaterialFrameStyle}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0"
+                       Style="{StaticResource TextTitle16}"
+                       Text="{x:Static resources:Localization.ChangeStatusLink_Explanation_Text}"/>
+                <Button Grid.Row="1"
+                        Text="{x:Static resources:Localization.ChangeStatusLink_Button_Text}"
+                        Style="{StaticResource HeroButtonStyle}"
+                        Command="{Binding ChangeStatusCommand}"
+                        Margin="0,16,0,0"/>
+            </Grid>
+        </materialFrame:MaterialFrame>
+    </ContentView.Content>
+</ContentView>

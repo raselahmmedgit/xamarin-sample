@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutUs@AboutUs_Header_Title_Text" xml:space="preserve">
+    <value>Σχετικά</value>
+  </data>
+  <data name="AboutUs@Menu_AboutUs_ItemText" xml:space="preserve">
+    <value>Σχετικά</value>
+  </data>
+  <data name="Account@CreateProfileValidationException_DuplicateUserName_ErrorText" xml:space="preserve">
+    <value>Το όνομα χρήστη υπάρχει ήδη.</value>
+  </data>
+  <data name="Account@CreateProfileValidationException_PasswordRequiresDigit_ErrorText" xml:space="preserve">
+    <value>Ο κωδικός πρέπει να έχει τουλάχιστον ένα ψηφίο (&apos;0&apos;-&apos;9&apos;).</value>
+  </data>
+  <data name="Account@CreateProfileValidationException_PasswordRequiresNonAlphanumeric_ErrorText" xml:space="preserve">
+    <value>Ο κωδικός πρέπει να έχει τουλάχιστον έναν μη αλφαριθμητικό χαρακτήρα.</value>
+  </data>
+  <data name="Account@CreateProfileValidationException_PasswordRequiresUpper_ErrorText" xml:space="preserve">
+    <value>Ο κωδικός πρέπει να έχει τουλάχιστον ένα κεφαλαίο γράμμα.</value>
+  </data>
+  <data name="Account@CreateProfileValidationException_PasswordTooShort_ErrorText" xml:space="preserve">
+    <value>Ο κωδικός πρέπει να έχει τουλάχιστον 8 χαρακτήρες.</value>
+  </data>
+  <data name="Account@CreateProfileValidationException_Password_ErrorText" xml:space="preserve">
+    <value>Ο κωδικός είναι υποχρεωτικός.</value>
+  </data>
+  <data name="Account@CreateProfileValidationException_Username_ErrorText" xml:space="preserve">
+    <value>Το όνομα χρήστη είναι υποχρεωτικό.</value>
+  </data>
+  <data name="Account@LoginException_InvalidGrant_ErrorText" xml:space="preserve">
+    <value>Το όνομα χρήστη ή ο κωδικός δεν αναγνωρίζονται.</value>
+  </data>
+  <data name="AccountFeaturesInformation@AccountInfo_Btn_Text" xml:space="preserve">
+    <value>Επόμενο</value>
+  </data>
+  <data name="AccountFeaturesInformation@AccountInfo_Title_Text" xml:space="preserve">
+    <value>Σχετικά με το προφίλ σου στο HealthBuddy</value>
+  </data>
+  <data name="AccountFeaturesInformation@RegisteredProfile_Instruction_Text1" xml:space="preserve">
+    <value>Τα στοιχεία σου παραμένουν απόρρητα και ασφαλή</value>
+  </data>
+  <data name="AccountFeaturesInformation@RegisteredProfile_Instruction_Text2" xml:space="preserve">
+    <value>Μόνο εσύ μπορείς να έχεις πρόσβαση στα στοιχεία του προφίλ σου</value>
+  </data>
+  <data name="AccountFeaturesInformation@RegisteredProfile_Instruction_Text3" xml:space="preserve">
+    <value>Σημείωσε το όνομα χρήστη και τον κωδικό σου. Αν τα ξεχάσεις, δεν μπορούν να ανακτηθούν μέσω της εφαρμογής </value>
+  </data>
+  <data name="AccountFeaturesInformation@RegisteredProfile_Instruction_Text4" xml:space="preserve">
+    <value>Χρησιμοποιούμε τεχνολογία Bluetooth για να ελέγξουμε αν έχεις έρθει σε επαφή με κάποιον που έχει μολυνθεί, ώστε να σε ειδοποιήσουμε</value>
+  </data>
+  <data name="AccountFeaturesInformation@AnonymProfile_Instruction_Text1" xml:space="preserve">
+    <value>Η τρέχουσα έκδοση παρέχει μόνο ενημέρωση για θέματα υγείας</value>
+  </data>
+  <data name="AccountFeaturesInformation@AnonymProfile_Instruction_Text2" xml:space="preserve">
+    <value>Μπορείς να κάνεις αναβάθμιση στην προηγμένη έκδοση, ανά πάσα στιγμή, με τη δημιουργία λογαριασμού</value>
+  </data>
+  <data name="ChangeLanguage@ChangeLanguage_AlertDescription_Text" xml:space="preserve">
+    <value>Για να ισχύσουν οι αλλαγές, χρειάζεται επανεκκίνηση της εφαρμογής.</value>
+  </data>
+  <data name="ChangeLanguage@ChangeLanguage_Label_Text" xml:space="preserve">
+    <value>Επιλογή γλώσσας</value>
+  </data>
+  <data name="ChangeLanguage@Confirm_Btn_Text" xml:space="preserve">
+    <value>Επιβεβαίωση</value>
+  </data>
+  <data name="Chat@Chat_Input_Placeholder_Text" xml:space="preserve">
+    <value>Εισαγωγή  κειμένου...</value>
+  </data>
+  <data name="Chat@Chat_Title_Text" xml:space="preserve">
+    <value>CHATBOT</value>
+  </data>
+  <data name="CreateProfile@CreateProfileValidationException_Username_HasSpecialSymbolErrorText" xml:space="preserve">
+    <value>Στο όνομα χρήστη επιτρέπονται μόνο λατινικοί χαρακτήρες</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_ConfirmPassword_Label_Text" xml:space="preserve">
+    <value>Επιβεβαίωση κωδικού</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Confirm_Password_Text" xml:space="preserve">
+    <value>Επιβεβαίωση κωδικού</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Expander_Header_Text" xml:space="preserve">
+    <value>Περισσότερα</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Expander_Main_Text" xml:space="preserve">
+    <value>Αν είσαι επαγγελματίας υγείας, ενεργοποίησε την επιλογή. Αυτό θα δημιουργήσει κωδικούς για αποστολή στους ασθενείς, ώστε να μπορούν να αλλάξουν την κατάστασή τους.</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Medical_EmptyErrorMessage_Text" xml:space="preserve">
+    <value>Το Ιατρικό ID πρέπει να συμπληρωθεί</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Medical_Entry_Placeholder_Text" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Medical_Title_Text" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Next_Button_Text" xml:space="preserve">
+    <value>Επόμενο</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_OfficialHealthCare_Label_Text" xml:space="preserve">
+    <value>Είμαι επαγγελματίας υγείας</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_PageName_Text" xml:space="preserve">
+    <value>Δημιουργία προφίλ</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_PasswordRequirements_Text" xml:space="preserve">
+    <value>Ο κωδικός πρέπει να έχει τουλάχιστον:</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Password_Label_Text" xml:space="preserve">
+    <value>Κωδικός</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Password_Text" xml:space="preserve">
+    <value>Κωδικός</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Requirement_1_Text" xml:space="preserve">
+    <value>8 χαρακτήρες</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Requirement_2_Text" xml:space="preserve">
+    <value>1 κεφαλαίο γράμμα</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Requirement_3_Text" xml:space="preserve">
+    <value>1 μικρό γράμμα</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Requirement_4_Text" xml:space="preserve">
+    <value>1 σύμβολο και 1 αριθμό</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Requirement_Filled_Username_Text" xml:space="preserve">
+    <value>Το όνομα χρήστη πρέπει να συμπληρωθεί.</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Requirement_Same_Passwords_Text" xml:space="preserve">
+    <value>Οι κωδικοί πρέπει να είναι ίδιοι.</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Title_Text" xml:space="preserve">
+    <value>Δημιουργία ανώνυμου προφίλ</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Username_Entry_Placeholder_Text" xml:space="preserve">
+    <value>Όνομα χρήστη</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Username_Label_Text" xml:space="preserve">
+    <value>Επιλογή ονόματος χρήστη</value>
+  </data>
+  <data name="CreateProfile@SignUp_AlreadyHaveAnAccount_Text" xml:space="preserve">
+    <value>Έχεις ήδη λογαριασμό;</value>
+  </data>
+  <data name="CreateProfile@SignUp_LoginBtn_Text" xml:space="preserve">
+    <value>Σύνδεση</value>
+  </data>
+  <data name="ExpiredToken@SessionDescriptionTitle_Text" xml:space="preserve">
+    <value>Η περίοδος σύνδεσης έληξε. Γίνεται ανακατεύθυνση στη σελίδα Σύνδεσης</value>
+  </data>
+  <data name="ExpiredToken@SessionExpiredBtn_Text" xml:space="preserve">
+    <value>Μετάβαση σε Σύνδεση</value>
+  </data>
+  <data name="Filters@Filters_PageName_Text" xml:space="preserve">
+    <value>Φίλτρα</value>
+  </data>
+  <data name="Filters@Filter_AllSelected_Text" xml:space="preserve">
+    <value>Όλα</value>
+  </data>
+  <data name="Filters@Filter_NoneSelected_Text" xml:space="preserve">
+    <value>Κανένα</value>
+  </data>
+  <data name="Filters@Filters_Save_Text" xml:space="preserve">
+    <value>Αποθήκευση</value>
+  </data>
+  <data name="Filters@Filters_Apply_Text" xml:space="preserve">
+    <value>Εφαρμογή</value>
+  </data>
+  <data name="Filters@Filters_Reset_Text" xml:space="preserve">
+    <value>Επαναφορά</value>
+  </data>
+  <data name="Filters@Filters_ResetAll_Text" xml:space="preserve">
+    <value>Επαναφορά όλων</value>
+  </data>
+  <data name="ForceUpdate@UpdateDescriptionTitle_Text" xml:space="preserve">
+    <value>Κάνε ενημέρωση τώρα για βέλτιστη εμπειρία και πλέον πρόσφατες λειτουργίες.</value>
+  </data>
+  <data name="ForceUpdate@UpdateRequiredBtn_Text" xml:space="preserve">
+    <value>Ενημέρωση τώρα</value>
+  </data>
+  <data name="ForceUpdate@UpdateRequiredTitle_Text" xml:space="preserve">
+    <value>Μία νέα έκδοση του HealthBuddy είναι διαθέσιμη.</value>
+  </data>
+  <data name="Maintenance@MaintenanceDescriptionTitle_Text" xml:space="preserve">
+    <value>Το HealthBuddy δεν λειτουργεί προσωρινά λόγω συντήρησης. Ξανά κοντά σου σε λίγες ώρες. Ευχαριστούμε.</value>
+  </data>
+  <data name="Menu@Menu_Title_Text" xml:space="preserve">
+    <value>ΠΕΡΙΣΣΟΤΕΡΑ</value>
+  </data>
+  <data name="Menu@Menu_HeaderTitle_Text" xml:space="preserve">
+    <value>Περισσότερα</value>
+  </data>
+  <data name="NewsArticle@NewsArticle_Title_Text" xml:space="preserve">
+    <value>Άρθρο</value>
+  </data>
+  <data name="Newsfeed@Newsfeed_Title_Text" xml:space="preserve">
+    <value>ΑΡΧΙΚΗ</value>
+  </data>
+  <data name="Newsfeed@Newsfeed_Filter_Result_Text" xml:space="preserve">
+    <value>Αποτελέσματα ({0})</value>
+  </data>
+  <data name="Newsfeed@Newsfeed_Filter_Text" xml:space="preserve">
+    <value>Φίλτρα</value>
+  </data>
+  <data name="Newsfeed@Newsfeed_NoItems_Text" xml:space="preserve">
+    <value>Δεν βρέθηκαν άρθρα. Προσπάθησε ξανά αργότερα.</value>
+  </data>
+  <data name="OnBoarding@BluetoothNotification_Denied_ErrorText" xml:space="preserve">
+    <value>Άρνηση χρήσης του bluetooth. Για να συνεχίσεις, ενεργοποίησε τη χρήση του bluetooth στις ρυθμίσεις της εφαρμογής.</value>
+  </data>
+  <data name="OnBoarding@BluetoothNotification_Disabled_ErrorText" xml:space="preserve">
+    <value>Το bluetooth είναι προσωρινά μη διαθέσιμο. Δεν υποστηρίζεται από τη συσκευή σου ή είναι απενεργοποιημένο. Έλεγξε τις ρυθμίσεις bluetooth της συσκευής.</value>
+  </data>
+  <data name="OnBoarding@BluetoothNotification_Error_Title" xml:space="preserve">
+    <value>Σφάλμα bluetooth.</value>
+  </data>
+  <data name="OnBoarding@BluetoothNotification_NotSupported_WarningText" xml:space="preserve">
+    <value>Η συσκευή σου έχει περιορισμούς υλικού και ενδέχεται να μην είναι ορατή από άλλες συσκευές μέσω Bluetooth.</value>
+  </data>
+  <data name="OnBoarding@BluetoothNotification_Warning_Title" xml:space="preserve">
+    <value>Προειδοποίηση bluetooth.</value>
+  </data>
+  <data name="OnBoarding@OnBoardind_MadeForYou_SubTitle" xml:space="preserve">
+    <value>Φτιαγμένο στα μέτρα σου</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Connectivity_ErrorText" xml:space="preserve">
+    <value>Για να λειτουργήσει η εφαρμογή και να σώσει ζωές, συνδέσου με το Bluetooth</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Connectivity_Instruction1" xml:space="preserve">
+    <value>100% ανωνυμία
+Δεν γνωρίζουμε το όνομα ή την τοποθεσία σου</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Connectivity_Instruction2" xml:space="preserve">
+    <value>Η εφαρμογή χρησιμοποιεί Bluetooth για να εντοπίσει αν έχεις έρθει έρθει σε επαφή με κάποιον που έχει μολυνθεί</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Connectivity_Instruction4_AndroidOnly" xml:space="preserve">
+    <value>Θα χρησιμοποιήσουμε το bluetooth και όχι την τοποθεσία</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Connectivity_SubTitle" xml:space="preserve">
+    <value>Σύνδεση με Bluetooth</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Connectivity_Title" xml:space="preserve">
+    <value>Συνδεσιμότητα</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_MadeForYou_Instruction1" xml:space="preserve">
+    <value>Προτάσεις προσαρμοσμένες στην κατηγορία προφίλ σου</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_MadeForYou_Instruction2" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="OnBoarding@OnBoarding_MadeForYou_Instruction3" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="OnBoarding@OnBoarding_MadeForYou_Title" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Next_Button_Text" xml:space="preserve">
+    <value>Επόμενο</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Notifications_ErrorText" xml:space="preserve">
+    <value>Για να λειτουργήσει η εφαρμογή και να σώσει ζωές, ενεργοποίησε τις ειδοποιήσεις</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Notifications_Instruction1" xml:space="preserve">
+    <value>Ο λογαριασμός σου είναι προσωπικός και απόρρητος. Δεν αποθηκεύουμε προσωπικά στοιχεία.</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Notifications_Instruction2" xml:space="preserve">
+    <value>Δεν αποθηκεύουμε το e-mail ούτε το τηλέφωνό σου, επομένως δεν θα σου στείλουμε ποτέ μήνυμα.</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Notifications_Instruction3" xml:space="preserve">
+    <value>Οι ειδοποιήσεις στέλνονται αποκλειστικά μέσω της εφαρμόγής. Μπορείς να τις απενεργοποιήσεις στις Ρυθμίσεις.</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Notifications_Title" xml:space="preserve">
+    <value>Σημαντικές πληροφορίες</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Privacy_Instruction1" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Privacy_Instruction2" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Privacy_Instruction3" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Privacy_SubTitle" xml:space="preserve">
+    <value>Πλήρης ανωνυμία</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Privacy_Title" xml:space="preserve">
+    <value>Απόρρητο</value>
+  </data>
+  <data name="Polls@Polls_Title_Text" xml:space="preserve">
+    <value>ΔΗΜΟΣΚΟΠΗΣΕΙΣ</value>
+  </data>
+  <data name="Polls@Polls_HeaderTitle_Text" xml:space="preserve">
+    <value>Δημοσκοπήσεις</value>
+  </data>
+  <data name="Polls@Polls_Restricted_TitleText" xml:space="preserve">
+    <value>Μόνο οι εγγεγραμένοι χρήστες μπορούν να συμμετέχουν στις δημοσκοπήσεις.</value>
+  </data>
+  <data name="Polls@Polls_InfoItem1_Text" xml:space="preserve">
+    <value>Η επιλεγμένη έκδοση παρέχει μόνο ενημέρωση.</value>
+  </data>
+  <data name="Polls@Polls_InfoItem2_Text" xml:space="preserve">
+    <value>Για πρόσβαση στις δημοσκοπήσεις και την προηγμένη έκδοση του HealthBuddy, συνδέσου ή κάνε δωρεάν εγγραφή αν δεν έχεις ήδη λογαριασμό.</value>
+  </data>
+  <data name="Polls@Polls_CreateAccount_BtnText" xml:space="preserve">
+    <value>Δημιουργία λογαριασμού</value>
+  </data>
+  <data name="Polls@Polls_Input_Placeholder_Text" xml:space="preserve">
+    <value>Εισαγωγή απάντησης...</value>
+  </data>
+  <data name="Polls@Polls_LogIn_BtnText" xml:space="preserve">
+    <value>Σύνδεση στο λογαριασμό μου</value>
+  </data>
+  <data name="PrivacyPolicy@Menu_PrivacyPolicy_ItemText" xml:space="preserve">
+    <value>Πολιτική απορρήτου</value>
+  </data>
+  <data name="PrivacyPolicy@PrivacyPolicy_Header_Title_Text" xml:space="preserve">
+    <value>Πολιτική απορρήτου</value>
+  </data>
+  <data name="Rumours@Menu_Rumours_ItemText" xml:space="preserve">
+    <value>Αναφορά ψευδών ειδήσεων ή φημών</value>
+  </data>
+  <data name="Rumours@Rumours_CreateAccount_BtnText" xml:space="preserve">
+    <value>Δημιουργία λογαριασμού</value>
+  </data>
+  <data name="Rumours@Rumours_Header_TitleText" xml:space="preserve">
+    <value>Ψευδείς ειδήσεις ή φήμες</value>
+  </data>
+  <data name="Rumours@Rumours_InfoItem1_Text" xml:space="preserve">
+    <value>Η επιλεγμένη έκδοση παρέχει μόνο ενημέρωση.</value>
+  </data>
+  <data name="Rumours@Rumours_InfoItem2_Text" xml:space="preserve">
+    <value>Για πρόσβαση στις ψευδείς ειδήσεις και τις φήμες αλλά την προηγμένη έκδοση του HealthBuddy, συνδέσου ή κάνε δωρεάν εγγραφή αν δεν έχεις ήδη λογαριασμό.</value>
+  </data>
+  <data name="Rumours@Rumours_Input_Placeholder_Text" xml:space="preserve">
+    <value>Αναφορά ψευδών ειδήσεων ή φημών</value>
+  </data>
+  <data name="Rumours@Rumours_LogIn_BtnText" xml:space="preserve">
+    <value>Σύνδεση στο λογαριασμό μου</value>
+  </data>
+  <data name="Rumours@Rumours_Restricted_TitleText" xml:space="preserve">
+    <value>Μόνο οι εγγεγραμμένοι χρήστες μπορούν να αναφέρουν ψευδείς ειδήσεις ή φήμες.</value>
+  </data>
+  <data name="Rumours@Rumours_TabTitle_Text" xml:space="preserve">
+    <value>ΦΗΜΕΣ</value>
+  </data>
+  <data name="Settings@Menu_Settings_ItemText" xml:space="preserve">
+    <value>Ρυθμίσεις</value>
+  </data>
+  <data name="Settings@Settings_NotificationsTitle" xml:space="preserve">
+    <value>Ειδοποιήσεις</value>
+  </data>
+  <data name="Settings@Settings_NotificationsText" xml:space="preserve">
+    <value>Οι ειδοποιήσεις στέλνονται αποκλειστικά μέσω της εφαρμόγής. Μπορείς να τις (απ)ενεργοποιήσεις στις Ρυθμίσεις.</value>
+  </data>
+  <data name="Settings@Settings_LanguageDescriptionTitle" xml:space="preserve">
+    <value>Αλλαγή γλώσσας</value>
+  </data>
+  <data name="Settings@Settings_LanguageTitle" xml:space="preserve">
+    <value>Γλώσσα</value>
+  </data>
+  <data name="SettingsChangeLanguage@Confirm_Btn_Text" xml:space="preserve">
+    <value>Επιβεβαίωση</value>
+  </data>
+  <data name="SettingsChangeLanguage@Menu_Settings_ItemText" xml:space="preserve">
+    <value>Ρυθμίσεις</value>
+  </data>
+  <data name="UserDeleteAccount@Menu_DeleteAccount_ItemText" xml:space="preserve">
+    <value>Διαγραφή λογαριασμού &amp; δεδομένων</value>
+  </data>
+  <data name="UserDeleteAccount@UserDeleteAccount_Action_Description_Text" xml:space="preserve">
+    <value>Επιλέγοντας διαγραφή λογαριασμού, όλα τα δεδομένα σου θα διαγραφούν. Δεν θα μπορείς να συνδεθείς ή να ανακτήσεις τον λογαριασμό σου. Μπορείς, όμως, να δημιουργήσεις νέο λογαριασμό με τα ίδια διαπιστευτήρια.</value>
+  </data>
+  <data name="UserDeleteAccount@UserDeleteAccount_Delete_Btn_Text" xml:space="preserve">
+    <value>Διαγραφή λογαριασμού</value>
+  </data>
+  <data name="UserDeleteAccount@UserDeleteAccount_ThankYou_Text" xml:space="preserve">
+    <value>Ο λογαριασμός και όλα τα δεδομένα έχουν διαγραφεί</value>
+  </data>
+  <data name="UserDeleteAccount@UserDeleteAccount_ThankYou_Title_Text" xml:space="preserve">
+    <value>Ευχαριστούμε!</value>
+  </data>
+  <data name="UserDeleteAccount@UserDeleteAccount_Title_Text" xml:space="preserve">
+    <value>Διαγραφή λογαριασμού &amp; δεδομένων</value>
+  </data>
+  <data name="UserLogIn@UserLogIn_Btn_Text" xml:space="preserve">
+    <value>Σύνδεση</value>
+  </data>
+  <data name="UserLogIn@UserLogIn_NameEntry_Placeholder_Text" xml:space="preserve">
+    <value>Όνομα χρήστη</value>
+  </data>
+  <data name="UserLogIn@UserLogIn_PageName_Text" xml:space="preserve">
+    <value>Σύνδεση</value>
+  </data>
+  <data name="UserLogIn@UserLogIn_PasswordEntry_Placeholder_Text" xml:space="preserve">
+    <value>Κωδικός</value>
+  </data>
+  <data name="UserLogIn@UserLogIn_PasswordEntry_Requirements_Text" xml:space="preserve">
+    <value>Το όνομα χρήστη ή ο κωδικός δεν αναγνωρίζονται</value>
+  </data>
+  <data name="UserLogIn@UserLogIn_Password_EmptyErrorMessage_Text" xml:space="preserve">
+    <value>Ο κωδικός είναι υποχρεωτικός</value>
+  </data>
+  <data name="UserLogIn@UserLogIn_Username_EmptyErrorMessage_Text" xml:space="preserve">
+    <value>Το όνομα χρήστη είναι υποχρεωτικό.</value>
+  </data>
+  <data name="UserLogOut@Menu_LogOut_Dialog_AcceptBtn" xml:space="preserve">
+    <value>Ναι</value>
+  </data>
+  <data name="UserLogOut@Menu_LogOut_Dialog_CancelBtn" xml:space="preserve">
+    <value>Όχι</value>
+  </data>
+  <data name="UserLogOut@Menu_LogOut_Dialog_QuestionText" xml:space="preserve">
+    <value>Σίγουρα θέλεις να αποσυνδεθείς;</value>
+  </data>
+  <data name="UserLogOut@Menu_Exit_Dialog_QuestionText" xml:space="preserve">
+    <value>Σίγουρα θέλεις να κλείσεις την εφαρμογή;</value>
+  </data>
+  <data name="UserLogOut@Menu_LogOut_Dialog_TitleText" xml:space="preserve">
+    <value>Αποσύνδεση</value>
+  </data>
+  <data name="UserLogOut@Menu_Exit_Dialog_TitleText" xml:space="preserve">
+    <value>Κλείσιμο</value>
+  </data>
+  <data name="UserLogOut@Menu_LogOut_ItemText" xml:space="preserve">
+    <value>Αποσύνδεση</value>
+  </data>
+  <data name="UserLogOut@Menu_Exit_ItemText" xml:space="preserve">
+    <value>Κλείσιμο εφαρμογής</value>
+  </data>
+  <data name="Welcome@Welcome_Text" xml:space="preserve">
+    <value>Καλώς ήρθες στο HealthBuddy</value>
+  </data>
+  <data name="Welcome@Welcome_CreateAccount_Text" xml:space="preserve">
+    <value>Δημιουργία λογαριασμού</value>
+  </data>
+  <data name="Welcome@Welcome_HaveAccount_Text" xml:space="preserve">
+    <value>Σύνδεση στο λογαριασμό μου</value>
+  </data>
+  <data name="Welcome@Welcome_Skip_Text" xml:space="preserve">
+    <value>Μετάβαση στη βασική έκδοση</value>
+  </data>
+  <data name="Welcome@Welcome_Assistant_Text" xml:space="preserve">
+    <value>Ο ψηφιακός σύμβουλος για τον COVID-19
+</value>
+  </data>
+  <data name="Covi@Dialog_Accept" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Covi@ErrorDialog_Message_Generic" xml:space="preserve">
+    <value>Κάτι πήγε λάθος. Προσπάθησε ξανά αργότερα.
+</value>
+  </data>
+  <data name="Covi@ErrorDialog_Title" xml:space="preserve">
+    <value>Σφάλμα</value>
+  </data>
+  <data name="Covi@Exception_NoInternetConnection" xml:space="preserve">
+    <value>Μάλλον υπάρχει πρόβλημα με τη σύνδεσή σου</value>
+  </data>
+  <data name="Covi@Exception_TimedOut_Text" xml:space="preserve">
+    <value>Ο χρόνος σύνδεσης έληξε. Προσπάθησε ξανά αργότερα.</value>
+  </data>
+  <data name="Covi@Exception_UnderMaintenance" xml:space="preserve">
+    <value>Υπό συντήρηση</value>
+  </data>
+  <data name="Covi@Exception_Unknown" xml:space="preserve">
+    <value>Ωχ!</value>
+  </data>
+  <data name="Covi@Exception_UpdateRequired" xml:space="preserve">
+    <value>Απαιτείται ενημέρωση</value>
+  </data>
+  <data name="Covi@Global_EPAM_Text" xml:space="preserve">
+    <value>EPAM Systems</value>
+  </data>
+  <data name="Covi@Global_PoweredBy_Text" xml:space="preserve">
+    <value>Powered by</value>
+  </data>
+  <data name="Covi@Component_Info_SomethingWrong_Text" xml:space="preserve">
+    <value>Κάτι πήγε λάθος...
+</value>
+  </data>
+  <data name="Covi@Component_Info_Retry_Text" xml:space="preserve">
+    <value>Επανάληψη</value>
+  </data>
+</root>

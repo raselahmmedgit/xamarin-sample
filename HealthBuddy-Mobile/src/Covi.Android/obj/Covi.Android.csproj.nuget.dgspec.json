@@ -1,0 +1,456 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\placo\\OneDrive\\Documents\\GitHub\\HealthBuddy-Mobile\\src\\Covi.Android\\Covi.Android.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\placo\\OneDrive\\Documents\\GitHub\\HealthBuddy-Mobile\\src\\Covi.Android\\Covi.Android.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\placo\\OneDrive\\Documents\\GitHub\\HealthBuddy-Mobile\\src\\Covi.Android\\Covi.Android.csproj",
+        "projectName": "Covi.Android",
+        "projectPath": "C:\\Users\\placo\\OneDrive\\Documents\\GitHub\\HealthBuddy-Mobile\\src\\Covi.Android\\Covi.Android.csproj",
+        "packagesPath": "C:\\Users\\placo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\placo\\OneDrive\\Documents\\GitHub\\HealthBuddy-Mobile\\src\\Covi.Android\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\placo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "monoandroid10.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "monoandroid10.0": {
+            "projectReferences": {
+              "C:\\Users\\placo\\OneDrive\\Documents\\GitHub\\HealthBuddy-Mobile\\src\\Covi.Configuration\\Covi.Configuration.csproj": {
+                "projectPath": "C:\\Users\\placo\\OneDrive\\Documents\\GitHub\\HealthBuddy-Mobile\\src\\Covi.Configuration\\Covi.Configuration.csproj"
+              },
+              "C:\\Users\\placo\\OneDrive\\Documents\\GitHub\\HealthBuddy-Mobile\\src\\Covi\\Covi.csproj": {
+                "projectPath": "C:\\Users\\placo\\OneDrive\\Documents\\GitHub\\HealthBuddy-Mobile\\src\\Covi\\Covi.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "monoandroid10.0": {
+          "dependencies": {
+            "LiteDB": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.AppCenter.Analytics": {
+              "target": "Package",
+              "version": "[3.4.0, )"
+            },
+            "Microsoft.AppCenter.Crashes": {
+              "target": "Package",
+              "version": "[3.4.0, )"
+            },
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
+            "Microsoft.Extensions.Logging.Debug": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
+            "Microsoft.Web.Xdt": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Plugin.CurrentActivity": {
+              "target": "Package",
+              "version": "[2.1.0.4, )"
+            },
+            "Plugin.FirebasePushNotification": {
+              "target": "Package",
+              "version": "[3.4.1, )"
+            },
+            "Prism.DryIoc.Extensions": {
+              "target": "Package",
+              "version": "[7.2.0.1054, )"
+            },
+            "Prism.Forms.Extended": {
+              "target": "Package",
+              "version": "[7.2.0.1054, )"
+            },
+            "ReactiveUI.XamForms": {
+              "target": "Package",
+              "version": "[11.5.26, )"
+            },
+            "Sharpnado.MaterialFrame": {
+              "target": "Package",
+              "version": "[1.1.2, )"
+            },
+            "StyleCop.Analyzers": {
+              "target": "Package",
+              "version": "[1.1.118, )"
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
+            },
+            "Xamarin.Android.Support.v4": {
+              "target": "Package",
+              "version": "[28.0.0.3, )"
+            },
+            "Xamarin.Android.Support.v7.AppCompat": {
+              "target": "Package",
+              "version": "[28.0.0.3, )"
+            },
+            "Xamarin.AndroidX.AppCompat.Resources": {
+              "target": "Package",
+              "version": "[1.1.0.1, )"
+            },
+            "Xamarin.Azure.NotificationHubs.Android": {
+              "target": "Package",
+              "version": "[1.1.1, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.5.3.2, )"
+            },
+            "Xamarin.Firebase.Analytics": {
+              "target": "Package",
+              "version": "[71.1630.4, )"
+            },
+            "Xamarin.Firebase.Config": {
+              "target": "Package",
+              "version": "[71.1610.4, )"
+            },
+            "Xamarin.Firebase.Messaging": {
+              "target": "Package",
+              "version": "[71.1740.4, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[4.8.0.1269, )"
+            },
+            "Xamarin.GooglePlayServices.Base": {
+              "target": "Package",
+              "version": "[71.1610.4, )"
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.8.116, )"
+            }
+          }
+        }
+      }
+    },
+    "C:\\Users\\placo\\OneDrive\\Documents\\GitHub\\HealthBuddy-Mobile\\src\\Covi.Client\\Covi.Client.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\placo\\OneDrive\\Documents\\GitHub\\HealthBuddy-Mobile\\src\\Covi.Client\\Covi.Client.csproj",
+        "projectName": "Covi.Client",
+        "projectPath": "C:\\Users\\placo\\OneDrive\\Documents\\GitHub\\HealthBuddy-Mobile\\src\\Covi.Client\\Covi.Client.csproj",
+        "packagesPath": "C:\\Users\\placo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\placo\\OneDrive\\Documents\\GitHub\\HealthBuddy-Mobile\\src\\Covi.Client\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\placo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {
+              "C:\\Users\\placo\\OneDrive\\Documents\\GitHub\\HealthBuddy-Mobile\\src\\Covi.Configuration\\Covi.Configuration.csproj": {
+                "projectPath": "C:\\Users\\placo\\OneDrive\\Documents\\GitHub\\HealthBuddy-Mobile\\src\\Covi.Configuration\\Covi.Configuration.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "Microsoft.Rest.ClientRuntime": {
+              "target": "Package",
+              "version": "[2.3.21, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "StyleCop.Analyzers": {
+              "target": "Package",
+              "version": "[1.1.118, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\placo\\OneDrive\\Documents\\GitHub\\HealthBuddy-Mobile\\src\\Covi.Configuration\\Covi.Configuration.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\placo\\OneDrive\\Documents\\GitHub\\HealthBuddy-Mobile\\src\\Covi.Configuration\\Covi.Configuration.csproj",
+        "projectName": "Covi.Configuration",
+        "projectPath": "C:\\Users\\placo\\OneDrive\\Documents\\GitHub\\HealthBuddy-Mobile\\src\\Covi.Configuration\\Covi.Configuration.csproj",
+        "packagesPath": "C:\\Users\\placo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\placo\\OneDrive\\Documents\\GitHub\\HealthBuddy-Mobile\\src\\Covi.Configuration\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\placo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "Mobile.BuildTools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.0.1007-pre, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "StyleCop.Analyzers": {
+              "target": "Package",
+              "version": "[1.1.118, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\placo\\OneDrive\\Documents\\GitHub\\HealthBuddy-Mobile\\src\\Covi\\Covi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\placo\\OneDrive\\Documents\\GitHub\\HealthBuddy-Mobile\\src\\Covi\\Covi.csproj",
+        "projectName": "Covi",
+        "projectPath": "C:\\Users\\placo\\OneDrive\\Documents\\GitHub\\HealthBuddy-Mobile\\src\\Covi\\Covi.csproj",
+        "packagesPath": "C:\\Users\\placo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\placo\\OneDrive\\Documents\\GitHub\\HealthBuddy-Mobile\\src\\Covi\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\placo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {
+              "C:\\Users\\placo\\OneDrive\\Documents\\GitHub\\HealthBuddy-Mobile\\src\\Covi.Client\\Covi.Client.csproj": {
+                "projectPath": "C:\\Users\\placo\\OneDrive\\Documents\\GitHub\\HealthBuddy-Mobile\\src\\Covi.Client\\Covi.Client.csproj"
+              },
+              "C:\\Users\\placo\\OneDrive\\Documents\\GitHub\\HealthBuddy-Mobile\\src\\Covi.Configuration\\Covi.Configuration.csproj": {
+                "projectPath": "C:\\Users\\placo\\OneDrive\\Documents\\GitHub\\HealthBuddy-Mobile\\src\\Covi.Configuration\\Covi.Configuration.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[9.1.3, )"
+            },
+            "LiteDB": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "Nito.AsyncEx": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Plugin.FirebasePushNotification": {
+              "target": "Package",
+              "version": "[3.4.1, )"
+            },
+            "Prism.DryIoc.Extensions": {
+              "target": "Package",
+              "version": "[7.2.0.1054, )"
+            },
+            "Prism.Forms.Extended": {
+              "target": "Package",
+              "version": "[7.2.0.1054, )"
+            },
+            "PropertyChanged.Fody": {
+              "target": "Package",
+              "version": "[3.2.8, )"
+            },
+            "ReactiveUI.XamForms": {
+              "target": "Package",
+              "version": "[11.5.26, )"
+            },
+            "Sharpnado.MaterialFrame": {
+              "target": "Package",
+              "version": "[1.1.2, )"
+            },
+            "StyleCop.Analyzers": {
+              "target": "Package",
+              "version": "[1.1.118, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.5.3.2, )"
+            },
+            "Xamarin.FFImageLoading.Forms": {
+              "target": "Package",
+              "version": "[2.4.11.982, )"
+            },
+            "Xamarin.FFImageLoading.Svg.Forms": {
+              "target": "Package",
+              "version": "[2.4.11.982, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[4.8.0.1269, )"
+            },
+            "Xamarin.Forms.PancakeView": {
+              "target": "Package",
+              "version": "[1.4.2, )"
+            },
+            "Xamarin.Forms.Visual.Material": {
+              "target": "Package",
+              "version": "[4.8.0.1269, )"
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.8.116, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

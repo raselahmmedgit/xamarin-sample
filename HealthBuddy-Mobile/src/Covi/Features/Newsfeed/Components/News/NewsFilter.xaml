@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:forms="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             xmlns:resources="clr-namespace:Covi.Features.Newsfeed.Resources;assembly=Covi"
+             mc:Ignorable="d"
+             xmlns:local="clr-namespace:Covi.Features.Newsfeed.Components.News"
+             x:Class="Covi.Features.Newsfeed.Components.News.NewsFilter"
+             Margin="16,8"
+             HeightRequest="32">
+    <ContentView.Content>
+        <Grid
+            x:DataType="local:NewsFilterViewModel">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <!--Turned off until business confirmation-->
+            <!--<Label Grid.Column="0"
+                   VerticalOptions="Center"
+                   Style="{StaticResource TextTitleRegular16}"
+                   IsVisible="{Binding NewsArticlesResultFilter, Converter={StaticResource NotEmptyStringToBoolConverter }}"
+                   Text="{Binding NewsArticlesResultFilter}"/>-->
+            <Frame
+                BackgroundColor="{StaticResource SurfaceColor}"
+                Grid.Column="1"
+                CornerRadius="16"
+                Padding="0"
+                HasShadow="False">
+            <Grid
+                  IsVisible="{Binding NewsArticlesResultFilter, Converter={StaticResource NotEmptyStringToBoolConverter }}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0"
+                       Margin="16,0,0,0"
+                       Text="{x:Static resources:Localization.Newsfeed_Filter_Text}"
+                       VerticalOptions="Center"
+                       Style="{StaticResource TextTitle11}"/>
+                <forms:SvgCachedImage
+                    Margin="12,0"
+                    Grid.Column="1"
+                    Source="resource://Covi.Features.Newsfeed.Resources.Images.arrow_down.svg"
+                    VerticalOptions="Center"
+                    Style="{StaticResource IconImageStyleV2}"/>
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding ShowNewsFilterCommand}" />
+                </Grid.GestureRecognizers>
+            </Grid>
+            </Frame>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>2.0</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+  <data name="UserLogIn_Btn_Text" xml:space="preserve">
+    <value>Войти</value>
+  </data>
+  <data name="UserLogIn_NameEntry_Placeholder_Text" xml:space="preserve">
+    <value>Логин</value>
+  </data>
+  <data name="UserLogIn_PageName_Text" xml:space="preserve">
+    <value>Войти</value>
+  </data>
+  <data name="UserLogIn_PasswordEntry_Placeholder_Text" xml:space="preserve">
+    <value>Пароль</value>
+  </data>
+  <data name="UserLogIn_PasswordEntry_Requirements_Text" xml:space="preserve">
+    <value>Неверный логин или пароль</value>
+  </data>
+  <data name="UserLogIn_Password_EmptyErrorMessage_Text" xml:space="preserve">
+    <value>Поле "Пароль" не должно быть пустым</value>
+  </data>
+  <data name="UserLogIn_Username_EmptyErrorMessage_Text" xml:space="preserve">
+    <value>Поле "Логин" не должно быть пустым</value>
+  </data>
+</root>

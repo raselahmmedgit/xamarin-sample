@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutUs@AboutUs_Header_Title_Text" xml:space="preserve">
+    <value>Дар бораи мо</value>
+  </data>
+  <data name="AboutUs@Menu_AboutUs_ItemText" xml:space="preserve">
+    <value>Дар бораи мо</value>
+  </data>
+  <data name="Account@CreateProfileValidationException_DuplicateUserName_ErrorText" xml:space="preserve">
+    <value>Номи корбар аллакай гирифта шудааст.</value>
+  </data>
+  <data name="Account@CreateProfileValidationException_PasswordRequiresDigit_ErrorText" xml:space="preserve">
+    <value>Гузарвожа бояд ҳадди ақал як рақам дошта бошад (&apos;0&apos; - &apos;9&apos;).</value>
+  </data>
+  <data name="Account@CreateProfileValidationException_PasswordRequiresNonAlphanumeric_ErrorText" xml:space="preserve">
+    <value>Гузарвожа бояд ҳадди ақал як аломати ғайриҳарфӣ-рақамӣ дошта бошад.</value>
+  </data>
+  <data name="Account@CreateProfileValidationException_PasswordRequiresUpper_ErrorText" xml:space="preserve">
+    <value>Гузарвожа бояд ҳадди ақал як ҳарфи калон дошта бошад (&apos;A&apos; - &apos;Z&apos;).</value>
+  </data>
+  <data name="Account@CreateProfileValidationException_PasswordTooShort_ErrorText" xml:space="preserve">
+    <value>Гузарвожа бояд на камтар аз 8 аломат дошта бошад.</value>
+  </data>
+  <data name="Account@CreateProfileValidationException_Password_ErrorText" xml:space="preserve">
+    <value>Майдони гузарвожа зарур мебошад.</value>
+  </data>
+  <data name="Account@CreateProfileValidationException_Username_ErrorText" xml:space="preserve">
+    <value>Майдони Номи корбар зарур мебошад.</value>
+  </data>
+  <data name="Account@LoginException_InvalidGrant_ErrorText" xml:space="preserve">
+    <value>Номи корбар ё гузарвожа шинохта намешавад.</value>
+  </data>
+  <data name="AccountFeaturesInformation@AccountInfo_Btn_Text" xml:space="preserve">
+    <value>Қадами навбатӣ</value>
+  </data>
+  <data name="AccountFeaturesInformation@AccountInfo_Title_Text" xml:space="preserve">
+    <value>Дар бораи профили HealthBuddy-и шумо</value>
+  </data>
+  <data name="AccountFeaturesInformation@RegisteredProfile_Instruction_Text1" xml:space="preserve">
+    <value>Маълумоте, ки шумо пешниҳод мекунед, махфӣ ва бехатар боқӣ мемонад</value>
+  </data>
+  <data name="AccountFeaturesInformation@RegisteredProfile_Instruction_Text2" xml:space="preserve">
+    <value>Танҳо шумо ба маълумоти профили худ дастрасӣ дошта метавонед</value>
+  </data>
+  <data name="AccountFeaturesInformation@RegisteredProfile_Instruction_Text3" xml:space="preserve">
+    <value>Лутфан номи корбар ва гузарвожаи худро қайд кунед. Агар шумо онро фаромӯш карда бошед, шумо онро дар дохили замима бозёб карда наметавонед ва мо ҳам ба шумо кӯмак карда наметавонем</value>
+  </data>
+  <data name="AccountFeaturesInformation@RegisteredProfile_Instruction_Text4" xml:space="preserve">
+    <value>Мо Bluetooth -ро барои тафтиш кардани он ки оё шумо бо ягон каси сироятшуда дар тамос ҳастед, истифода бурда истодаем, то ин ки мо шуморо огоҳ карда тавонем</value>
+  </data>
+  <data name="AccountFeaturesInformation@AnonymProfile_Instruction_Text1" xml:space="preserve">
+    <value>Дар ин версия шумо танҳо маълумот оид ба саломатӣ хоҳед гирифт</value>
+  </data>
+  <data name="AccountFeaturesInformation@AnonymProfile_Instruction_Text2" xml:space="preserve">
+    <value>Шумо метавонед дар вақти дилхоҳ ба версияи пешрафтаи ин замима тавассути эҷод кардани ҳисоб навсозӣ кунед</value>
+  </data>
+  <data name="ChangeLanguage@ChangeLanguage_AlertDescription_Text" xml:space="preserve">
+    <value>Барои ба кор бурдани ин тағирот лутфан замимаро аз нав оғоз кунед.</value>
+  </data>
+  <data name="ChangeLanguage@ChangeLanguage_Label_Text" xml:space="preserve">
+    <value>Лутфан забони худро интихоб кунед</value>
+  </data>
+  <data name="ChangeLanguage@Confirm_Btn_Text" xml:space="preserve">
+    <value>Тасдиқ кунед</value>
+  </data>
+  <data name="Chat@Chat_Input_Placeholder_Text" xml:space="preserve">
+    <value>Матнро дар ин ҷо ворид кунед ...</value>
+  </data>
+  <data name="Chat@Chat_Title_Text" xml:space="preserve">
+    <value>ЧАТБОТ</value>
+  </data>
+  <data name="CreateProfile@CreateProfileValidationException_Username_HasSpecialSymbolErrorText" xml:space="preserve">
+    <value>Дар Номи корбар  танҳо алифбои лотинӣ ва рақамҳо иҷозат дода шудааст</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_ConfirmPassword_Label_Text" xml:space="preserve">
+    <value>Гузарвожаро тасдиқ кунед</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Confirm_Password_Text" xml:space="preserve">
+    <value>Гузарвожаро тасдиқ кунед</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Expander_Header_Text" xml:space="preserve">
+    <value>Маълумоти бештар</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Expander_Main_Text" xml:space="preserve">
+    <value>Агар шумо корманди расмии соҳаи тандурустӣ бошед, лутфан ин имконотро гирон кунед. Ин ба шумо имконият медиҳад, ки рамзҳои худро барои фиристодан ба беморони худ эҷод кунед, то ин ки онҳо вазъи худро тағир диҳанд.</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Medical_EmptyErrorMessage_Text" xml:space="preserve">
+    <value>ID-и тиббӣ набояд холӣ бошад</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Medical_Entry_Placeholder_Text" xml:space="preserve">
+    <value>ID-и саломатӣ</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Medical_Title_Text" xml:space="preserve">
+    <value>ID-и саломатӣ</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Next_Button_Text" xml:space="preserve">
+    <value>Қадами навбатӣ</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_OfficialHealthCare_Label_Text" xml:space="preserve">
+    <value>Ман корманди расмии тандурустӣ ҳастам</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_PageName_Text" xml:space="preserve">
+    <value>Эҷодкунии профил</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_PasswordRequirements_Text" xml:space="preserve">
+    <value>Гузарвожаи шумо бояд ҳадди ақал зеринро дошта бошад:</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Password_Label_Text" xml:space="preserve">
+    <value>Гузарвожа</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Password_Text" xml:space="preserve">
+    <value>Гузарвожа</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Requirement_1_Text" xml:space="preserve">
+    <value>8 аломат</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Requirement_2_Text" xml:space="preserve">
+    <value>1 ҳарфи калон</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Requirement_3_Text" xml:space="preserve">
+    <value>1 ҳарфи хурд</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Requirement_4_Text" xml:space="preserve">
+    <value>1 аломати махсус ва рақам</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Requirement_Filled_Username_Text" xml:space="preserve">
+    <value>Номи корбар набояд холӣ бошад.</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Requirement_Same_Passwords_Text" xml:space="preserve">
+    <value>Гузарвожа ва тасдиқи гузарвожа бояд якхела бошанд.</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Title_Text" xml:space="preserve">
+    <value>Профили номаълуми худро эҷод кунед</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Username_Entry_Placeholder_Text" xml:space="preserve">
+    <value>Номи корбар</value>
+  </data>
+  <data name="CreateProfile@CreateProfile_Username_Label_Text" xml:space="preserve">
+    <value>Номи корбарро интихоб кунед</value>
+  </data>
+  <data name="CreateProfile@SignUp_AlreadyHaveAnAccount_Text" xml:space="preserve">
+    <value>Аллакай ҳисоб доред?</value>
+  </data>
+  <data name="CreateProfile@SignUp_LoginBtn_Text" xml:space="preserve">
+    <value>Даромадан</value>
+  </data>
+  <data name="Filters@Filters_PageName_Text" xml:space="preserve">
+    <value>Филтрҳо</value>
+  </data>
+  <data name="Filters@Filter_AllSelected_Text" xml:space="preserve">
+    <value>Ҳама</value>
+  </data>
+  <data name="Filters@Filter_NoneSelected_Text" xml:space="preserve">
+    <value>Ҳеҷ</value>
+  </data>
+  <data name="Filters@Filters_Save_Text" xml:space="preserve">
+    <value>Захира кардан</value>
+  </data>
+  <data name="Filters@Filters_Apply_Text" xml:space="preserve">
+    <value>Татбиқ кардан</value>
+  </data>
+  <data name="Filters@Filters_Reset_Text" xml:space="preserve">
+    <value>Танзими дубора</value>
+  </data>
+  <data name="Filters@Filters_ResetAll_Text" xml:space="preserve">
+    <value>Ҳамаашро аз нав барқарор кунед</value>
+  </data>
+  <data name="Menu@Menu_Title_Text" xml:space="preserve">
+    <value>БЕШТАР</value>
+  </data>
+  <data name="Menu@Menu_HeaderTitle_Text" xml:space="preserve">
+    <value>Бештар</value>
+  </data>
+  <data name="NewsArticle@NewsArticle_Title_Text" xml:space="preserve">
+    <value>Мақола</value>
+  </data>
+  <data name="Newsfeed@Newsfeed_Title_Text" xml:space="preserve">
+    <value>АСОСӢ</value>
+  </data>
+  <data name="Newsfeed@Newsfeed_Filter_Result_Text" xml:space="preserve">
+    <value>Натиҷаҳо  ({0})</value>
+  </data>
+  <data name="Newsfeed@Newsfeed_Filter_Text" xml:space="preserve">
+    <value>Филтрҳо</value>
+  </data>
+  <data name="Newsfeed@Newsfeed_NoItems_Text" xml:space="preserve">
+    <value>Дар ҳоли ҳозир ягон мақолае нест. Лутфан дертар баргардед ва умедворем, ки мо чизе барои мубодила бо шумо хоҳем дошт.</value>
+  </data>
+  <data name="OnBoarding@BluetoothNotification_Denied_ErrorText" xml:space="preserve">
+    <value>Иҷозат барои истифодаи bluetooth рад карда шуд. Лутфан, иҷозатро барои истифодаи bluetooth дар танзимоти замима барои идома додан диҳед.</value>
+  </data>
+  <data name="OnBoarding@BluetoothNotification_Disabled_ErrorText" xml:space="preserve">
+    <value>Bluetooth дар айни замон дастнорас аст. Bluetooth-ро дастгоҳи шумо дастгирӣ намекунад ё ин ки он ғайрифаъол аст. Лутфан, танзимоти Bluetooth-и дастгоҳро санҷед.</value>
+  </data>
+  <data name="OnBoarding@BluetoothNotification_Error_Title" xml:space="preserve">
+    <value>Хатои Bluetooth.</value>
+  </data>
+  <data name="OnBoarding@BluetoothNotification_NotSupported_WarningText" xml:space="preserve">
+    <value>Дастгоҳи шумо маҳдудиятҳои сахтафзор дорад ва барои дигар дастгоҳҳо тавассути Bluetooth нонамоён буда метавонад.</value>
+  </data>
+  <data name="OnBoarding@BluetoothNotification_Warning_Title" xml:space="preserve">
+    <value>Огоҳии Bluetooth.</value>
+  </data>
+  <data name="OnBoarding@OnBoardind_MadeForYou_SubTitle" xml:space="preserve">
+    <value>Барои шумо мутобиқшуда </value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Connectivity_ErrorText" xml:space="preserve">
+    <value>Барои кор кардани ин замимаи ва кӯмакрасонӣ барои наҷот додани ҳаёт, лутфан бо Bluetooth пайваст шавед</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Connectivity_Instruction1" xml:space="preserve">
+    <value>100% номаълум
+Мо ном ё макони шуморо намедонем</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Connectivity_Instruction2" xml:space="preserve">
+    <value>Ин замима барои пайгирӣ кардани он ки оё шумо бо шахси сироятёфта дар тамос будед, Bluetooth-ро истифода мебарад</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Connectivity_Instruction4_AndroidOnly" xml:space="preserve">
+    <value>Вақте ки шумо иҷозат медиҳед, мо танҳо bluetooth-ро истифода хоҳем кард, на ин ки маконро</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Connectivity_SubTitle" xml:space="preserve">
+    <value>Бо Bluetooth пайваст шавед</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Connectivity_Title" xml:space="preserve">
+    <value>Пайвастшавӣ</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_MadeForYou_Instruction1" xml:space="preserve">
+    <value>Тавсияҳо барои категорияи профили шумо мутобиқ карда шудаанд</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_MadeForYou_Instruction2" xml:space="preserve">
+    <value>Хатарҳои мушаххаси соҳа, тавсияҳо ва қоидаҳои рафтор</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_MadeForYou_Instruction3" xml:space="preserve">
+    <value>ЯГОН маълумоти шахсӣ мубодила нашудааст</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_MadeForYou_Title" xml:space="preserve">
+    <value>Барои шумо сохта шудааст</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Next_Button_Text" xml:space="preserve">
+    <value>Қадами навбатӣ</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Notifications_ErrorText" xml:space="preserve">
+    <value>Барои он ки ин замима кор кунад ва барои наҷотдиҳии ҳаёт кӯмак кунад, лутфан ба огоҳиҳо иҷозат диҳед</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Notifications_Instruction1" xml:space="preserve">
+    <value>Ҳисоби шумо махфӣ аст. Мо дар бораи шумо ягон маълумоти шахсӣ надорем</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Notifications_Instruction2" xml:space="preserve">
+    <value>Мо суроғаи почтаи электронӣ ё рақами мобилии шуморо надорем, аз ин рӯ мо ҳеҷ гоҳ ба шумо имейл ва матн нахоҳем фиристод</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Notifications_Instruction3" xml:space="preserve">
+    <value>Огоҳиҳо танҳо тавассути замима фиристода мешаванд. Шумо огоҳиҳоро дар Танзимот хомӯш карда метавонед</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Notifications_Title" xml:space="preserve">
+    <value>Маълумоти муҳим</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Privacy_Instruction1" xml:space="preserve">
+    <value>Ҳама маълумот тавассути рамзгузорӣ интиқол дода мешавад</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Privacy_Instruction2" xml:space="preserve">
+    <value>Ягон маълумот ба шахсияти шумо робита надорад</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Privacy_Instruction3" xml:space="preserve">
+    <value>ЯГОН маълумоти шахсӣ аз телефони шумо намебарояд</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Privacy_SubTitle" xml:space="preserve">
+    <value>Комилан беном</value>
+  </data>
+  <data name="OnBoarding@OnBoarding_Privacy_Title" xml:space="preserve">
+    <value>Махфият</value>
+  </data>
+  <data name="Polls@Polls_Title_Text" xml:space="preserve">
+    <value>ПУРСИШҲО</value>
+  </data>
+  <data name="Polls@Polls_HeaderTitle_Text" xml:space="preserve">
+    <value>Пурсишҳо</value>
+  </data>
+  <data name="Polls@Polls_Restricted_TitleText" xml:space="preserve">
+    <value>Танҳо корбарони сабтиномшуда дар пурсишҳо ширкат варзида метавонанд</value>
+  </data>
+  <data name="Polls@Polls_InfoItem1_Text" xml:space="preserve">
+    <value>Аз он бармеояд, ки шумо имконоти танҳо маълумотро интихоб кардед</value>
+  </data>
+  <data name="Polls@Polls_InfoItem2_Text" xml:space="preserve">
+    <value>Барои дастрасӣ ба пурсишҳо ва профили мукаммали HealthBuddy-и худ, лутфан ворид шавед ё ройгон сабти ном кунед, агар шумо ҳисоб надошта бошед.</value>
+  </data>
+  <data name="Polls@Polls_CreateAccount_BtnText" xml:space="preserve">
+    <value>Эҷод кардани ҳисоб</value>
+  </data>
+  <data name="Polls@Polls_Input_Placeholder_Text" xml:space="preserve">
+    <value>Ҷавоби худро дар ин ҷой ҳуруфчинӣ кунед</value>
+  </data>
+  <data name="PrivacyPolicy@Menu_PrivacyPolicy_ItemText" xml:space="preserve">
+    <value>Сиёсати махфият</value>
+  </data>
+  <data name="PrivacyPolicy@PrivacyPolicy_Header_Title_Text" xml:space="preserve">
+    <value>Сиёсати махфият</value>
+  </data>
+  <data name="Rumours@Menu_Rumours_ItemText" xml:space="preserve">
+    <value>Дар бораи хабарҳои бардурӯғ ё овозаҳо гузориш диҳед</value>
+  </data>
+  <data name="Rumours@Rumours_CreateAccount_BtnText" xml:space="preserve">
+    <value>Эҷод кардани ҳисоб</value>
+  </data>
+  <data name="Rumours@Rumours_Header_TitleText" xml:space="preserve">
+    <value>Хабарҳои бардурӯғ ё овозаҳо</value>
+  </data>
+  <data name="Rumours@Rumours_InfoItem1_Text" xml:space="preserve">
+    <value>Аз он бармеояд, ки шумо имконоти танҳо маълумотро интихоб кардед</value>
+  </data>
+  <data name="Rumours@Rumours_InfoItem2_Text" xml:space="preserve">
+    <value>Барои дастрасӣ ба имконоти хабарҳои бардурӯғ ва овозаҳо ва ба профили пурраи HealthBuddy Plus-и худ, лутфан ворид шавед ё ройгон сабти ном кунед, агар шумо ҳисоб надошта бошед.</value>
+  </data>
+  <data name="Rumours@Rumours_Input_Placeholder_Text" xml:space="preserve">
+    <value>Дар бораи хабарҳои бардурӯғ ё овозаҳо дар ин ҷой гузориш диҳед</value>
+  </data>
+  <data name="Rumours@Rumours_Restricted_TitleText" xml:space="preserve">
+    <value>Танҳо корбарони сабтиномшуда дар бораи хабарҳои бардурӯғ ё овозаҳо гузориш дода метавонанд</value>
+  </data>
+  <data name="Rumours@Rumours_TabTitle_Text" xml:space="preserve">
+    <value>ОВОЗАҲО</value>
+  </data>
+  <data name="Settings@Menu_Settings_ItemText" xml:space="preserve">
+    <value>Танзимот</value>
+  </data>
+  <data name="Settings@Settings_NotificationsTitle" xml:space="preserve">
+    <value>Огоҳиҳо</value>
+  </data>
+  <data name="Settings@Settings_NotificationsText" xml:space="preserve">
+    <value>Огоҳиҳо танҳо тавассути замима фиристода мешаванд. Шумо огоҳиҳоро дар Танзимот гирон/хомӯш карда метавонед</value>
+  </data>
+  <data name="Settings@Settings_LanguageDescriptionTitle" xml:space="preserve">
+    <value>Забонро иваз кунед</value>
+  </data>
+  <data name="Settings@Settings_LanguageTitle" xml:space="preserve">
+    <value>Забон</value>
+  </data>
+  <data name="SettingsChangeLanguage@Confirm_Btn_Text" xml:space="preserve">
+    <value>Тасдиқ кунед</value>
+  </data>
+  <data name="SettingsChangeLanguage@Menu_Settings_ItemText" xml:space="preserve">
+    <value>Танзимот</value>
+  </data>
+  <data name="UserDeleteAccount@Menu_DeleteAccount_ItemText" xml:space="preserve">
+    <value>Ҳисоб ва додаҳоро нест кунед</value>
+  </data>
+  <data name="UserDeleteAccount@UserDeleteAccount_Action_Description_Text" xml:space="preserve">
+    <value>Вақте ки шумо ҳисоби худро нест мекунед, ҳамаи маълумотҳо нест карда мешаванд. Шумо ба ҳисоби несткардашуда ворид шуда наметавонед ё онро барқарор карда наметавонед. Аммо агар шумо хоҳед, шумо як ҳисоби навро бо ҳамон маълумоти корбар эҷод карда метавонед.</value>
+  </data>
+  <data name="UserDeleteAccount@UserDeleteAccount_Delete_Btn_Text" xml:space="preserve">
+    <value>Ҳисобро нест кунед</value>
+  </data>
+  <data name="UserDeleteAccount@UserDeleteAccount_ThankYou_Text" xml:space="preserve">
+    <value>Ҳисоби шумо бо тамоми маълумот нест карда шуд</value>
+  </data>
+  <data name="UserDeleteAccount@UserDeleteAccount_ThankYou_Title_Text" xml:space="preserve">
+    <value>Ташаккур!</value>
+  </data>
+  <data name="UserDeleteAccount@UserDeleteAccount_Title_Text" xml:space="preserve">
+    <value>Ҳисоб ва додаҳоро нест кунед</value>
+  </data>
+  <data name="UserLogIn@UserLogIn_Btn_Text" xml:space="preserve">
+    <value>Ворид шудан</value>
+  </data>
+  <data name="UserLogIn@UserLogIn_NameEntry_Placeholder_Text" xml:space="preserve">
+    <value>Номи корбар</value>
+  </data>
+  <data name="UserLogIn@UserLogIn_PageName_Text" xml:space="preserve">
+    <value>Ворид шудан</value>
+  </data>
+  <data name="UserLogIn@UserLogIn_PasswordEntry_Placeholder_Text" xml:space="preserve">
+    <value>Гузарвожа</value>
+  </data>
+  <data name="UserLogIn@UserLogIn_PasswordEntry_Requirements_Text" xml:space="preserve">
+    <value>Номи корбар ё гузарвожа шинохта намешавад</value>
+  </data>
+  <data name="UserLogIn@UserLogIn_Password_EmptyErrorMessage_Text" xml:space="preserve">
+    <value>Гузарвожа набояд холӣ бошад</value>
+  </data>
+  <data name="UserLogIn@UserLogIn_Username_EmptyErrorMessage_Text" xml:space="preserve">
+    <value>Номи корбар набояд холӣ бошад.</value>
+  </data>
+  <data name="UserLogOut@Menu_LogOut_Dialog_AcceptBtn" xml:space="preserve">
+    <value>Ҳа</value>
+  </data>
+  <data name="UserLogOut@Menu_LogOut_Dialog_CancelBtn" xml:space="preserve">
+    <value>Не</value>
+  </data>
+  <data name="UserLogOut@Menu_LogOut_Dialog_QuestionText" xml:space="preserve">
+    <value>Шумо мутмаин ҳастед, ки шумо баромадан мехоҳед?</value>
+  </data>
+  <data name="UserLogOut@Menu_Exit_Dialog_QuestionText" xml:space="preserve">
+    <value>Шумо мутмаин ҳастед, ки баромадан мехоҳед?</value>
+  </data>
+  <data name="UserLogOut@Menu_LogOut_Dialog_TitleText" xml:space="preserve">
+    <value>Баромадан </value>
+  </data>
+  <data name="UserLogOut@Menu_Exit_Dialog_TitleText" xml:space="preserve">
+    <value>Баромад</value>
+  </data>
+  <data name="UserLogOut@Menu_LogOut_ItemText" xml:space="preserve">
+    <value>Баромадан </value>
+  </data>
+  <data name="UserLogOut@Menu_Exit_ItemText" xml:space="preserve">
+    <value>Аз замима бароед</value>
+  </data>
+  <data name="Welcome@Welcome_Text" xml:space="preserve">
+    <value>Ба HealthBuddy хуш омадед</value>
+  </data>
+  <data name="Welcome@Welcome_CreateAccount_Text" xml:space="preserve">
+    <value>Ҳисоби худро эҷод кунед</value>
+  </data>
+  <data name="Welcome@Welcome_HaveAccount_Text" xml:space="preserve">
+    <value>Ҳисоб доред? Ворид шудан</value>
+  </data>
+  <data name="Welcome@Welcome_Skip_Text" xml:space="preserve">
+    <value>Барои версияи асосӣ партофта гузаред</value>
+  </data>
+  <data name="Welcome@Welcome_Assistant_Text" xml:space="preserve">
+    <value>Дӯсти маҷозии шумо барои маълумот ва маслиҳат оид ба COVID-19</value>
+  </data>
+  <data name="Covi@Dialog_Accept" xml:space="preserve">
+    <value>ХУБ</value>
+  </data>
+  <data name="Covi@ErrorDialog_Message_Generic" xml:space="preserve">
+    <value>Чизе хато шуд. Лутфан баъдтар бори дигар кӯшиш кунед.</value>
+  </data>
+  <data name="Covi@ErrorDialog_Title" xml:space="preserve">
+    <value>Хато</value>
+  </data>
+  <data name="Covi@Exception_NoInternetConnection" xml:space="preserve">
+    <value>Чунин ба назар мерасад, ки шумо мушкилиҳои пайвастшавӣ доред</value>
+  </data>
+  <data name="Covi@Exception_TimedOut_Text" xml:space="preserve">
+    <value>Пайвастшавӣ ба охир расид, лутфан дертар бори дигар кӯшиш кунед.</value>
+  </data>
+  <data name="Covi@Exception_UnderMaintenance" xml:space="preserve">
+    <value>Дар нигоҳубин</value>
+  </data>
+  <data name="Covi@Exception_Unknown" xml:space="preserve">
+    <value>Эҳеее!</value>
+  </data>
+  <data name="Covi@Exception_UpdateRequired" xml:space="preserve">
+    <value>Навсозӣ зарур аст</value>
+  </data>
+  <data name="Covi@Global_EPAM_Text" xml:space="preserve">
+    <value>Системаҳои EPAM</value>
+  </data>
+  <data name="Covi@Global_PoweredBy_Text" xml:space="preserve">
+    <value>Дар асоси </value>
+  </data>
+  <data name="Covi@Component_Info_SomethingWrong_Text" xml:space="preserve">
+    <value>Чизе хато шуд...</value>
+  </data>
+  <data name="Covi@Component_Info_Retry_Text" xml:space="preserve">
+    <value>Аз нав кӯшидан</value>
+  </data>
+  <data name="ExpiredToken@SessionDescriptionTitle_Text" xml:space="preserve">
+    <value>Ҷаласа ба охир расид. Шумо ба саҳифаи Воридшавӣ равон карда мешавед</value>
+  </data>
+  <data name="ExpiredToken@SessionExpiredBtn_Text" xml:space="preserve">
+    <value>Ба вуруд равед</value>
+  </data>
+  <data name="ForceUpdate@UpdateDescriptionTitle_Text" xml:space="preserve">
+    <value>Ҳозир замимаи худро навсозӣ кунед, то ин ки таҷрибаи беҳтартарин ва функсияи охиринро дошта бошед.</value>
+  </data>
+  <data name="ForceUpdate@UpdateRequiredBtn_Text" xml:space="preserve">
+    <value>Ҳозир нав кунед</value>
+  </data>
+  <data name="ForceUpdate@UpdateRequiredTitle_Text" xml:space="preserve">
+    <value>Нусхаи нави замимаи Health Buddy дастрас аст.</value>
+  </data>
+  <data name="Maintenance@MaintenanceDescriptionTitle_Text" xml:space="preserve">
+    <value>Health Buddy дар айни ҳол барои нигоҳдорӣ дар ҳолати ғайрифаъол қарор дорад. Интизорӣ дорем, ки пас аз ду соат бармегардем. Ташаккур барои сабр.</value>
+  </data>
+  <data name="Polls@Polls_LogIn_BtnText" xml:space="preserve">
+    <value>Ҳисоб доред? Ворид шудан</value>
+  </data>
+  <data name="Rumours@Rumours_LogIn_BtnText" xml:space="preserve">
+    <value>Ҳисоб доред? Ворид шудан</value>
+  </data>
+</root>

@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:forms="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             xmlns:resources="clr-namespace:Covi.Features.NewsArticle.Resources;assembly=Covi"
+             xmlns:controls="clr-namespace:Covi.Features.Controls;assembly=Covi"
+             xmlns:components="clr-namespace:Covi.Features.Components.InfoView"
+             xmlns:images="clr-namespace:Covi.Features.ImagesScaling"
+             xmlns:htmlLabel="clr-namespace:Covi.Features.Controls.HtmlLabel;assembly=Covi"
+             xmlns:local="clr-namespace:Covi.Features.NewsArticle;assembly=Covi"
+             mc:Ignorable="d"
+             x:Class="Covi.Features.NewsArticle.NewsArticlePage"
+             Style="{StaticResource SingleContentPageStyle}"
+             x:DataType="local:NewsArticleViewModel">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <images:ImageScaleConverter x:Key="ImageScaleConverter"
+                                        ImageWidth="375"
+                                        ImageHeight="135"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid>
+            <forms:SvgCachedImage Grid.Row="0"
+                                  Aspect="Fill"
+                                  Source="resource://Covi.Resources.Images.background_rectangle.svg"
+                                  Style="{StaticResource BackgroundImageStyle}"
+                                  HorizontalOptions="End"
+                                  VerticalOptions="Start"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <ContentView Style="{StaticResource SingleContentPageHeaderStyle}">
+                </ContentView>
+                <Grid IsVisible="{Binding HasError}"
+                      Grid.Row="1"
+                      Style="{StaticResource ContentPageCollectionStyle}">
+                    <components:InfoComponentView BindingContext="{Binding InfoViewModel}"/>
+                </Grid>
+                <ScrollView
+                    IsVisible="{Binding HasError, Converter={StaticResource InvertedBoolConverter}}"
+                    Grid.Row="1"
+                    Margin="0,35,0,0"
+                    Style="{StaticResource ContentPageCollectionStyle}">
+                    <Grid >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0">
+                            <forms:SvgCachedImage Source="{Binding ImageLink, Converter={StaticResource ImageScaleConverter}}"
+                                              Aspect="AspectFill"
+                                              HeightRequest="{StaticResource ImageHeight}"
+                                              HorizontalOptions="FillAndExpand"/>
+                            <forms:SvgCachedImage  Source="play.svg"
+                                               IsVisible="{Binding HasVideoContent}"
+                                               VerticalOptions="Center"
+                                               Style="{StaticResource VideoImageStyle}"
+                                               HorizontalOptions="Center"/>
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding OpenVideoLinkCommand}" />
+                            </Grid.GestureRecognizers>
+                        </Grid>
+                        <StackLayout Grid.Row="1"
+                                     Style="{StaticResource NestedContentContainerStyle}"
+                                 Spacing="8"
+                                 Orientation="Vertical">
+                            <Grid VerticalOptions="Start"
+                                  Margin="0,8,0,0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="24"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <BoxView Grid.Column="0"
+                                     Color="{StaticResource OnSecondaryColor}"
+                                     WidthRequest="4"/>
+                                <Label Grid.Column="1"
+                                       Text="{Binding Source}"
+                                       VerticalTextAlignment="Center"
+                                       Style="{StaticResource TextTitle11}"/>
+                            </Grid>
+
+                            <Label Text="{Binding Title}"
+                               Style="{StaticResource TextHeadlineH4}"
+                               Margin="0, 8, 0, 8"/>
+
+                            <htmlLabel:HtmlLabel Text="{Binding Body}"
+                                                Style="{StaticResource TextTitleRegular16}"
+                                                IsVisible="{Binding Body, Converter={StaticResource NotEmptyStringToBoolConverter}}"
+                                                BackgroundColor="Transparent"/>
+                        </StackLayout>
+
+                        <controls:BusyIndicatorView Grid.Row="1"
+                                                    FadeBackground="True"
+                                                    IsActive="{Binding IsBusy}"/>
+                    </Grid>
+                </ScrollView>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

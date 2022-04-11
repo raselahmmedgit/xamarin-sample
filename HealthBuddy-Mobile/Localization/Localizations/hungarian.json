@@ -1,0 +1,29 @@
+{
+    "localeName": "hu",
+    "items": {
+        "AboutUs": "Covi\\Features\\AboutUs\\Resources\\Localization.hu.resx",
+        "Account": "Covi\\Features\\Account\\Resources\\Localization.hu.resx",
+        "AccountFeaturesInformation": "Covi\\Features\\AccountFeaturesInformation\\Resources\\Localization.hu.resx",
+        "ChangeLanguage": "Covi\\Features\\ChangeLanguage\\Resources\\Localization.hu.resx",
+        "Chat": "Covi\\Features\\Chat\\Resources\\Localization.hu.resx",
+        "CreateProfile": "Covi\\Features\\CreateProfile\\Resources\\Localization.hu.resx",
+        "ExpiredToken": "Covi\\Features\\ExpiredToken\\Resources\\Localization.hu.resx",
+        "Filters": "Covi\\Features\\Filters\\Resources\\Localization.hu.resx",
+        "ForceUpdate": "Covi\\Features\\ForceUpdate\\Resources\\Localization.hu.resx",
+        "Maintenance": "Covi\\Features\\Maintenance\\Resources\\Localization.hu.resx",
+        "Menu": "Covi\\Features\\Menu\\Resources\\Localization.hu.resx",
+        "NewsArticle": "Covi\\Features\\NewsArticle\\Resources\\Localization.hu.resx",
+        "Newsfeed": "Covi\\Features\\Newsfeed\\Resources\\Localization.hu.resx",
+        "OnBoarding": "Covi\\Features\\OnBoarding\\Resources\\Localization.hu.resx",
+        "Polls": "Covi\\Features\\Polls\\Resources\\Localization.hu.resx",
+        "PrivacyPolicy": "Covi\\Features\\PrivacyPolicy\\Resources\\Localization.hu.resx",
+        "Rumours": "Covi\\Features\\Rumours\\Resources\\Localization.hu.resx",
+        "Settings": "Covi\\Features\\Settings\\Resources\\Localization.hu.resx",
+        "SettingsChangeLanguage": "Covi\\Features\\SettingsChangeLanguage\\Resources\\Localization.hu.resx",
+        "UserDeleteAccount": "Covi\\Features\\UserDeleteAccount\\Resources\\Localization.hu.resx",
+        "UserLogIn": "Covi\\Features\\UserLogIn\\Resources\\Localization.hu.resx",
+        "UserLogOut": "Covi\\Features\\UserLogOut\\Resources\\Localization.hu.resx",
+        "Welcome": "Covi\\Features\\Welcome\\Resources\\Localization.hu.resx",
+        "Covi": "Covi\\Resources\\Localization.hu.resx"
+    }
+}

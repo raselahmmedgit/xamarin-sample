@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:resources="clr-namespace:Covi.Features.Newsfeed.Resources;assembly=Covi"
+    xmlns:components="clr-namespace:Covi.Features.ComponentsManagement"
+    xmlns:local="clr-namespace:Covi.Features.Newsfeed"
+    xmlns:forms="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    x:Class="Covi.Features.Newsfeed.NewsfeedPage"
+    Title="{x:Static resources:Localization.Newsfeed_Title_Text}"
+    Style="{StaticResource RootStandaloneNoSafeAreaPageStyle}"
+    IconImageSource="home">
+    <ContentPage.Content>
+        <Grid x:DataType="local:NewsfeedViewModel">
+            <forms:SvgCachedImage
+                Grid.Row="0"
+                Aspect="Fill"
+                Source="resource://Covi.Features.Newsfeed.Resources.Images.rectangle_news.svg"
+                Style="{StaticResource BackgroundImageStyle}"
+                HorizontalOptions="Start"
+                VerticalOptions="Start"/>
+            <Grid
+                 Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid Style="{StaticResource ContentPageHeaderStyle}">
+                    <forms:SvgCachedImage
+                        Grid.Row="0"
+                        Source="logo_and_title.svg"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"
+                        HeightRequest="32"/>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <components:ComponentsHost Style="{StaticResource ContentPageCollectionStyle}"
+                        RegionManager="{Binding HomeRegion}"/>
+                </Grid>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
+

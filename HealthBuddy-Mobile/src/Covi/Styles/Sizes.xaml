@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <x:Double x:Key="SpacingSmall">5</x:Double>
+    <x:Double x:Key="SpacingMedium">10</x:Double>
+    <x:Double x:Key="SpacingLarge">15</x:Double>
+
+    <x:Double x:Key="NavigationBar">15</x:Double>
+
+    <x:Double x:Key="ImageHeight">135</x:Double>
+
+    <x:Double x:Key="IconImageWidth">24</x:Double>
+    <x:Double x:Key="IconImageHeight">24</x:Double>
+
+    <x:Double x:Key="IconImageWidthV2">18</x:Double>
+    <x:Double x:Key="IconImageHeightV2">18</x:Double>
+
+    <x:Double x:Key="IconImageWidthV3">48</x:Double>
+    <x:Double x:Key="IconImageHeightV3">48</x:Double>
+
+    <x:Double x:Key="IconImageWidthV4">40</x:Double>
+    <x:Double x:Key="IconImageHeightV4">40</x:Double>
+
+    <x:Double x:Key="IconImageWidthV5">80</x:Double>
+    <x:Double x:Key="IconImageHeightV5">80</x:Double>
+
+    <x:Double x:Key="IconImageWidthV6">60</x:Double>
+    <x:Double x:Key="IconImageHeightV6">60</x:Double>
+
+    <x:Double x:Key="IconImageWidthChat">28</x:Double>
+    <x:Double x:Key="IconImageHeightChat">32</x:Double>
+    
+    <x:Double x:Key="BackgroundImageWidth">300</x:Double>
+    <x:Double x:Key="BackgroundImageHeight">300</x:Double>
+
+    <x:Double x:Key="BackgroundRectangleWidth">352</x:Double>
+    <x:Double x:Key="BackgroundRectangleHeight">448</x:Double>
+
+    <x:Double x:Key="SmallBackgroundRectangleWidth">336</x:Double>
+    <x:Double x:Key="SmallBackgroundRectangleHeight">352</x:Double>
+
+    <x:Double x:Key="SmallBackgroundMapWidth">436</x:Double>
+    <x:Double x:Key="SmallBackgroundMapHeight">452</x:Double>
+    
+    <x:Double x:Key="SeparatorHeight">1</x:Double>
+
+</ResourceDictionary>

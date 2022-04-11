@@ -1,0 +1,29 @@
+{
+    "localeName": "tg",
+    "items": {
+        "AboutUs": "Covi\\Features\\AboutUs\\Resources\\Localization.tg.resx",
+        "Account": "Covi\\Features\\Account\\Resources\\Localization.tg.resx",
+        "AccountFeaturesInformation": "Covi\\Features\\AccountFeaturesInformation\\Resources\\Localization.tg.resx",
+        "ChangeLanguage": "Covi\\Features\\ChangeLanguage\\Resources\\Localization.tg.resx",
+        "Chat": "Covi\\Features\\Chat\\Resources\\Localization.tg.resx",
+        "CreateProfile": "Covi\\Features\\CreateProfile\\Resources\\Localization.tg.resx",
+        "ExpiredToken": "Covi\\Features\\ExpiredToken\\Resources\\Localization.tg.resx",
+        "Filters": "Covi\\Features\\Filters\\Resources\\Localization.tg.resx",
+        "ForceUpdate": "Covi\\Features\\ForceUpdate\\Resources\\Localization.tg.resx",
+        "Maintenance": "Covi\\Features\\Maintenance\\Resources\\Localization.tg.resx",
+        "Menu": "Covi\\Features\\Menu\\Resources\\Localization.tg.resx",
+        "NewsArticle": "Covi\\Features\\NewsArticle\\Resources\\Localization.tg.resx",
+        "Newsfeed": "Covi\\Features\\Newsfeed\\Resources\\Localization.tg.resx",
+        "OnBoarding": "Covi\\Features\\OnBoarding\\Resources\\Localization.tg.resx",
+        "Polls": "Covi\\Features\\Polls\\Resources\\Localization.tg.resx",
+        "PrivacyPolicy": "Covi\\Features\\PrivacyPolicy\\Resources\\Localization.tg.resx",
+        "Rumours": "Covi\\Features\\Rumours\\Resources\\Localization.tg.resx",
+        "Settings": "Covi\\Features\\Settings\\Resources\\Localization.tg.resx",
+        "SettingsChangeLanguage": "Covi\\Features\\SettingsChangeLanguage\\Resources\\Localization.tg.resx",
+        "UserDeleteAccount": "Covi\\Features\\UserDeleteAccount\\Resources\\Localization.tg.resx",
+        "UserLogIn": "Covi\\Features\\UserLogIn\\Resources\\Localization.tg.resx",
+        "UserLogOut": "Covi\\Features\\UserLogOut\\Resources\\Localization.tg.resx",
+        "Welcome": "Covi\\Features\\Welcome\\Resources\\Localization.tg.resx",
+        "Covi": "Covi\\Resources\\Localization.tg.resx"
+    }
+}

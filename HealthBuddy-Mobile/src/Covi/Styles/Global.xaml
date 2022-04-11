@@ -1,0 +1,457 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converters="clr-namespace:Covi.Converters;assembly=Covi"
+    xmlns:controls="clr-namespace:Covi.Features.Controls"
+    xmlns:effects="clr-namespace:Covi.Effects"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:components="clr-namespace:Covi.Features.Components;assembly=Covi"
+    xmlns:forms="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:platformSpecific="clr-namespace:Covi.PlatformSpecific;assembly=Covi"
+    xmlns:materialFrame="clr-namespace:Sharpnado.MaterialFrame;assembly=Sharpnado.MaterialFrame">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Styles/Colors.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style x:Key="ContentPageStyleBase"
+           TargetType="ContentPage">
+        <Setter
+            Property="BackgroundColor"
+            Value="{DynamicResource BackgroundColor}" />
+        <Setter
+            Property="effects:NavigationBarExtensions.BackgroundColor"
+            Value="Transparent" />
+    </Style>
+
+    <Style x:Key="ModalPageStyle"
+           BasedOn="{StaticResource ContentPageStyleBase}"
+           TargetType="ContentPage">
+        <Setter Property="Shell.TabBarIsVisible" Value="false"/>
+
+    </Style>
+
+    <Style x:Key="RootPageStyle"
+           BasedOn="{StaticResource ContentPageStyleBase}"
+           TargetType="ContentPage">
+        <Setter Property="ios:Page.UseSafeArea" Value="true"/>
+        <Setter Property="NavigationPage.HasNavigationBar" Value="False"/>
+    </Style>
+
+    <Style x:Key="RootStandalonePageStyle"
+           BasedOn="{StaticResource ContentPageStyleBase}"
+           TargetType="ContentPage">
+        <Setter Property="ios:Page.UseSafeArea" Value="true"/>
+        <Setter Property="NavigationPage.HasNavigationBar" Value="False"/>
+    </Style>
+
+    <Style x:Key="RootStandaloneNoSafeAreaPageStyle"
+           BasedOn="{StaticResource ContentPageStyleBase}"
+           TargetType="ContentPage">
+        <Setter Property="ios:Page.UseSafeArea" Value="False"/>
+        <Setter Property="NavigationPage.HasNavigationBar" Value="False"/>
+    </Style>
+
+    <Style x:Key="ContentPageStyle"
+           BasedOn="{StaticResource ContentPageStyleBase}"
+           TargetType="ContentPage">
+        <Setter Property="ios:Page.UseSafeArea" Value="true" />
+    </Style>
+
+    <Style x:Key="ContentNoSafeAreaPageStyle"
+           BasedOn="{StaticResource ContentPageStyleBase}"
+           TargetType="ContentPage">
+        <Setter Property="ios:Page.UseSafeArea" Value="False" />
+    </Style>
+
+    <Style x:Key="SingleContentPageStyle"
+           BasedOn="{StaticResource ContentPageStyleBase}"
+           TargetType="ContentPage">
+        <Setter Property="ios:Page.UseSafeArea" Value="false" />
+        <Setter Property="BackgroundColor" Value="{StaticResource SecondaryColor}" />
+    </Style>
+
+    <Style x:Key="StandaloneContentPageStyle"
+           BasedOn="{StaticResource ContentPageStyleBase}"
+           TargetType="ContentPage">
+        <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}" />
+    </Style>
+
+    <Style
+        x:Key="DashedLineStyle"
+        TargetType="platformSpecific:DashedLine">
+        <Setter
+            Property="HeightRequest"
+            Value="2" />
+        <Setter
+            Property="BackgroundColor"
+            Value="Transparent" />
+        <Setter
+            Property="Color"
+            Value="{StaticResource OnSecondaryColor}" />
+        <Setter
+            Property="LineWidth"
+            Value="2" />
+    </Style>
+
+    <Style x:Key="SwitchStyle"
+           TargetType="Switch">
+        <Setter Property="OnColor"
+                Value="{StaticResource OnBackgroundColor}"/>
+        <Setter Property="ThumbColor"
+                Value="{StaticResource EntryBackground}"/>
+    </Style>
+
+    <Style
+        x:Key="HeroButtonStyle"
+        TargetType="Button">
+        <Setter Property="HeightRequest"
+                Value="60"/>
+        <Setter
+            Property="CornerRadius"
+            Value="30"/>
+        <Setter
+            Property="BackgroundColor"
+            Value="{DynamicResource PrimaryColor}" />
+        <Setter
+            Property="TextColor"
+            Value="{DynamicResource OnPrimaryColor}" />
+        <Setter
+            Property="FontSize"
+            Value="16"/>
+        <Setter
+            Property="FontFamily"
+            Value="OpenSans-SemiBold"/>
+
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup Name="CommonStates">
+                    <VisualState Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor" Value="{StaticResource OnPrimaryColor}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+
+
+    <Style
+        x:Key="HeroButtonLightStyle"
+        TargetType="Button">
+        <Setter Property="HeightRequest"
+                Value="60"/>
+        <Setter
+            Property="CornerRadius"
+            Value="30"/>
+        <Setter
+            Property="FontSize"
+            Value="16"/>
+        <Setter
+            Property="FontFamily"
+            Value="OpenSans-SemiBold"/>
+        <Setter
+            Property="BackgroundColor"
+            Value="{DynamicResource OnPrimaryColor}" />
+        <Setter
+            Property="TextColor"
+            Value="{DynamicResource PrimaryColor}" />
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup Name="CommonStates">
+                    <VisualState Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor" Value="{StaticResource PrimaryColor}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+
+    <Style
+        x:Key="FlatButtonStyle"
+        TargetType="Button">
+        <Setter
+            Property="BackgroundColor"
+            Value="Transparent" />
+        <Setter
+            Property="TextColor"
+            Value="{DynamicResource AccentColor}" />
+        <Setter
+            Property="FontSize"
+            Value="16"/>
+        <Setter
+            Property="FontFamily"
+            Value="OpenSans-Regular"/>
+    </Style>
+
+    <Style
+        x:Key="FlatButtonStyleBold"
+        TargetType="Button"
+        BasedOn="{StaticResource FlatButtonStyle}">
+        <Setter
+            Property="FontSize"
+            Value="16"/>
+    </Style>
+
+    <Style x:Key="CardStyle" TargetType="controls:Card">
+        <Setter Property="BackgroundColor" Value="{StaticResource SurfaceColor}"/>
+        <Setter Property="CornerRadius" Value="1"/>
+    </Style>
+
+    <Style
+        x:Key="AccentTextStyle"
+        TargetType="Label">
+        <Setter
+            Property="TextColor"
+            Value="{DynamicResource AccentColor}"/>
+        <Setter
+            Property="FontSize"
+            Value="18"/>
+        <Setter
+            Property="FontFamily"
+            Value="OpenSans-Regular"/>
+    </Style>
+
+    <Style
+        x:Key="AccentBoldTextStyle"
+        TargetType="Label">
+        <Setter
+            Property="TextColor"
+            Value="{DynamicResource AccentColor}"/>
+        <Setter
+            Property="FontSize"
+            Value="18"/>
+        <Setter
+            Property="FontFamily"
+            Value="OpenSans-Bold"/>
+    </Style>
+
+
+    <!-- Nested container that represents a content that fills entire page -->
+    <Style x:Key="NestedSingleContentContainerStyle" TargetType="Layout">
+        <Setter Property="Padding" Value="16,16,16,16"/>
+    </Style>
+
+    <!-- Nested container that represents a content that fills entire page -->
+    <Style x:Key="NestedContentContainerStyle" TargetType="Layout">
+        <Setter Property="Padding" Value="16,0,16,16"/>
+    </Style>
+
+    <!-- Nested container that represents a content that is part of more complex content in the middle of the page -->
+    <Style x:Key="NestedContentPartContainerStyle" TargetType="Layout">
+        <Setter Property="Padding" Value="16,0,16,0"/>
+    </Style>
+
+    <!-- Nested container that represents a collection of items, that comes after some header, adding corresponding margins left,right,bottom-->
+    <Style x:Key="NestedCollectionContentContainerStyle" TargetType="Layout">
+        <Setter Property="Margin" Value="16,0,16,16"/>
+    </Style>
+
+    <!-- This style is for header with text placed on the page with back button -->
+    <Style x:Key="NestedHeaderContentContainerStyle" TargetType="Layout">
+        <Setter Property="Padding">
+            <OnPlatform x:TypeArguments="Thickness">
+                <On Platform="iOS" Value="16,8" />
+                <On Platform="Android" Value="16,8" />
+            </OnPlatform>
+        </Setter>
+    </Style>
+
+    <!-- DELETE with old features -->
+    <Style x:Key="PageHeaderStyle" TargetType="ContentView">
+        <Setter Property="Padding">
+            <OnPlatform x:TypeArguments="Thickness">
+                <On Platform="iOS" Value="68,28" />
+                <On Platform="Android" Value="68,32,24,16" />
+            </OnPlatform>
+        </Setter>
+    </Style>
+
+    <!-- This style is for header with text placed on the page with back button -->
+    <Style x:Key="ContentPageHeaderStyle" TargetType="Layout" BasedOn="{StaticResource NestedHeaderContentContainerStyle}">
+        <Setter Property="effects:SafeAreaMarginInsetEffect.UseSafeAreaMarginInsets" Value="Left,Top,Right"/>
+    </Style>
+
+    <!-- This style is for header with image placed on the page with back button -->
+    <!-- DELETE NOW -->
+    <Style x:Key="LogoPageHeaderStyle" TargetType="Layout">
+        <Setter Property="Padding">
+            <OnPlatform x:TypeArguments="Thickness">
+                <On Platform="iOS" Value="24,8" />
+                <On Platform="Android" Value="24,8" />
+            </OnPlatform>
+        </Setter>
+        <Setter Property="effects:SafeAreaMarginInsetEffect.UseSafeAreaMarginInsets" Value="Left,Top,Right"/>
+    </Style>
+
+    <!-- DELETE NOW -->
+    <Style x:Key="LogoPageHeaderContainerStyle" TargetType="Layout">
+        <Setter Property="Padding">
+            <OnPlatform x:TypeArguments="Thickness">
+                <On Platform="iOS" Value="16,4,16,4" />
+                <On Platform="Android" Value="16,4,16,4" />
+            </OnPlatform>
+        </Setter>
+    </Style>
+
+    <!-- This style is for header placed on the page with back button -->
+    <Style x:Key="SingleContentPageHeaderStyle" TargetType="ContentView" BasedOn="{StaticResource ContentPageHeaderStyle}">
+        <Setter Property="Padding">
+            <OnPlatform x:TypeArguments="Thickness">
+                <On Platform="iOS" Value="68,4,16,4" />
+                <On Platform="Android" Value="68,8,16,4" />
+            </OnPlatform>
+        </Setter>
+    </Style>
+
+    <!-- DELETE with old features -->
+    <Style x:Key="PageHeaderVariant2Style" TargetType="ContentView">
+        <Setter Property="Padding" Value="24,16"/>
+    </Style>
+
+    <!--  This style is for collection of elements placed on the page with any header (doesn't add top safe area margin) -->
+    <Style x:Key="ContentPageCollectionStyle" TargetType="Layout">
+        <!-- This is required to add padding on ios bottom for content going under the safe area -->
+        <Setter Property="effects:SafeAreaPaddingInsetEffect.UseSafeAreaPaddingInsets">
+            <OnPlatform x:TypeArguments="effects:InsetDirection">
+                <On Platform="iOS" Value="Bottom"/>
+            </OnPlatform>
+        </Setter>
+        <Setter Property="effects:SafeAreaMarginInsetEffect.UseSafeAreaMarginInsets" Value="Left,Right"/>
+    </Style>
+
+    <!-- Container that contains page content without scroll -->
+    <Style x:Key="ContentContainerStyle" TargetType="Layout">
+        <!-- This is required to add padding on ios bottom for content going under the safe area -->
+        <Setter Property="effects:SafeAreaPaddingInsetEffect.UseSafeAreaPaddingInsets">
+            <OnPlatform x:TypeArguments="effects:InsetDirection">
+                <On Platform="iOS" Value="Bottom"/>
+            </OnPlatform>
+        </Setter>
+        <Setter Property="effects:SafeAreaMarginInsetEffect.UseSafeAreaMarginInsets" Value="Left,Top,Right"/>
+    </Style>
+
+    <!-- Container that contains page content but is scrollable view so for better experience should add margin on left,top,right but not bottom -->
+    <Style x:Key="ContentContainerScrollableStyle" TargetType="Layout">
+        <!-- This is required to add padding on ios bottom for content going under the safe area -->
+        <Setter Property="effects:SafeAreaPaddingInsetEffect.UseSafeAreaPaddingInsets">
+            <OnPlatform x:TypeArguments="effects:InsetDirection">
+                <On Platform="iOS" Value="Bottom"/>
+            </OnPlatform>
+        </Setter>
+        <Setter Property="effects:SafeAreaMarginInsetEffect.UseSafeAreaMarginInsets" Value="Left,Top,Right"/>
+    </Style>
+
+    <!-- This style is for collection of elements placed on the page with any header (doesn't add top safe area margin) -->
+    <Style x:Key="NestedContainerScrollableStyle" TargetType="ScrollView">
+        <Setter Property="effects:SafeAreaPaddingInsetEffect.UseSafeAreaPaddingInsets" Value="Bottom"/>
+    </Style>
+
+    <!-- Container that contains page content and should add safe area margins from left, top, right sides -->
+    <Style x:Key="ContentPageSingleContentContainerStyle" TargetType="Layout">
+        <Setter Property="effects:SafeAreaMarginInsetEffect.UseSafeAreaMarginInsets" Value="Left,Top,Right,Bottom"/>
+    </Style>
+
+    <!-- Container that contains page content but is scroll view so for better experience should add padding for insets instead of margin -->
+    <Style x:Key="ContentPageContentContainerScrollableStyle" TargetType="Layout">
+        <!-- This is require to add margin on ios for status bar -->
+
+        <Setter Property="effects:SafeAreaPaddingInsetEffect.UseSafeAreaPaddingInsets">
+            <OnPlatform x:TypeArguments="effects:InsetDirection">
+                <On Platform="iOS" Value="Bottom"/>
+            </OnPlatform>
+        </Setter>
+        <Setter Property="effects:SafeAreaMarginInsetEffect.UseSafeAreaMarginInsets" Value="Left,Top,Right"/>
+    </Style>
+
+
+    <!-- Container that contains page content but is scroll view so for better experience should add padding for insets instead of margin -->
+    <Style x:Key="ContentPageContentContainerStyle" TargetType="Layout">
+        <!-- This is require to add margin on ios for status bar -->
+
+        <Setter Property="effects:SafeAreaPaddingInsetEffect.UseSafeAreaPaddingInsets">
+            <OnPlatform x:TypeArguments="effects:InsetDirection">
+                <On Platform="iOS" Value="Bottom"/>
+            </OnPlatform>
+        </Setter>
+        <Setter Property="effects:SafeAreaMarginInsetEffect.UseSafeAreaMarginInsets" Value="Left,Right"/>
+    </Style>
+
+
+    <!-- DELETE with old features -->
+    <Style x:Key="ContentContainerVariant2Style" TargetType="Layout">
+        <Setter Property="Padding" Value="8,8"/>
+        <Setter Property="BackgroundColor" Value="{StaticResource BackgroundColor}"/>
+    </Style>
+
+    <!-- DELETE -->
+    <Style x:Key="ContentContainerCardStyle" TargetType="controls:Card">
+        <Setter Property="BackgroundColor" Value="{StaticResource SurfaceColor}"/>
+        <Setter Property="Padding" Value="16,16"/>
+        <Setter Property="CornerRadius" Value="5"/>
+    </Style>
+
+    <!-- DELETE with old features -->
+    <Style x:Key="ContentContainerMaterialFrameStyle" TargetType="materialFrame:MaterialFrame">
+        <Setter Property="BackgroundColor" Value="{StaticResource SurfaceColor}"/>
+        <Setter Property="Margin" Value="8,8,8,8"/>
+        <Setter Property="CornerRadius" Value="4"/>
+        <Setter Property="Elevation" Value="4"/>
+        <Setter Property="MaterialTheme" Value="Light"/>
+    </Style>
+
+
+    <Style TargetType="components:CoviEntry">
+        <Setter Property="PlaceholderCorrectColor" Value="{StaticResource EntryPlaceholderCorrectColor}"/>
+        <Setter Property="PlaceholderErrorColor" Value="{StaticResource EntryPlaceholderErrorColor}"/>
+        <Setter Property="PlaceholderNormalColor" Value="{StaticResource EntryPlaceholderColor}"/>
+        <Setter Property="effects:BorderlessEntryEffect.UseEntryEffect" Value="true"/>
+    </Style>
+
+    <Style x:Key="IconImageStyle" TargetType="forms:SvgCachedImage">
+        <Setter Property="WidthRequest" Value="{DynamicResource IconImageWidth}"/>
+        <Setter Property="HeightRequest" Value="{DynamicResource IconImageHeight}"/>
+    </Style>
+
+    <Style x:Key="IconImageStyleChat" TargetType="forms:SvgCachedImage">
+        <Setter Property="WidthRequest" Value="{DynamicResource IconImageWidthChat}"/>
+        <Setter Property="HeightRequest" Value="{DynamicResource IconImageHeightChat}"/>
+    </Style>
+    
+    <Style x:Key="CloseIconImageStyle" TargetType="forms:SvgCachedImage">
+        <Setter Property="WidthRequest" Value="{DynamicResource IconImageWidth}"/>
+        <Setter Property="HeightRequest" Value="{DynamicResource IconImageHeight}"/>
+    </Style>
+
+    <Style x:Key="IconImageStyleV2" TargetType="forms:SvgCachedImage">
+        <Setter Property="WidthRequest" Value="{DynamicResource IconImageWidthV2}"/>
+        <Setter Property="HeightRequest" Value="{DynamicResource IconImageHeightV2}"/>
+    </Style>
+
+    <Style x:Key="VideoImageStyle" TargetType="forms:SvgCachedImage">
+        <Setter Property="WidthRequest" Value="{DynamicResource IconImageWidthV3}"/>
+        <Setter Property="HeightRequest" Value="{DynamicResource IconImageHeightV3}"/>
+    </Style>
+
+    <Style x:Key="BackgroundImageStyle" TargetType="forms:SvgCachedImage">
+        <Setter Property="WidthRequest" Value="{DynamicResource BackgroundImageWidth}"/>
+        <Setter Property="HeightRequest" Value="{DynamicResource BackgroundImageHeight}"/>
+    </Style>
+
+    <Style x:Key="SeparatorStyle" TargetType="BoxView">
+        <Setter Property="HeightRequest" Value="{DynamicResource SeparatorHeight}"/>
+        <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+        <Setter Property="Color" Value="{StaticResource SeparatorColor}"/>
+    </Style>
+
+    <Style x:Key="CircleBoxStyle" TargetType="BoxView">
+        <Setter Property="WidthRequest" Value="16"/>
+        <Setter Property="HeightRequest" Value="16"/>
+        <Setter Property="CornerRadius" Value="8"/>
+    </Style>
+
+</ResourceDictionary>

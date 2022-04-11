@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:components="clr-namespace:Covi.Features.OnBoarding.Components"
+             xmlns:controls="clr-namespace:Covi.Features.Controls;assembly=Covi"
+             xmlns:resources="clr-namespace:Covi.Features.OnBoarding.Resources;assembly=Covi"
+             xmlns:forms="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             xmlns:local="clr-namespace:Covi.Features.OnBoarding"
+             x:Class="Covi.Features.OnBoarding.OnBoardingPage"
+             Style="{StaticResource RootStandaloneNoSafeAreaPageStyle}"
+             BackgroundColor="{StaticResource PrimaryColor}">
+    <ContentPage.Content>
+        <Grid>
+            <forms:SvgCachedImage Grid.Row="0"
+                                  Aspect="AspectFit"
+                                  Source="man.svg"
+                                  HeightRequest="360"
+                                  HorizontalOptions="End"
+                                  VerticalOptions="End"/>
+            <forms:SvgCachedImage Grid.Row="0"
+                                  Aspect="AspectFit"
+                                  Source="plants.svg"
+                                  HeightRequest="216"
+                                  HorizontalOptions="Start"
+                                  VerticalOptions="End"/>
+            <Grid x:DataType="local:OnBoardingViewModel" Style="{StaticResource ContentContainerStyle}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <components:OnBoardingCarouselView Grid.Row="0"
+                                                   OnBoardingItems="{Binding OnBoardingActivities}"/>
+                <Button VerticalOptions="End"
+                        Grid.Row="1"
+                        Margin="32, 24"
+                        Text="{x:Static resources:Localization.OnBoarding_Next_Button_Text}"
+                        Style="{StaticResource HeroButtonLightStyle}"
+                        Command="{Binding GoToNextStepCommand}"/>
+                <components:HorizontalSelectedItemIndicatorControl Grid.Row="2"
+                                                                    x:Name="SelectedItemIndicator"
+                                                                    HorizontalOptions="Center"
+                                                                    VerticalOptions="End"
+                                                                    IsVisible="{Binding HasManyActivities}"
+                                                                    SelectedItemIndex="{Binding SelectedActivityIndex}"
+                                                                    ItemCount="{Binding ActivitiesCount}"
+                                                                    IndicatorColor="{StaticResource AccentColor}"
+                                                                    Margin="0,24"/>
+
+                <controls:BusyIndicatorView Grid.Row="0"
+                                            Grid.RowSpan="3"
+                                            IsActive="{Binding IsBusy}"/>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

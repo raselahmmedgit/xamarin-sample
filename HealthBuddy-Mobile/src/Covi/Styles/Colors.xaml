@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <Color x:Key="BackgroundColor">#E4F5FF</Color>
+    <Color x:Key="OnBackgroundColor">#152FBF</Color>
+
+    <Color x:Key="PrimaryColor">#022aa6</Color>
+    <Color x:Key="OnPrimaryColor">#FFFFFF</Color>
+
+    <Color x:Key="SecondaryColor">#EEF9F6</Color>
+    <Color x:Key="OnSecondaryColor">#1CABE2</Color>
+
+    <Color x:Key="TertiaryColor">#EEF9F6</Color>
+    <Color x:Key="OnTertiaryColor">#152FBF</Color>
+
+    <Color x:Key="QuaternaryColor">#152FBF</Color>
+    <Color x:Key="OnQuaternaryColor">#FFFFFF</Color>
+
+
+    <Color x:Key="AccentColor">#152FBF</Color>
+    <Color x:Key="AccentSecondaryColor">#8DD3FF</Color>
+
+    <Color x:Key="SurfaceColor">#FFFFFF</Color>
+    <Color x:Key="OnSurfaceColor">#2e384d</Color>
+
+    <Color x:Key="ErrorColor">#ff0000</Color>
+
+    <Color x:Key="BorderColor">#142e5bff</Color>
+
+    <Color x:Key="SecondarySurfaceColor">#f5f5f5</Color>
+    <Color x:Key="OnSecondarySurfaceColor">#2e384d</Color>
+
+    <!-- Start Delete me -->
+    <Color x:Key="EntryBackground">#f5f5f5</Color>
+    <!-- End Delete me -->
+
+    <!-- Entry colors -->
+    <Color x:Key="EntryBackgroundColor">#E4F5FF</Color>
+    <Color x:Key="EntryOnBackgroundColor">#152FBF</Color>
+    <Color x:Key="EntryPlaceholderCorrectColor">#152FBF</Color>
+    <Color x:Key="EntryPlaceholderErrorColor">#ff0000</Color>
+    <Color x:Key="EntryPlaceholderColor">#152FBF</Color>
+
+    <Color x:Key="SeparatorColor">#EEEEEE</Color>
+    <Color x:Key="HeaderSeparatorColor">#89C5CC</Color>
+    <Color x:Key="HeaderSeparatorColor2">#E4F5FF</Color>
+    <Color x:Key="HeaderSeparatorColor3">#EEF9F6</Color>
+    <Color x:Key="FooterSeparatorColor">#EAEBEF</Color>
+
+    <Color x:Key="RadioButtonColor">#EEEEEE</Color>
+    <Color x:Key="RadioButtonActiveColor">#43B02A</Color>
+
+    <Color x:Key="HealthyStatusColor">#00bb45</Color>
+    <Color x:Key="AtRiskStatusColor">#f3b700</Color>
+    <Color x:Key="InfectedStatusColor">#ff0000</Color>
+    <Color x:Key="NotRecognizedStatusColor">#f5f5f5</Color>
+    <Color x:Key="TabSelectedColor">#182a8e</Color>
+
+    <Color x:Key="ToolbarFadeInColor">White</Color>
+</ResourceDictionary>

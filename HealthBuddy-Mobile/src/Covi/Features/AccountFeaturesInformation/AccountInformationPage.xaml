@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:resources="clr-namespace:Covi.Features.AccountFeaturesInformation.Resources;assembly=Covi"
+             xmlns:forms="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             xmlns:platformSpecific="clr-namespace:Covi.PlatformSpecific;assembly=Covi"
+             xmlns:controls="clr-namespace:Covi.Features.Controls"
+             mc:Ignorable="d"
+             xmlns:local="clr-namespace:Covi.Features.AccountFeaturesInformation"
+             x:Class="Covi.Features.AccountFeaturesInformation.AccountInformationPage"
+             Style="{StaticResource ContentNoSafeAreaPageStyle}">
+    <ContentPage.Content>
+        <Grid x:DataType="local:AccountInformationViewModel" >
+            <forms:SvgCachedImage Grid.Row="0"
+                                  Aspect="Fill"
+                                  Source="rectangle_info.svg"
+                                  Style="{StaticResource BackgroundImageStyle}"
+                                  HorizontalOptions="End"
+                                  VerticalOptions="Start"/>
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <ContentView Grid.Row="0"
+                             Style="{StaticResource ContentPageHeaderStyle}">
+                    <forms:SvgCachedImage
+                    Source="resource://Covi.Features.AccountFeaturesInformation.Resources.Images.hb_logo.svg"
+                        HeightRequest="{StaticResource IconImageHeightV4}"
+                        WidthRequest="{StaticResource IconImageWidthV4}"
+                        VerticalOptions="Start"
+                        HorizontalOptions="Center"/>
+                </ContentView>
+                <ScrollView  Grid.Row="1"
+                             Style="{StaticResource ContentPageCollectionStyle}">
+                    <Grid Style="{StaticResource NestedCollectionContentContainerStyle}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Label
+                           Grid.Row="0"
+                           Margin="0,56,0,0"
+                           Text="{x:Static resources:Localization.AccountInfo_Title_Text}"
+                           Style="{StaticResource TextHeadlineH2}"
+                           VerticalOptions="End" />
+                        <StackLayout BindableLayout.ItemsSource="{Binding InformationItemsList}"
+                                     VerticalOptions="Center"
+                                     Grid.Row="1"
+                                     Margin="0,36,0,0">
+                            <BindableLayout.ItemTemplate>
+                                <DataTemplate x:DataType="local:Flows.InformationItem">
+                                    <Grid BackgroundColor="Transparent">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <forms:SvgCachedImage Grid.Column="0"
+                                                              WidthRequest="24"
+                                                              HeightRequest="24"
+                                                              Source="{Binding InfoImagePath}"
+                                                              Style="{StaticResource IconImageStyle}"
+                                                              VerticalOptions="Start"
+                                                              HorizontalOptions="Start"/>
+                                        <Label Grid.Column="1"
+                                               Grid.Row="0"
+                                               VerticalOptions="Start"
+                                               HorizontalOptions="Start"
+                                               Margin="24,0,0,0"
+                                               Style="{StaticResource TextTitleRegular16}"
+                                               Text="{Binding Information}"/>
+                                        <platformSpecific:DashedLine Grid.Row="1"
+                                                                 Grid.Column="0"
+                                                                 Grid.ColumnSpan="2"
+                                                                 Margin="0, 16"
+                                                                 Style="{StaticResource DashedLineStyle}"/>
+                                    </Grid>
+                                </DataTemplate>
+                            </BindableLayout.ItemTemplate>
+                        </StackLayout>
+                        <Button Grid.Row="2"
+                            VerticalOptions="End"
+                            Text="{x:Static resources:Localization.AccountInfo_Btn_Text}"
+                            Style="{StaticResource HeroButtonStyle}"
+                            Command="{Binding GoToNextStepCommand}"
+                            Margin="0,16,0,0"/>
+                    </Grid>
+                </ScrollView>
+            </Grid>
+            <controls:BusyIndicatorView Grid.Row="0"
+                            FadeBackground="True"
+                            IsActive="{Binding IsBusy}"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

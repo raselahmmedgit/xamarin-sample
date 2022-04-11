@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Covi.Features.Newsfeed.Components.News.NewsCard"
+    xmlns:local="clr-namespace:Covi.Features.Newsfeed.Components.News"
+    xmlns:forms="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:images="clr-namespace:Covi.Features.ImagesScaling"
+    Margin="16,8"
+    x:DataType="local:NewsArticleItemViewModel">
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <images:ImageScaleConverter x:Key="ImageScaleConverter"
+                                        ImageWidth="340"
+                                        ImageHeight="126"/>
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <ContentView.Content>
+        <pancakeView:PancakeView
+            CornerRadius="30"
+            BackgroundColor="{StaticResource SurfaceColor}">
+            <pancakeView:PancakeView.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding ShowNewsArticleCommand}"/>
+            </pancakeView:PancakeView.GestureRecognizers>
+            <Grid
+                x:DataType="local:NewsArticleItemViewModel"
+                RowSpacing="8">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <forms:SvgCachedImage
+                            Grid.Row="0"
+                            Source="{Binding ImageSource, Converter={StaticResource ImageScaleConverter,ImageScaleConverter}, Mode=OneTime}"
+                            IsVisible="{Binding ImageSource, Converter={StaticResource NotEmptyStringToBoolConverter}}"
+                            Aspect="AspectFill"
+                            HeightRequest="{StaticResource ImageHeight}"
+                            HorizontalOptions="FillAndExpand"/>
+                <forms:SvgCachedImage  Grid.Row="0"
+                                        Source="play.svg"
+                                        IsVisible="{Binding HasVideoContent, Mode=OneTime}"
+                                        VerticalOptions="Center"
+                                        Style="{StaticResource VideoImageStyle}"
+                                        HorizontalOptions="Center"/>
+                <Grid Padding="24,8,24,12"
+                      Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Row="0"
+                          Grid.Column="0"
+                          Grid.ColumnSpan="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="24"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <BoxView Grid.Column="0"
+                                 Color="{StaticResource OnSecondaryColor}"
+                                 WidthRequest="4"/>
+                        <Label Grid.Column="1"
+                               Text="{Binding Source, Mode=OneTime}"
+                               VerticalTextAlignment="Center"
+                               Style="{StaticResource TextTitle11}"/>
+                    </Grid>
+                    <Label Grid.Row="1"
+                           Grid.Column="0"
+                           Grid.ColumnSpan="2"
+                           Text="{Binding Title}"
+                           Style="{StaticResource TextHeadlineH4}"
+                           IsVisible="{Binding Title, Converter={StaticResource NotEmptyStringToBoolConverter}, Mode=OneTime}"/>
+                    <Label VerticalOptions="Start"
+                           Grid.Row="2"
+                           Grid.Column="0"
+                           Grid.ColumnSpan="2"
+                           Margin="0,0,0,0"
+                           Text="{Binding Summary, Mode=OneTime}"
+                           Style="{StaticResource TextTitleRegular16}"/>
+                </Grid>
+
+            </Grid>
+        </pancakeView:PancakeView>
+    </ContentView.Content>
+</ContentView>

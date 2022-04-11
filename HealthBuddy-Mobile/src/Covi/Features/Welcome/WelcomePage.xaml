@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             xmlns:resources="clr-namespace:Covi.Features.Welcome.Resources"
+             xmlns:local="clr-namespace:Covi.Features.Welcome"
+             xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="Covi.Features.Welcome.WelcomePage"
+             Style="{StaticResource RootStandaloneNoSafeAreaPageStyle}">
+    <ContentPage.Resources>
+        <x:Double x:Key="WelcomeRectangleWidth">248</x:Double>
+        <x:Double x:Key="WelcomeTailHeight">20</x:Double>
+        <x:Double x:Key="HealthBuddyIconHeight">144</x:Double>
+        <x:Double x:Key="HealthBuddyIconWidth">168</x:Double>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid x:DataType="local:WelcomePageViewModel">
+            <forms:SvgCachedImage Grid.Row="0"
+                                  Aspect="Fill"
+                                  Source="resource://Covi.Features.Welcome.Resources.Images.rectangle_welcome.svg"
+                                  Style="{StaticResource BackgroundImageStyle}"
+                                  HorizontalOptions="StartAndExpand"
+                                  VerticalOptions="StartAndExpand"/>
+            <ScrollView Style="{StaticResource ContentPageSingleContentContainerStyle}">
+                <Grid Style="{StaticResource NestedSingleContentContainerStyle}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid RowSpacing="0"
+                          VerticalOptions="Start"
+                          Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <pancakeView:PancakeView Grid.Row="0"
+                                                 Grid.ColumnSpan="2"
+                                                 HorizontalOptions="Center"
+                                                 WidthRequest="{StaticResource WelcomeRectangleWidth}"
+                                                 Padding="32,24,32,24"
+                                                 BackgroundColor="{StaticResource SurfaceColor}"
+                                                 CornerRadius="50,50,50,50"
+                                                 Margin="0,0,0,0">
+                            <StackLayout Margin="0,0,0,0"
+                                        HorizontalOptions="Center"
+                                        Orientation="Vertical">
+                                <Label HorizontalTextAlignment="Center"
+                                        Text="{x:Static resources:Localization.Welcome_Text}"
+                                        Style="{StaticResource AccentBoldTextStyle}"/>
+                                <Label HorizontalTextAlignment="Center"
+                                        Text="{x:Static resources:Localization.Welcome_Assistant_Text}"
+                                        Style="{StaticResource AccentTextStyle}"/>
+                            </StackLayout>
+                        </pancakeView:PancakeView>
+                        <forms:SvgCachedImage Grid.Row="1"
+                                              Grid.Column="1"
+                                              Margin="16,0,0,0"
+                                              HorizontalOptions="Start"
+                                              VerticalOptions="End"
+                                              Source="resource://Covi.Features.Welcome.Resources.Images.welcome_tail.svg"
+                                              HeightRequest="{StaticResource WelcomeTailHeight}"/>
+                        <forms:SvgCachedImage Margin="0,8,0,0"
+                                              Grid.Column="0"
+                                              Grid.Row="2"
+                                              Grid.ColumnSpan="2"
+                                              WidthRequest="{StaticResource HealthBuddyIconWidth}"
+                                              HeightRequest="{StaticResource HealthBuddyIconHeight}"
+                                              Source="resource://Covi.Features.Welcome.Resources.Images.hb_logo.svg"
+                                              HorizontalOptions="Center"
+                                              VerticalOptions="Start"/>
+                    </Grid>
+                    <Button Grid.Row="2"
+                            HorizontalOptions="Fill"
+                            Text="{x:Static resources:Localization.Welcome_CreateAccount_Text}"
+                            Margin="0,8,0,8"
+                            VerticalOptions="End"
+                            Style="{StaticResource HeroButtonStyle}"
+                            Command="{Binding GoToCreateProfile}"/>
+                    <Button Grid.Row="3"
+                            HorizontalOptions="Fill"
+                            Text="{x:Static resources:Localization.Welcome_HaveAccount_Text}"
+                            Style="{StaticResource HeroButtonLightStyle}"
+                            Margin="0,4,0,0"
+                            VerticalOptions="End"
+                            Command="{Binding LogInCommand}"/>
+                    <Button Grid.Row="4"
+                            Margin="0,4,0,4"
+                            Text="{x:Static resources:Localization.Welcome_Skip_Text}"
+                            Style="{StaticResource FlatButtonStyle}"
+                            HorizontalOptions="Fill"
+                            VerticalOptions="End"
+                            Command="{Binding GoAnonymouslyCommand}"/>
+                </Grid>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
+

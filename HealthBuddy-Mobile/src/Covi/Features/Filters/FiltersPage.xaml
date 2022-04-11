@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:controls="clr-namespace:Covi.Features.Controls;assembly=Covi"
+             xmlns:filters="clr-namespace:Covi.Features.Filters.Components;assembly=Covi"
+             xmlns:resources="clr-namespace:Covi.Features.Filters.Resources;assembly=Covi"
+             xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:forms="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             xmlns:local="clr-namespace:Covi.Features.Filters"
+             mc:Ignorable="d"
+             x:Class="Covi.Features.Filters.FiltersPage"
+             Style="{StaticResource ContentNoSafeAreaPageStyle}">
+
+    <ContentPage.Content>
+
+        <Grid x:DataType="local:FiltersViewModel"
+            RowSpacing="0">
+
+            <forms:SvgCachedImage Grid.Row="0"
+                        Aspect="Fill"
+                        Source="resource://Covi.Resources.Images.background_rectangle.svg"
+                        Style="{StaticResource BackgroundImageStyle}"
+                        HorizontalOptions="End"
+                        VerticalOptions="Start"/>
+
+            <Grid
+                Grid.Row="0"
+                RowSpacing="0">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <ContentView Style="{StaticResource SingleContentPageHeaderStyle}">
+                    <Label Text="{x:Static resources:Localization.Filters_PageName_Text}"
+                           Style="{StaticResource TextPageHeadlineH3}"/>
+                </ContentView>
+
+                <ContentView  Grid.Row="2"
+                              Style="{StaticResource ContentPageContentContainerStyle}">
+                    <Grid  Style="{StaticResource NestedContentContainerStyle}" 
+                           VerticalOptions="FillAndExpand">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <BoxView Grid.Row="0"
+                                 HeightRequest="1"
+                                 Margin="0,8,0,8"
+                                 Color="{StaticResource HeaderSeparatorColor}"/>
+
+                        <pancakeView:PancakeView Grid.Row="1"
+                                                 Padding="16"
+                                                 BackgroundColor="{StaticResource SurfaceColor}"
+                                                 CornerRadius="32">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0"
+                                      RowSpacing="0"
+                                      HeightRequest="48"
+                                      MinimumWidthRequest="48"
+                                      HorizontalOptions="End"
+                                      VerticalOptions="Center">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Column="0"
+                                           Text="{x:Static resources:Localization.Filters_ResetAll_Text}"
+                                           VerticalOptions="Center"
+                                           Style="{StaticResource TapableText13}"/>
+                                    <forms:SvgCachedImage
+                                        Grid.Column="1"
+                                        Source="refresh_icon.svg"
+                                        VerticalOptions="Center"
+                                        Style="{StaticResource IconImageStyle}"/>
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding ResetToDefaultsFiltersCommand}" />
+                                    </Grid.GestureRecognizers>
+                                </Grid>
+                                <ScrollView Orientation="Vertical"
+                                            Grid.Row="1">
+                                    <StackLayout
+                                        BindableLayout.ItemsSource="{Binding Filters}"
+                                        IsVisible="{Binding IsBusy, Converter={StaticResource InvertedBoolConverter}}"
+                                        Margin="0,0">
+                                        <BindableLayout.ItemTemplate>
+                                            <DataTemplate>
+                                                <filters:FilterDescriptionCard/>
+                                            </DataTemplate>
+                                        </BindableLayout.ItemTemplate>
+                                    </StackLayout>
+                                </ScrollView>
+                            </Grid>
+
+                        </pancakeView:PancakeView>
+
+                        <Button
+                            Grid.Row="2"
+                            Margin="0,16,0,0"
+                            Text="{x:Static resources:Localization.Filters_Save_Text}"
+                            VerticalOptions="EndAndExpand"
+                            Style="{StaticResource HeroButtonStyle}"
+                            Command="{Binding SaveFiltersCommand}"/>
+                    </Grid>
+                </ContentView>
+                <controls:BusyIndicatorView Grid.Row="1"
+                                            FadeBackground="True"
+                                            IsActive="{Binding IsBusy}"/>
+
+
+            </Grid>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

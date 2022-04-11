@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:platformSpecific="clr-namespace:Covi.PlatformSpecific"
+             mc:Ignorable="d"
+             x:Class="Covi.Features.Filters.Components.FilterOptionCardSingleSelect">
+    <ContentView.Content>
+        <Grid
+            RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="1"/>
+            </Grid.RowDefinitions>
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer
+                    NumberOfTapsRequired="1"
+                    Command="{Binding FilterTappedCommand}"/>
+            </Grid.GestureRecognizers>
+
+            <Grid Padding="0,16,0,16"
+                  Grid.Row="0"
+                  HorizontalOptions="FillAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0"
+                       Text="{Binding DisplayName, Mode=OneTime}"
+                       Style="{StaticResource TapableText16}"
+                       VerticalOptions="Center"/>
+
+                <RadioButton x:Name="FilterOptionRadioButton"
+                             Grid.Column="1"
+                             VerticalOptions="Center"
+                             BackgroundColor="Transparent"
+                             BorderColor="{StaticResource PrimaryColor}"
+                             TextColor="{StaticResource PrimaryColor}"
+                             IsChecked="{Binding IsChecked, Mode=TwoWay}"/>
+            </Grid>
+
+            <platformSpecific:DashedLine
+                Grid.Row="1"
+                IsVisible="{Binding IsLast, Converter={StaticResource InvertedBoolConverter}, Mode=OneWay}"
+                Style="{StaticResource DashedLineStyle}"/>
+
+        </Grid>
+    </ContentView.Content>
+</ContentView>

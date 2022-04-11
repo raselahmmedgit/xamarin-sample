@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>2.0</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+  <data name="AccountInfo_Btn_Text" xml:space="preserve">
+    <value>Продолжить</value>
+  </data>
+  <data name="AccountInfo_Title_Text" xml:space="preserve">
+    <value>О вашем профиле в HealthBuddy+</value>
+  </data>
+  <data name="RegisteredProfile_Instruction_Text1" xml:space="preserve">
+    <value>Предоставленные вами данные останутся конфиденциальными и защищенными.</value>
+  </data>
+  <data name="RegisteredProfile_Instruction_Text2" xml:space="preserve">
+    <value>Доступ к информации вашего профиля есть только у вас.</value>
+  </data>
+  <data name="RegisteredProfile_Instruction_Text3" xml:space="preserve">
+    <value>Запишите свой логин и пароль. Если вы забудете учетные данные, мы не сможем помочь вам их восстановить.</value>
+  </data>
+  <data name="RegisteredProfile_Instruction_Text4" xml:space="preserve">
+    <value>Мы используем Bluetooth для проверки, были ли вы в контакте с зараженными, чтобы мы могли вас предупредить.</value>
+  </data>
+  <data name="AnonymProfile_Instruction_Text1" xml:space="preserve">
+    <value>В этой версии вы получите только медицинскую информацию.</value>
+  </data>
+  <data name="AnonymProfile_Instruction_Text2" xml:space="preserve">
+    <value>Вы можете в любое время перейти к расширенной версии приложения, создав аккаунт.</value>
+  </data>
+</root>

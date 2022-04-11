@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:Covi.Features.UserProfile"
+    x:Class="Covi.Features.UserProfile.UserProfilePage"
+    xmlns:userProfileCard="clr-namespace:Covi.Features.UserProfile.Components.UserStatusCard"
+    xmlns:resources="clr-namespace:Covi.Features.UserProfile.Resources;assembly=Covi"
+    xmlns:changeStatus="clr-namespace:Covi.Features.UserProfile.Components.ChangeStatus;assembly=Covi"
+    xmlns:encryptionStatus="clr-namespace:Covi.Features.UserProfile.Components.EncryptionStatus;assembly=Covi"
+    xmlns:healthStatusAdvice="clr-namespace:Covi.Features.UserProfile.Components.HealthStatusAdvice;assembly=Covi"
+    xmlns:bluetoothReminder="clr-namespace:Covi.Features.UserProfile.Components.BluetoothReminder;assembly=Covi"
+    xmlns:controls="clr-namespace:Covi.Features.Controls"
+    xmlns:components="clr-namespace:Covi.Features.ComponentsManagement"
+    xmlns:local="clr-namespace:Covi.Features.UserProfile"
+    Title="{x:Static resources:Localization.UserProfile_Title_Text}"
+    IconImageSource="{StaticResource IconTabProfile}"
+    Style="{StaticResource RootStandalonePageStyle}">
+    <ContentPage.Content>
+        <Grid x:DataType="local:UserProfileViewModel"
+              RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <ContentView
+                x:Name="Header"
+                Style="{StaticResource PageHeaderStyle}">
+                <Label Text="{x:Static resources:Localization.UserProfile_Title_Text}"
+                       Style="{StaticResource TextPageTitleStyle}"/>
+            </ContentView>
+            <BoxView Grid.Row="1"
+                     Style="{StaticResource SeparatorStyle}"/>
+
+            <StackLayout Orientation="Vertical"
+                        Style="{StaticResource ContentContainerVariant2Style}"
+                        Padding="0"
+                        Grid.Row="2"
+                        HorizontalOptions="FillAndExpand">
+                <components:ComponentsHost
+                    RegionManager="{Binding UserProfileRegion}"
+                    BackgroundColor="Transparent"/>
+
+            </StackLayout>
+
+            <controls:BusyIndicatorView Grid.Row="2"
+                                        FadeBackground="True"
+                                        IsActive="{Binding IsBusy}"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

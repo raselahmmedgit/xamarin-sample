@@ -1,0 +1,29 @@
+{
+    "localeName": "uk",
+    "items": {
+        "AboutUs": "Covi\\Features\\AboutUs\\Resources\\Localization.uk.resx",
+        "Account": "Covi\\Features\\Account\\Resources\\Localization.uk.resx",
+        "AccountFeaturesInformation": "Covi\\Features\\AccountFeaturesInformation\\Resources\\Localization.uk.resx",
+        "ChangeLanguage": "Covi\\Features\\ChangeLanguage\\Resources\\Localization.uk.resx",
+        "Chat": "Covi\\Features\\Chat\\Resources\\Localization.uk.resx",
+        "CreateProfile": "Covi\\Features\\CreateProfile\\Resources\\Localization.uk.resx",
+        "ExpiredToken": "Covi\\Features\\ExpiredToken\\Resources\\Localization.uk.resx",
+        "Filters": "Covi\\Features\\Filters\\Resources\\Localization.uk.resx",
+        "ForceUpdate": "Covi\\Features\\ForceUpdate\\Resources\\Localization.uk.resx",
+        "Maintenance": "Covi\\Features\\Maintenance\\Resources\\Localization.uk.resx",
+        "Menu": "Covi\\Features\\Menu\\Resources\\Localization.uk.resx",
+        "NewsArticle": "Covi\\Features\\NewsArticle\\Resources\\Localization.uk.resx",
+        "Newsfeed": "Covi\\Features\\Newsfeed\\Resources\\Localization.uk.resx",
+        "OnBoarding": "Covi\\Features\\OnBoarding\\Resources\\Localization.uk.resx",
+        "Polls": "Covi\\Features\\Polls\\Resources\\Localization.uk.resx",
+        "PrivacyPolicy": "Covi\\Features\\PrivacyPolicy\\Resources\\Localization.uk.resx",
+        "Rumours": "Covi\\Features\\Rumours\\Resources\\Localization.uk.resx",
+        "Settings": "Covi\\Features\\Settings\\Resources\\Localization.uk.resx",
+        "SettingsChangeLanguage": "Covi\\Features\\SettingsChangeLanguage\\Resources\\Localization.uk.resx",
+        "UserDeleteAccount": "Covi\\Features\\UserDeleteAccount\\Resources\\Localization.uk.resx",
+        "UserLogIn": "Covi\\Features\\UserLogIn\\Resources\\Localization.uk.resx",
+        "UserLogOut": "Covi\\Features\\UserLogOut\\Resources\\Localization.uk.resx",
+        "Welcome": "Covi\\Features\\Welcome\\Resources\\Localization.uk.resx",
+        "Covi": "Covi\\Resources\\Localization.uk.resx"
+    }
+}

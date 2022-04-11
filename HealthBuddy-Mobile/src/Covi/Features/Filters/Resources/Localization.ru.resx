@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>2.0</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+  <data name="Filters_PageName_Text" xml:space="preserve">
+    <value>Фильтры</value>
+  </data>
+  <data name="Filter_AllSelected_Text" xml:space="preserve">
+    <value>Все</value>
+  </data>
+  <data name="Filter_NoneSelected_Text" xml:space="preserve">
+    <value>Ничего</value>
+  </data>
+  <data name="Filters_Save_Text" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="Filters_Apply_Text" xml:space="preserve">
+    <value>Применить</value>
+  </data>
+  <data name="Filters_Reset_Text" xml:space="preserve">
+    <value>Сброс</value>
+  </data>
+  <data name="Filters_ResetAll_Text" xml:space="preserve">
+    <value>Сбросить все</value>
+  </data>
+</root>

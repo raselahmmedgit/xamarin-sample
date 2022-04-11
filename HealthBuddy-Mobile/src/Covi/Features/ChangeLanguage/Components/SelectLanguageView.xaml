@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:resources="clr-namespace:Covi.Features.ChangeLanguage.Resources;assembly=Covi"
+             xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:platformSpecific="clr-namespace:Covi.PlatformSpecific;assembly=Covi"
+             xmlns:converters="clr-namespace:Covi.Converters;assembly=Covi"
+             mc:Ignorable="d"
+             xmlns:local="clr-namespace:Covi.Features.ChangeLanguage"
+             xmlns:components="clr-namespace:Covi.Features.ChangeLanguage.Components;assembly=Covi"
+             x:Class="Covi.Features.ChangeLanguage.Components.SelectLanguageView"
+             x:DataType="components:SelectLanguageViewModel">
+    <ContentView.Content>
+        <Grid RowSpacing="32">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0"
+                   Style="{StaticResource TextHeadlineH2}"
+                   Text="{x:Static resources:Localization.ChangeLanguage_Label_Text}"/>
+
+            <pancakeView:PancakeView Grid.Row="1"
+                                     BackgroundColor="White"
+                                     CornerRadius="32">
+
+                <StackLayout BindableLayout.ItemsSource="{Binding ProvidedLanguages}"
+                             IsVisible="{Binding IsBusy, Converter={StaticResource InvertedBoolConverter}}"
+                             Padding="16,16">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate x:DataType="local:LanguageItemViewModel">
+                            <Grid RowSpacing="16"
+                                  Padding="0,16,0,0"
+                                  HorizontalOptions="FillAndExpand">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="1"/>
+                                </Grid.RowDefinitions>
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer NumberOfTapsRequired="1"
+                                                          Command="{Binding SelectCommand}"/>
+                                </Grid.GestureRecognizers>
+
+                                <StackLayout Grid.Row="0"
+                                             HorizontalOptions="FillAndExpand"
+                                             Orientation="Horizontal">
+                                    
+                                    <RadioButton BackgroundColor="Transparent"
+                                                 BorderColor="{StaticResource PrimaryColor}"
+                                                 TextColor="{StaticResource PrimaryColor}"
+                                                 IsChecked="{Binding IsChecked, Mode=TwoWay}"/>
+                                    
+                                    <Label Text="{Binding DisplayName}"
+                                           VerticalOptions="Center"
+                                           HorizontalOptions="StartAndExpand"
+                                           Style="{StaticResource TapableText16}" />
+
+                                </StackLayout>
+
+                                <platformSpecific:DashedLine Grid.Row="1"
+                                                             IsVisible="{Binding IsLast, Converter={StaticResource InvertedBoolConverter}}"
+                                                             Style="{StaticResource DashedLineStyle}"/>
+                            </Grid>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </StackLayout>
+
+            </pancakeView:PancakeView>
+
+            <Button Text="{x:Static resources:Localization.Confirm_Btn_Text}"
+                    Grid.Row="2"
+                    Style="{StaticResource HeroButtonStyle}"
+                    VerticalOptions="End"
+                    Command="{Binding ChangeLanguageCommand}"/>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="Covi.Features.UserDeleteAccount.Components.DeleteAccountView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:forms="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:local="clr-namespace:Covi.Features.UserDeleteAccount"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:resources="clr-namespace:Covi.Features.UserDeleteAccount.Resources;assembly=Covi"
+    mc:Ignorable="d">
+    <ContentView.Content>
+
+        <Grid
+            x:DataType="local:DeleteAccountViewModel"
+            HorizontalOptions="FillAndExpand"
+            RowSpacing="0">
+
+            <forms:SvgCachedImage
+                Grid.Row="0"
+                Aspect="Fill"
+                HorizontalOptions="End"
+                Source="resource://Covi.Resources.Images.background_rectangle.svg"
+                Style="{StaticResource BackgroundImageStyle}"
+                VerticalOptions="Start" />
+
+            <Grid Grid.Row="0">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="1" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <ContentView
+                    Grid.Row="0"
+                    Style="{StaticResource SingleContentPageHeaderStyle}">
+                    <Label Style="{StaticResource TextPageHeadlineH3}" Text="{x:Static resources:Localization.UserDeleteAccount_Title_Text}" />
+                </ContentView>
+                <BoxView Grid.Row="1"
+                         HeightRequest="1"
+                         Margin="16,0"
+                         Color="{StaticResource HeaderSeparatorColor}"/>
+                <StackLayout
+                    Style="{StaticResource ContentPageContentContainerStyle}"
+                    Grid.Row="2"
+                    Orientation="Vertical"
+                    VerticalOptions="FillAndExpand">
+
+                    <pancakeView:PancakeView
+                        Margin="16"
+                        Padding="28"
+                        BackgroundColor="{StaticResource SurfaceColor}"
+                        CornerRadius="32">
+
+                        <Label Style="{StaticResource AccentTextStyle}" Text="{x:Static resources:Localization.UserDeleteAccount_Action_Description_Text}" />
+
+                    </pancakeView:PancakeView>
+
+                    <Button
+                        Margin="16,12"
+                        Command="{Binding DeleteButtonCommand}"
+                        Style="{StaticResource HeroButtonStyle}"
+                        Text="{x:Static resources:Localization.UserDeleteAccount_Delete_Btn_Text}"
+                        VerticalOptions="EndAndExpand" />
+
+                </StackLayout>
+
+            </Grid>
+
+        </Grid>
+
+    </ContentView.Content>
+</ContentView>

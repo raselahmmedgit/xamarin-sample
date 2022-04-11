@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+          x:Class="Covi.Features.Chat.Components.IncomingViewCell">
+    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Margin="4,10,80,10">
+        <Frame VerticalOptions="FillAndExpand" HorizontalOptions="EndAndExpand" BackgroundColor="#152fbf" Rotation="180" FlowDirection="LeftToRight" Padding="20,14" HasShadow="false" BorderColor="#152fbf" CornerRadius="20">
+            <Label ClassId="{Binding Value}" Text="{Binding Text}" TextColor="#ffffff" FontFamily="Open Sans,sans-serif" FontSize="16" MinimumHeightRequest="36"/>
+        </Frame>
+    </StackLayout>
+</ViewCell>

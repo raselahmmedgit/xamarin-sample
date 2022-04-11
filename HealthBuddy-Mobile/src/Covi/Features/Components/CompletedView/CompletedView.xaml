@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="Covi.Features.Components.CompletedView.CompletedView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:forms="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:local="clr-namespace:Covi.Features.Components.CompletedView"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    x:Name="Root"
+    mc:Ignorable="d">
+    <ContentView.Content>
+
+        <Grid HorizontalOptions="FillAndExpand"
+              RowSpacing="0">
+
+            <forms:SvgCachedImage
+                Grid.Row="0"
+                Aspect="Fill"
+                HorizontalOptions="Fill"
+                Source="resource://Covi.Features.Components.CompletedView.Resources.Images.completed_rectangle.svg"
+                HeightRequest="{StaticResource BackgroundImageHeight}"
+                VerticalOptions="Start" />
+
+            <Grid Grid.Row="0"
+                  Padding="64,176,64,0">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <forms:SvgCachedImage
+                    Grid.Row="0"
+                    Margin="0,0,0,64"
+                    HeightRequest="60"
+                    HorizontalOptions="Center"
+                    Source="resource://Covi.Features.Components.CompletedView.Resources.Images.completed_sign.svg"
+                    VerticalOptions="Center"
+                    WidthRequest="60" />
+
+                <Label
+                    Grid.Row="1"
+                    BindingContext="{x:Reference Root}"
+                    HorizontalOptions="Center"
+                    Style="{StaticResource TextHeadlineH2}"
+                    Text="{Binding TitleText}" />
+
+                <Label
+                    Grid.Row="2"
+                    BindingContext="{x:Reference Root}"
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    Style="{StaticResource TextTitleRegular16}"
+                    Text="{Binding DescriptionText}" />
+            </Grid>
+
+        </Grid>
+
+    </ContentView.Content>
+</ContentView>

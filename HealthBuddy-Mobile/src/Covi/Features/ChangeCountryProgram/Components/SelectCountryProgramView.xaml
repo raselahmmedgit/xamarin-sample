@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:resources="clr-namespace:Covi.Features.ChangeCountryProgram.Resources;assembly=Covi"
+             xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:platformSpecific="clr-namespace:Covi.PlatformSpecific;assembly=Covi"
+             xmlns:converters="clr-namespace:Covi.Converters;assembly=Covi"
+             mc:Ignorable="d"
+             xmlns:local="clr-namespace:Covi.Features.ChangeCountryProgram"
+             xmlns:controls="clr-namespace:Covi.Features.Controls;assembly=Covi"
+             xmlns:components="clr-namespace:Covi.Features.ChangeCountryProgram.Components;assembly=Covi"
+             x:Class="Covi.Features.ChangeCountryProgram.Components.SelectCountryProgramView"
+             x:DataType="components:SelectCountryProgramViewModel">
+    <ContentView.Content>
+        <Grid RowSpacing="32">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="460"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0"></StackLayout>
+            
+            <Label Grid.Row="1"
+                   Style="{StaticResource TextPageHeadlineH4}"
+                   Text="{x:Static resources:Localization.ChangeCountryProgram_Label_Text}"/>
+
+            <StackLayout Grid.Row="2" Margin="0,0">
+                <Frame BackgroundColor="#ffffff" HasShadow="false" BorderColor="#ffffff" Margin="0,0" Padding="6,0" CornerRadius="30" HeightRequest="60">
+                    <Picker x:Name="CountryProgramItemPicker" IsEnabled="{Binding IsEnable}" ItemsSource="{Binding CountryProgramItemViewModels}" ItemDisplayBinding="{Binding DisplayName}" SelectedItem="{Binding SelectedCountryProgramItemViewModel, Mode=TwoWay}" FontSize="16" FontFamily="OpenSans-SemiBold" BackgroundColor="#ffffff" HeightRequest="70" />
+                </Frame>
+            </StackLayout>
+            
+            <!--<pancakeView:PancakeView Grid.Row="2"
+                                     BackgroundColor="White"
+                                     CornerRadius="32">
+
+                <StackLayout BindableLayout.ItemsSource="{Binding ProvidedCountryPrograms}"
+                             IsVisible="{Binding IsBusy, Converter={StaticResource InvertedBoolConverter}}"
+                             Padding="16,16">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate x:DataType="local:CountryProgramItemViewModel">
+                            <Grid RowSpacing="16"
+                                  Padding="0,16,0,0"
+                                  HorizontalOptions="FillAndExpand">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="1"/>
+                                </Grid.RowDefinitions>
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer NumberOfTapsRequired="1"
+                                                          Command="{Binding SelectCommand}"/>
+                                </Grid.GestureRecognizers>
+
+                                <StackLayout Grid.Row="0"
+                                             HorizontalOptions="FillAndExpand"
+                                             Orientation="Horizontal">
+
+                                    <RadioButton BackgroundColor="Transparent"
+                                                 BorderColor="{StaticResource PrimaryColor}"
+                                                 TextColor="{StaticResource PrimaryColor}"
+                                                 IsChecked="{Binding IsChecked, Mode=TwoWay}"/>
+                                    
+                                    <Label Text="{Binding DisplayName}"
+                                           VerticalOptions="Center"
+                                           HorizontalOptions="StartAndExpand"
+                                           Style="{StaticResource TapableText16}" />
+                                    
+                                </StackLayout>
+
+                                <platformSpecific:DashedLine Grid.Row="1"
+                                                             IsVisible="{Binding IsLast, Converter={StaticResource InvertedBoolConverter}}"
+                                                             Style="{StaticResource DashedLineStyle}"/>
+                            </Grid>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </StackLayout>
+
+            </pancakeView:PancakeView>-->
+
+            <Button Text="{x:Static resources:Localization.Confirm_Btn_Text}"
+                    Grid.Row="3"
+                    Style="{StaticResource HeroButtonStyle}"
+                    VerticalOptions="End"
+                    Command="{Binding ChangeCountryProgramCommand}"/>
+
+            <controls:BusyIndicatorView Grid.Row="0"
+                                        FadeBackground="True"
+                                        IsActive="{Binding IsBusy}"/>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

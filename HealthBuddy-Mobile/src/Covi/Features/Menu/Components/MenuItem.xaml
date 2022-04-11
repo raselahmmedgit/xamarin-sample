@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Grid
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:forms="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:platformSpecific="clr-namespace:Covi.PlatformSpecific"
+    x:Class="Covi.Features.Menu.Components.MenuItem"
+    Margin="16,8">
+    <Grid.GestureRecognizers>
+        <TapGestureRecognizer Command="{Binding NavigateCommand}" />
+    </Grid.GestureRecognizers>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="2"/>
+    </Grid.RowDefinitions>
+    <Grid Grid.Row="0" Padding="0,16,0,16">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <forms:SvgCachedImage Grid.Column="0"
+                              VerticalOptions="Center"
+                              Style="{StaticResource IconImageStyle}"
+                              Source="{Binding IconSource, Mode=OneTime}"/>
+        <Label Margin="8,0,8,0"
+               Grid.Column="1"
+               VerticalOptions="Center"
+               Style="{StaticResource TextTitleRegular18}"
+               TextColor="{StaticResource OnQuaternaryColor}"
+               Text="{Binding Title, Mode=OneTime}"/>
+        <forms:SvgCachedImage Grid.Column="2"
+                              VerticalOptions="Center"
+                              Style="{StaticResource IconImageStyle}"
+                              WidthRequest="32"
+                              Source="resource://Covi.Features.Menu.Resources.Images.arrow.svg"/>
+    </Grid>
+    <!-- We should set bottom margin to 1 because of bug with lines on iPhone7 -->
+    <platformSpecific:DashedLine Grid.Row="1"
+                                 HeightRequest="1"
+                                 LineWidth="1"
+                                 Spacing="2"
+                                 Margin="0,0,0,1"
+                                 BackgroundColor="Transparent"
+                                 Alpha="125"
+                                 Color="{StaticResource OnQuaternaryColor}"/>
+</Grid>
+

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:resources="clr-namespace:Covi.Resources;assembly=Covi"
+    xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:forms="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    x:Class="Covi.Features.Components.InfoView.InfoView">
+    <ContentView.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <pancakeView:PancakeView
+                CornerRadius="30"
+                BackgroundColor="{StaticResource SurfaceColor}"
+                Grid.Row="0">
+                 <Grid
+                     Margin="24,24">
+                    <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <forms:SvgCachedImage
+                                Grid.Row="0"
+                                Source="{Binding ImageSourceName}"
+                                HorizontalOptions="Center"
+                                HeightRequest="128"/>
+                      <Label
+                            Grid.Row="1"
+                            Style="{StaticResource TextTitleRegular18}"
+                            Text="{Binding InformationText}"
+                            HorizontalTextAlignment="Center"
+                            Margin="0,16,0,0"/>
+                 </Grid>
+            </pancakeView:PancakeView>
+            <Button
+                IsVisible="{Binding IsRetryAvailable}"
+                IsEnabled="{Binding IsRetryAvailable}"
+                Margin="12,8"
+                Grid.Row="1"
+                Command="{Binding RetryCommand}"
+                Text="{x:Static resources:Localization.Component_Info_Retry_Text}"
+                Style="{StaticResource HeroButtonStyle}"/>
+        </Grid>
+    </ContentView.Content>
+</ContentView>
+

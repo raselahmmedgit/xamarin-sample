@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:forms="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             xmlns:resources="clr-namespace:Covi.Features.Rumours.Resources;assembly=Covi"
+             mc:Ignorable="d"
+             xmlns:controls="clr-namespace:Covi.Features.Controls;assembly=Covi"
+             x:Class="Covi.Features.Rumours.Components.RestrictedRumours">
+    <ContentView.Resources>
+        <x:Double x:Key="LogoImageHeight">80</x:Double>
+    </ContentView.Resources>
+    <ContentView.Content>
+        <Grid>
+            <forms:SvgCachedImage Grid.Row="0"
+                                  x:Name="Image"
+                                  Aspect="Fill"
+                                  HeightRequest="{StaticResource BackgroundRectangleHeight}"
+                                  WidthRequest="{StaticResource BackgroundRectangleWidth}"
+                                  Source="resource://Covi.Features.Rumours.Resources.Images.rumours_rectangle.svg"
+                                  HorizontalOptions="End"
+                                  VerticalOptions="Start"/>
+            <Grid RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <ContentView Style="{StaticResource SingleContentPageHeaderStyle}">
+                    <Label Text="{x:Static resources:Localization.Rumours_Header_TitleText}"
+                           Style="{StaticResource TextPageHeadlineH3}"/>
+                </ContentView>
+
+                <ScrollView Grid.Row="1"
+                            VerticalOptions="FillAndExpand"
+                            HorizontalOptions="FillAndExpand" Style="{StaticResource ContentPageContentContainerStyle}">
+                    <Grid Padding="32">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <forms:SvgCachedImage Source="{Binding RumoursLogoImageSource}"
+                                              HeightRequest="{StaticResource LogoImageHeight}"
+                                              HorizontalOptions="Center"/>
+
+                        <Label Grid.Row="1"
+                               Text="{x:Static resources:Localization.Rumours_Restricted_TitleText}"
+                               Style="{StaticResource TextHeadlineH2}"
+                               Margin="0,40,0,0"/>
+                        <StackLayout BindableLayout.ItemsSource="{Binding RumoursInformationItemsList}"
+                                     Grid.Row="2"
+                                     Margin="0,36,0,0">
+                            <BindableLayout.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid BackgroundColor="Transparent">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        <BoxView Grid.Row="0"
+                                                Grid.Column="0"
+                                                Margin="0,12"
+                                                BackgroundColor="{StaticResource AccentColor}"
+                                                WidthRequest="4"
+                                                HeightRequest="4"
+                                                CornerRadius="2"
+                                                VerticalOptions="Start"
+                                                HorizontalOptions="Start"/>
+                                        <Label Grid.Column="1"
+                                               Grid.Row="0"
+                                               Margin="8,0"
+                                               VerticalOptions="Start"
+                                               HorizontalOptions="Start"
+                                               Style="{StaticResource TextTitleRegular16}"
+                                               Text="{Binding}"/>
+                                    </Grid>
+                                </DataTemplate>
+                            </BindableLayout.ItemTemplate>
+                        </StackLayout>
+
+                        <Button Grid.Row="3"
+                                VerticalOptions="End"
+                                Text="{x:Static resources:Localization.Rumours_CreateAccount_BtnText}"
+                                Style="{StaticResource HeroButtonStyle}"
+                                Command="{Binding CreateAccountCommand}"
+                                Margin="0,36,0,0"/>
+
+                        <Button Grid.Row="4"
+                                HorizontalOptions="Fill"
+                                Text="{x:Static resources:Localization.Rumours_LogIn_BtnText}"
+                                Style="{StaticResource HeroButtonLightStyle}"
+                                Margin="0,16,0,0"
+                                VerticalOptions="End"
+                                Command="{Binding LogInCommand}"/>
+                    </Grid>
+                </ScrollView>
+
+
+                <controls:BusyIndicatorView Grid.Row="1"
+                                            FadeBackground="True"
+                                            IsActive="{Binding IsBusy}"/>
+            </Grid>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

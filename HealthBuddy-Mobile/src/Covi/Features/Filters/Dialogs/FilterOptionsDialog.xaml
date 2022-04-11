@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<dialogPage:DialogPage
+    x:Class="Covi.Features.Filters.Dialogs.FilterOptionsDialog"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:components="clr-namespace:Covi.Features.Filters.Components;assembly=Covi"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:dialogs="clr-namespace:Covi.Features.Filters.Dialogs;assembly=Covi"
+    xmlns:forms="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:local="clr-namespace:Covi.Features.Filters.Dialogs"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:prism="http://prismlibrary.com"
+    xmlns:resources="clr-namespace:Covi.Features.Filters.Resources;assembly=Covi"
+    xmlns:dialogPage="clr-namespace:Covi.Features.Components.DialogPage;assembly=Covi"
+    prism:DialogLayout.CloseOnBackgroundTapped="true"
+    prism:DialogLayout.LayoutBounds="0.5, 1, -1, -1"
+    prism:DialogLayout.RelativeHeightRequest="0.8"
+    x:DataType="local:FilterOptionsViewModel"
+    mc:Ignorable="d">
+    <dialogPage:DialogPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="FilterOptionMultiSelect">
+                <components:FilterOptionCardMultiSelect />
+            </DataTemplate>
+            <DataTemplate x:Key="FilterOptionSingleSelect">
+                <components:FilterOptionCardSingleSelect />
+            </DataTemplate>
+            <dialogs:FilterOptionDataTemplateSelector
+                x:Key="FilterOptionDataTemplateSelector"
+                MultiSelectTemplate="{StaticResource FilterOptionMultiSelect}"
+                SingleSelectTemplate="{StaticResource FilterOptionSingleSelect}" />
+        </ResourceDictionary>
+    </dialogPage:DialogPage.Resources>
+    <Grid>
+        <ContentView x:Name="Overlay"
+                 Grid.Row="0"
+                 Opacity="0"
+                 BackgroundColor="#33000000">
+        </ContentView>
+
+
+        <Grid x:Name="DialogView"
+              RowSpacing="0"
+              Grid.Row="0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+
+            </Grid.RowDefinitions>
+
+            <pancakeView:PancakeView Style="{StaticResource ContentPageHeaderStyle}"
+                                     Grid.Row="1"
+                                     BackgroundColor="{StaticResource BackgroundColor}"
+                                     CornerRadius="32,32,0,0">
+                <Grid Margin="0,8,0,8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Style="{DynamicResource TextPageHeadlineH3}"
+                           Grid.Column="0"
+                           VerticalOptions="Center"
+                           Text="{Binding FilterName}" />
+                    <ContentView Grid.Column="1" HorizontalOptions="End"
+                                 WidthRequest="48">
+                        <forms:SvgCachedImage Source="close_icon.svg"
+                                              Style="{StaticResource CloseIconImageStyle}"/>
+                        <ContentView.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding CloseDialogCommand}" />
+                        </ContentView.GestureRecognizers>
+                    </ContentView>
+
+                </Grid>
+            </pancakeView:PancakeView>
+            <ContentView Grid.Row="2"
+                         Style="{StaticResource ContentPageCollectionStyle}"
+                         BackgroundColor="{StaticResource SurfaceColor}">
+                <Grid Style="{StaticResource NestedContentPartContainerStyle}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0"
+                      Margin="0,4,0,0"
+                      Padding="16,4,0,4"
+                      HeightRequest="48"
+                      HorizontalOptions="End"
+                      Style="{StaticResource NestedContentPartContainerStyle}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0"
+                           Style="{StaticResource TapableText13}"
+                           Text="{x:Static resources:Localization.Filters_Reset_Text}"
+                           VerticalOptions="Center" />
+                        <forms:SvgCachedImage Grid.Column="1"
+                                          Source="refresh_icon.svg"
+                                          Style="{StaticResource IconImageStyle}"
+                                          VerticalOptions="Center" />
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ReturnToDefaultValuesCommand}" />
+                        </Grid.GestureRecognizers>
+                    </Grid>
+                    <ScrollView Grid.Row="1">
+                        <StackLayout BindableLayout.ItemTemplateSelector="{StaticResource FilterOptionDataTemplateSelector}" BindableLayout.ItemsSource="{Binding FilterOptions}"/>
+                    </ScrollView>
+
+                    <Button Grid.Row="2"
+                        Margin="0,8,0,8"
+                        Command="{Binding SaveAndCloseDialogCommand}"
+                        Style="{StaticResource HeroButtonStyle}"
+                        Text="{x:Static resources:Localization.Filters_Apply_Text}" />
+                </Grid>
+            </ContentView>
+        </Grid>
+    </Grid>
+
+
+</dialogPage:DialogPage>

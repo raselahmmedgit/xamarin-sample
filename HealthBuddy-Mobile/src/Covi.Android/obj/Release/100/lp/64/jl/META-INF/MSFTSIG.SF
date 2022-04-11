@@ -1,0 +1,30 @@
+Signature-Version: 1.0
+SHA-256-Digest-Manifest-Main-Attributes: u753HJxN1Eto/mAwQLtMdk4wN0BtT
+ FhFqfTAVgfQLdE=
+SHA-256-Digest-Manifest: 4BrwiW7diUpz6byQlxwwT0SdTjO6vhXQPCyoSXZ6z9U=
+Created-By: 1.8.0_112 (Oracle Corporation)
+
+Name: classes.jar
+SHA-256-Digest: DUK62fYcLASR0U5fzc+bDdCpeAPx9ZGsvfaCMS2ETSk=
+
+Name: res/drawable-xhdpi-v4/ic_launcher.png
+SHA-256-Digest: aLNipZqT/0qnLB5sgucQvo9TAFj2f1hs/gnAc1cb00s=
+
+Name: res/values/values.xml
+SHA-256-Digest: 0lUVFhSx8W3oDD2FBl9EOSYYJxoN509WycgfuDYyvoo=
+
+Name: AndroidManifest.xml
+SHA-256-Digest: eS4D/DOqJ7abVozr0UzngsX+gnkqLOdb4OENikw7UpU=
+
+Name: res/drawable-hdpi-v4/ic_launcher.png
+SHA-256-Digest: Xw5seT++r697XS0239Oq+JQjdrXXN3uzhfVryP3kII4=
+
+Name: res/drawable-mdpi-v4/ic_launcher.png
+SHA-256-Digest: idcsQ8hAzbjLnpfuPDTT8pYx9aJCailBhTSQrSL5WxE=
+
+Name: res/drawable-xxhdpi-v4/ic_launcher.png
+SHA-256-Digest: S81XVDh5E2kpxwumiYv6cTc0YXIStM27nXKUH5GAmsg=
+
+Name: R.txt
+SHA-256-Digest: 8Puh1EwQeCym62lfEwZwHszrXb1an27avOMEhW/6a/U=
+

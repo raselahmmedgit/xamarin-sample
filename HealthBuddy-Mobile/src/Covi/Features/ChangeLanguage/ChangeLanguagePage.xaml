@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:forms="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             xmlns:resources="clr-namespace:Covi.Features.ChangeLanguage.Resources;assembly=Covi"
+             xmlns:components="clr-namespace:Covi.Features.ChangeLanguage.Components;assembly=Covi"
+             mc:Ignorable="d"
+             xmlns:local="clr-namespace:Covi.Features.ChangeLanguage"
+             xmlns:controls="clr-namespace:Covi.Features.Controls;assembly=Covi"
+             x:Class="Covi.Features.ChangeLanguage.ChangeLanguagePage"
+             Style="{StaticResource RootStandaloneNoSafeAreaPageStyle}">
+    <ContentPage.Content>
+        <Grid x:DataType="local:ChangeLanguageViewModel">
+            <forms:SvgCachedImage Grid.Row="0"
+                                  Aspect="Fill"
+                                  HeightRequest="{StaticResource SmallBackgroundRectangleHeight}"
+                                  WidthRequest="{StaticResource SmallBackgroundRectangleWidth}"
+                                  HorizontalOptions="Start"
+                                  VerticalOptions="Start"/>
+            <ScrollView Style="{StaticResource ContentPageContentContainerScrollableStyle}">
+                    <Grid Style="{StaticResource NestedCollectionContentContainerStyle}">
+                        <components:SelectLanguageView
+                            BindingContext="{Binding SelectLanguageViewModel}"
+                            Padding="0,16,0,16"/>
+                    </Grid>
+                </ScrollView>
+            <controls:BusyIndicatorView Grid.Row="0"
+                                        FadeBackground="True"
+                                        IsActive="{Binding IsBusy}"/>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

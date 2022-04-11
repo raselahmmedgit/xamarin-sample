@@ -1,0 +1,852 @@
+{
+  "openapi": "3.0.6",
+  "info": {
+    "title": "PlatformEndpoints",
+    "version": "v1",
+    "description": "Available API's."
+  },
+  "paths": {
+    "/v1/account/register": {
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/apiAcceptLanguage"
+        }
+      ],
+      "post": {
+        "tags": [
+          "Account"
+        ],
+        "summary": "Registers the user.",
+        "description": "Called on initial registration. Validates the uniqueness of the username.",
+        "operationId": "registerUser",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Registration is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/account/refresh": {
+      "post": {
+        "tags": [
+          "Account"
+        ],
+        "summary": "Refreshes the access token.",
+        "description": "Called when the access token has to be refreshed.",
+        "operationId": "refreshToken",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RefreshTokenRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "New token is provided.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TokenResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/account/login": {
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/apiAcceptLanguage"
+        }
+      ],
+      "post": {
+        "tags": [
+          "Account"
+        ],
+        "summary": "Logins the user.",
+        "description": "Called when an existing user reinstalls the app.",
+        "operationId": "login",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Login is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/account/logout": {
+      "post": {
+        "tags": [
+          "Account"
+        ],
+        "summary": "Logout the user.",
+        "description": "Called when accessToken and refreshToken have to be revoked.",
+        "operationId": "logoutUser",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RefreshTokenRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "User logged out successfully."
+          }
+        }
+      }
+    },
+    "/v1/account/delete": {
+      "post": {
+        "tags": [
+          "Account"
+        ],
+        "summary": "Deletes the user.",
+        "description": "Called when account and related data have to be removed.",
+        "operationId": "deleteUser",
+        "responses": {
+          "204": {
+            "description": "User account was deleted successfully."
+          }
+        }
+      }
+    },
+    "/v1/user/profile": {
+      "parameters": [
+        {
+          "in": "query",
+          "name": "lang",
+          "required": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Gets the user profile.",
+        "description": "Called whenever the mobile needs the user account, status and application metadata.",
+        "operationId": "getUserProfile",
+        "responses": {
+          "200": {
+            "description": "Returns the whole user profile required for running application.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserProfileResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/notification/setup": {
+      "post": {
+        "tags": [
+          "Notification"
+        ],
+        "summary": "Setups push notifications.",
+        "description": "Called by the mobile to share the push notification token and mobile OS identification.",
+        "operationId": "setupNotifications",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NotificationInfo"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Push notification details are saved successfully."
+          }
+        }
+      }
+    },
+    "/v1/application/metadata": {
+      "parameters": [
+        {
+          "in": "query",
+          "name": "lang",
+          "required": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "tags": [
+          "Application"
+        ],
+        "summary": "Gets the application metadata.",
+        "description": "Called to get the application metadata.",
+        "operationId": "getApplicationMetadata",
+        "responses": {
+          "200": {
+            "description": "Returns application metadata required for running application.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MetadataResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/article": {
+      "parameters": [
+        {
+          "in": "query",
+          "name": "filter",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "tags": [
+          "CMS"
+        ],
+        "summary": "Gets the newsfeed articles.",
+        "description": "Called to get the newsfeed articles by specified filter parameters.",
+        "operationId": "getArticles",
+        "responses": {
+          "200": {
+            "description": "Returns the newsfeed articles.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NewsfeedArticles"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/article/{id}": {
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "in": "query",
+          "name": "lang",
+          "required": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "tags": [
+          "CMS"
+        ],
+        "summary": "Gets the article by id.",
+        "description": "Called to get the article by id.",
+        "operationId": "getArticleById",
+        "responses": {
+          "200": {
+            "description": "Returns the article by specified id.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Article"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/article/aboutUs": {
+      "parameters": [
+        {
+          "in": "query",
+          "name": "lang",
+          "required": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "tags": [
+          "CMS"
+        ],
+        "summary": "Gets the About Us article.",
+        "description": "Called to get the About Us article.",
+        "operationId": "getAboutUs",
+        "responses": {
+          "200": {
+            "description": "Returns the About Us article.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UtilityArticle"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/article/privacyPolicy": {
+      "parameters": [
+        {
+          "in": "query",
+          "name": "lang",
+          "required": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "tags": [
+          "CMS"
+        ],
+        "summary": "Gets the Privacy Policy article.",
+        "description": "Called to get the Privacy Policy article.",
+        "operationId": "getPrivacyPolicy",
+        "responses": {
+          "200": {
+            "description": "Returns the Privacy Policy article.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UtilityArticle"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/image/{id}": {
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "in": "query",
+          "name": "width",
+          "schema": {
+            "type": "integer",
+            "format": "int32",
+            "default": 1500
+          }
+        },
+        {
+          "in": "query",
+          "name": "height",
+          "schema": {
+            "type": "integer",
+            "format": "int32",
+            "default": 600
+          }
+        }
+      ],
+      "get": {
+        "tags": [
+          "CMS"
+        ],
+        "summary": "Gets the image by id.",
+        "description": "Called to get the article image with specified size by id.",
+        "operationId": "getImageById",
+        "responses": {
+          "200": {
+            "description": "Returns image specified by id.",
+            "content": {
+              "image/jpeg": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              },
+              "image/png": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              },
+              "image/gif": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "parameters": {
+      "apiAcceptLanguage": {
+        "in": "header",
+        "name": "API-Accept-Language",
+        "schema": {
+          "type": "string"
+        }
+      }
+    },
+    "schemas": {
+      "NotificationInfo": {
+        "type": "object",
+        "properties": {
+          "token": {
+            "type": "string"
+          },
+          "targetPlatform": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "token",
+          "targetPlatform"
+        ]
+      },
+      "LoginRequest": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "example": "Username"
+          },
+          "password": {
+            "type": "string",
+            "example": "Password"
+          }
+        },
+        "required": [
+          "username",
+          "password"
+        ]
+      },
+      "Statuses": {
+        "type": "object",
+        "properties": {
+          "values": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Status"
+            }
+          },
+          "default": {
+            "type": "integer",
+            "format": "int32",
+            "example": 1
+          },
+          "onExposure": {
+            "type": "integer",
+            "format": "int32",
+            "example": 2
+          }
+        }
+      },
+      "Status": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32",
+            "example": 2
+          },
+          "name": {
+            "type": "string",
+            "example": "At Risk"
+          },
+          "severity": {
+            "type": "integer",
+            "format": "int32",
+            "example": 1,
+            "enum": [
+              0,
+              1,
+              2
+            ]
+          },
+          "requiresContactDiscovery": {
+            "type": "boolean",
+            "example": false
+          }
+        }
+      },
+      "UserProfileResponse": {
+        "type": "object",
+        "properties": {
+          "userAccount": {
+            "$ref": "#/components/schemas/UserAccount"
+          },
+          "userStatus": {
+            "$ref": "#/components/schemas/UserStatus"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/Metadata"
+          }
+        }
+      },
+      "MetadataResponse": {
+        "type": "object",
+        "properties": {
+          "metadata": {
+            "$ref": "#/components/schemas/Metadata"
+          }
+        }
+      },
+      "Metadata": {
+        "type": "object",
+        "properties": {
+          "statuses": {
+            "$ref": "#/components/schemas/Statuses"
+          },
+          "features": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "filters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Filter"
+            }
+          }
+        }
+      },
+      "UserAccount": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "string"
+          },
+          "username": {
+            "type": "string",
+            "example": "Username"
+          },
+          "roles": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "example": "User"
+            }
+          }
+        }
+      },
+      "UserStatus": {
+        "type": "object",
+        "properties": {
+          "statusId": {
+            "type": "integer",
+            "format": "int32",
+            "example": 1
+          },
+          "statusChangedOn": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "Token": {
+        "type": "object",
+        "properties": {
+          "accessToken": {
+            "type": "string"
+          },
+          "refreshToken": {
+            "type": "string"
+          },
+          "expiresIn": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "TokenResponse": {
+        "type": "object",
+        "properties": {
+          "token": {
+            "$ref": "#/components/schemas/Token"
+          }
+        }
+      },
+      "RefreshTokenRequest": {
+        "type": "object",
+        "properties": {
+          "refreshToken": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "refreshToken"
+        ]
+      },
+      "LoginResponse": {
+        "type": "object",
+        "properties": {
+          "token": {
+            "$ref": "#/components/schemas/Token"
+          },
+          "userAccount": {
+            "$ref": "#/components/schemas/UserAccount"
+          },
+          "userStatus": {
+            "$ref": "#/components/schemas/UserStatus"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/Metadata"
+          }
+        }
+      },
+      "Filter": {
+        "type": "object",
+        "properties": {
+          "displayName": {
+            "type": "string",
+            "example": "Health Status"
+          },
+          "parameterName": {
+            "type": "string",
+            "example": "health_status"
+          },
+          "isMultiSelect": {
+            "type": "boolean"
+          },
+          "values": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FilterValue"
+            }
+          }
+        }
+      },
+      "FilterValue": {
+        "type": "object",
+        "properties": {
+          "displayName": {
+            "type": "string",
+            "example": "Healthy"
+          },
+          "parameterName": {
+            "type": "string",
+            "example": "healthy"
+          },
+          "isDefault": {
+            "type": "boolean"
+          }
+        }
+      },
+      "NewsfeedArticles": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ShortArticle"
+            }
+          }
+        }
+      },
+      "ShortArticle": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "08ca8d3f-9526-48de-b34a-b60d8c30558a"
+          },
+          "languageCode": {
+            "type": "string",
+            "example": "en"
+          },
+          "source": {
+            "type": "string",
+            "example": "UNICEF"
+          },
+          "title": {
+            "type": "string",
+            "example": "Article with text userstory_61296 title 2"
+          },
+          "created": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "body": {
+            "type": "object",
+            "properties": {
+              "summary": {
+                "type": "string"
+              },
+              "format": {
+                "type": "string"
+              }
+            }
+          },
+          "videoLink": {
+            "$ref": "#/components/schemas/VideoLink"
+          },
+          "imageLink": {
+            "$ref": "#/components/schemas/ImageLink"
+          }
+        }
+      },
+      "Article": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "08ca8d3f-9526-48de-b34a-b60d8c30558a"
+          },
+          "languageCode": {
+            "type": "string",
+            "example": "en"
+          },
+          "source": {
+            "type": "string",
+            "example": "UNICEF"
+          },
+          "title": {
+            "type": "string",
+            "example": "Article with text userstory_61296 title 2"
+          },
+          "created": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "body": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string"
+              },
+              "format": {
+                "type": "string"
+              }
+            }
+          },
+          "videoLink": {
+            "$ref": "#/components/schemas/VideoLink"
+          },
+          "imageLink": {
+            "$ref": "#/components/schemas/ImageLink"
+          }
+        }
+      },
+      "UtilityArticle": {
+        "type": "object",
+        "properties": {
+          "languageCode": {
+            "type": "string",
+            "example": "en"
+          },
+          "title": {
+            "type": "string"
+          },
+          "body": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string"
+              },
+              "format": {
+                "type": "string"
+              }
+            }
+          },
+          "imageLink": {
+            "$ref": "#/components/schemas/ImageLink"
+          }
+        }
+      },
+      "ImageLink": {
+        "type": "object",
+        "properties": {
+          "imageId": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          }
+        }
+      },
+      "VideoLink": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "uri": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "ApiKeyAuth": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "Ocp-Apim-Subscription-Key"
+      }
+    }
+  },
+  "security": [
+    {
+      "ApiKeyAuth": []
+    }
+  ]
+}

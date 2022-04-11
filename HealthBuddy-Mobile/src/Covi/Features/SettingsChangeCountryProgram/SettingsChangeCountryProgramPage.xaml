@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:forms="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             xmlns:components="clr-namespace:Covi.Features.ChangeCountryProgram.Components;assembly=Covi"
+             mc:Ignorable="d"
+             xmlns:local="clr-namespace:Covi.Features.SettingsChangeCountryProgram"
+             xmlns:controls="clr-namespace:Covi.Features.Controls;assembly=Covi"
+             x:Class="Covi.Features.SettingsChangeCountryProgram.SettingsChangeCountryProgramPage"
+             Style="{StaticResource SingleContentPageStyle}">
+    <ContentPage.Content>
+        <Grid x:DataType="local:SettingsChangeCountryProgramViewModel">
+            <forms:SvgCachedImage Grid.Row="0"
+                                  Aspect="Fill"
+                                  HeightRequest="{StaticResource SmallBackgroundMapHeight}"
+                                  WidthRequest="{StaticResource SmallBackgroundMapWidth}"
+                                  Source="resource://Covi.Features.ChangeCountryProgram.Resources.Images.countryprogram_map.svg"
+                                  HorizontalOptions="CenterAndExpand"
+                                  VerticalOptions="StartAndExpand" Margin="0,60,0,0"/>
+
+            <Grid RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="1"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <ContentView Grid.Row="0" Style="{StaticResource SingleContentPageHeaderStyle}">
+                    <Label Text=""
+                           Style="{StaticResource TextPageHeadlineH3}"/>
+                </ContentView>
+                <BoxView Grid.Row="1"
+                         HeightRequest="1"
+                         Margin="24,0"
+                         Color="{StaticResource HeaderSeparatorColor3}"/>
+
+                <ScrollView Orientation="Vertical" Style="{StaticResource ContentPageCollectionStyle}"
+                            Grid.Row="2">
+                    <Grid Padding="16,0">
+                        <components:SelectCountryProgramView
+                            BindingContext="{Binding SelectCountryProgramViewModel}"
+                            Padding="0,0,0,16"/>
+                    </Grid>
+                </ScrollView>
+            </Grid>
+            
+            <controls:BusyIndicatorView Grid.Row="0"
+                                        FadeBackground="True"
+                                        IsActive="{Binding IsBusy}"/>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

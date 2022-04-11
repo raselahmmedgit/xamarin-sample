@@ -1,0 +1,48 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: init meta",
+            "type": "python",
+            "request": "launch",
+            "program": "init_meta.py",
+            "console": "integratedTerminal",
+            "args": ["../src", "./results"]
+        },
+        {
+            "name": "Python: add locale",
+            "type": "python",
+            "request": "launch",
+            "program": "add_locale.py",
+            "console": "integratedTerminal",
+            "args": ["../src", "results/default.json", "it"]
+        },
+        {
+            "name": "Python: bundle locale",
+            "type": "python",
+            "request": "launch",
+            "program": "bundle_locale.py",
+            "console": "integratedTerminal",
+            "args": ["../src", "./results/english.json", "./results/"]
+        },
+        {
+            "name": "Python: unbundle locale",
+            "type": "python",
+            "request": "launch",
+            "program": "unbundle_locale.py",
+            "console": "integratedTerminal",
+            "args": ["../src", "results/english.resx", "results/english.json"]
+        },
+        {
+            "name": "Python: unbundle locale help",
+            "type": "python",
+            "request": "launch",
+            "program": "unbundle_locale.py",
+            "console": "integratedTerminal",
+            "args": ["-h"]
+        }
+    ]
+}

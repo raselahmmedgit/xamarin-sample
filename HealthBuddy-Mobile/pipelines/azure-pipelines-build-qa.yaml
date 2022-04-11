@@ -1,0 +1,379 @@
+trigger: none
+
+parameters:
+# version_name - (Optional) The application version name (user visible). Defaults to 1.0.build_number where XXX is the 
+# same as the $(Build.BuildId)
+- name: version_name
+  displayName: Version Name (User version)
+  type: string
+  default: '1.0.$(Build.BuildId)'   
+
+# build_code - (Optional) The build version code to be applied to the application (user invisible). Defaults to Build.BuildId 
+# built in variable
+- name: version_code
+  displayName: Full Version Name (Technical version)
+  type: string
+  default: '$(Build.BuildNumber)'  
+
+variables:
+- group: Mobile.QA
+- name: outputDirectory
+  value: '$(build.binariesDirectory)/$(buildConfiguration)'
+
+pool:
+  name: Azure Pipelines
+  vmImage:  'internal-macos-10.15'
+  demands:
+  - MSBuild
+  - Xamarin.Android
+  - JDK
+
+jobs:
+- job: build_andriod
+
+  steps:
+
+    - task: NuGetToolInstaller@1
+      displayName: 'Use NuGet 5.2.0'
+      inputs:
+        versionSpec: 5.2.0
+
+    - task: NuGetCommand@2
+      displayName: 'Restore NuGet packages in solution'
+
+    - task: UseDotNet@2
+      displayName: 'Use .Net Core sdk 2.2.301'
+      inputs:
+        version: 2.2.301
+      continueOnError: true
+
+    - powershell: |
+        # Currently, task groups are not supported in YAML pipelines
+        #https://developercommunity.visualstudio.com/idea/567555/support-custom-task-group-in-yaml.html
+
+        $VersionCode = "${{parameters.version_code}}"
+        $VersionName = "${{parameters.version_name}}"
+        
+        $versionCode = $VersionCode.Replace(".", "")
+        $versionName = "$VersionName"
+
+        Write-Host "Version code: $versionCode"
+        Write-Host "Version name: $versionName"
+
+        $manifestFiles = Get-ChildItem .\ -recurse -include "AndroidManifest.xml" 
+        if ($manifestFiles) {
+          $count = $manifestFiles.count
+          Write-Host "Will apply Code=$versionCode Name=$versionName to $count AndroidManifest.xml files."
+          foreach ($file in $manifestFiles) {
+                $path = $file.FullName
+                Write-Host "**** Manifest: $path ****"
+                try {
+                    [xml] $XmlManifest = Get-Content -Path $file
+                    $versionCodeNode = Select-Xml -xml $XmlManifest -Xpath "/manifest/@android:versionCode" -namespace @{android = "http://schemas.android.com/apk/res/android"}
+                    $versionNameNode = Select-Xml -xml $XmlManifest -Xpath "/manifest/@android:versionName" -namespace @{android = "http://schemas.android.com/apk/res/android"}
+                    
+                    $versionCodeNode.Node.Value = $versionCode
+                    $versionNameNode.Node.Value = $versionName
+
+                    $XmlManifest.Save($file)
+                    Write-Host "AndroidManifest.xml - new version applied"
+                } catch {
+                    Write-Host "Couldn't update version information in $path"
+                }
+            }
+        } else {
+            Write-Host "No AndroidManifest.xml files found."
+            exit 1
+        }
+      displayName: 'Update AndroidManifest.xml versions'
+
+    - task: DownloadSecureFile@1
+      displayName: 'Download secrets'
+      name: secrets
+      inputs:
+        secureFile:  $(secrets_file_name)
+
+    - powershell: |
+        # Make sure path to secrets file is available
+        if (-not $Env:secretsPath)
+        {
+            Write-Error ("secrets environment variable is missing.")
+            exit 1
+        }
+
+        if (-not $Env:BUILD_SOURCESDIRECTORY)
+        {
+            Write-Error ("BUILD_SOURCESDIRECTORY environment variable is missing.")
+            exit 1
+        }
+      
+        # Copy file to Configuration project
+        $SecretsFilePath = $Env:secretsPath
+        $SecretsDestinationFilePath =  "$($Env:BUILD_SOURCESDIRECTORY)\src\Covi.Configuration\secrets.json"
+      
+        Copy-Item -Path $SecretsFilePath  -Destination $SecretsDestinationFilePath
+        Write-Verbose "Secrets file copied to $($SecretsDestinationFilePath)" 
+      displayName: 'Replace project secrets file'
+      env:
+        secretsPath: $(secrets.secureFilePath)
+
+    - task: DownloadSecureFile@1
+      displayName: 'Download Firebase configuration file'
+      name: googleservicesconfig
+      inputs:
+        secureFile: $(android__firebase_config_file_name)
+
+    - powershell: |
+        # Make sure path to secrets file is available
+        if (-not $Env:secretsPath)
+        {
+            Write-Error ("secrets environment variable is missing.")
+            exit 1
+        }
+        
+        # Make sure path to source code directory is available
+        if (-not $Env:BUILD_SOURCESDIRECTORY)
+        {
+            Write-Error ("BUILD_SOURCESDIRECTORY environment variable is missing.")
+            exit 1
+        }
+        
+        # Copy file to Configuration project
+        $SecretsFilePath = $Env:secretsPath
+        $SecretsDestinationFilePath =  "$($Env:BUILD_SOURCESDIRECTORY)\src\Covi.Android\google-services.json"
+        
+        Copy-Item -Path $SecretsFilePath  -Destination $SecretsDestinationFilePath
+        Write-Verbose "Secrets file copied to $($SecretsDestinationFilePath)" 
+      displayName: 'Replace project Firebase configuration file'
+      env:
+        secretsPath: $(googleservicesconfig.secureFilePath)
+
+    - task: DownloadSecureFile@1
+      displayName: 'Download keystore'
+      name: keystore  
+      inputs:
+        secureFile: $(android__keystore__file_name)
+
+    - task: XamarinAndroid@1
+      displayName: 'Build Xamarin.Android Apk project **/*.Android.csproj'
+      inputs:
+        projectFile: '**/*.Android.csproj'
+        target: Build
+        outputDirectory: '$(outputDirectory)'
+        configuration: '$(buildConfiguration)'
+        clean: true
+        msbuildArguments: '/p:AndroidPackageFormat=apk /p:AndroidBuildApplicationPackage="true" /t:SignAndroidPackage /p:AndroidKeyStore=true /p:AndroidSigningKeyStore=$(keystore.secureFilePath) /p:AndroidSigningStorePass=$(android__keystore__password) /p:AndroidSigningKeyAlias=$(android__keystore__key_alias) /p:AndroidSigningKeyPass=$(android__keystore__key_password)'
+
+    - task: CopyFiles@2
+      displayName: 'Copy apk Files to: $(Build.ArtifactStagingDirectory)'
+      inputs:
+        SourceFolder: '$(outputDirectory)'
+        Contents: |
+          **/*.apk
+        TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+    - task: XamarinAndroid@1
+      displayName: 'Build Xamarin.Android Aab project **/*.Android.csproj'
+      inputs:
+        projectFile: '**/*.Android.csproj'
+        target: Build
+        outputDirectory: '$(outputDirectory)'
+        configuration: '$(buildConfiguration)'
+        msbuildArguments: '/p:AndroidPackageFormat=aab /p:AndroidBuildApplicationPackage="true" /t:SignAndroidPackage /p:AndroidKeyStore=true /p:AndroidSigningKeyStore=$(keystore.secureFilePath) /p:AndroidSigningStorePass=$(android__keystore__password) /p:AndroidSigningKeyAlias=$(android__keystore__key_alias) /p:AndroidSigningKeyPass=$(android__keystore__key_password)'
+
+    - task: CopyFiles@2
+      displayName: 'Copy Aab Files to: $(Build.ArtifactStagingDirectory)'
+      inputs:
+        SourceFolder: '$(outputDirectory)'
+        Contents: |
+          **/*.aab
+        TargetFolder: '$(Build.ArtifactStagingDirectory)'        
+
+    - task: PublishBuildArtifacts@1
+      displayName: 'Publish Artifact: android'
+      inputs:
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+        ArtifactName: android
+
+
+- job: build_ios
+
+  steps:
+
+  - task: InstallAppleCertificate@2
+    displayName: 'Install an Apple certificate'
+    inputs:
+      certSecureFile: $(ios__certificate_file_name)
+      certPwd: '$(ios__certificate_password)'
+
+  - task: InstallAppleProvisioningProfile@1
+    displayName: 'Install an Apple provisioning profile'
+    inputs:
+      provProfileSecureFile: $(ios__profile_file_name)
+
+  - task: NuGetToolInstaller@1
+    displayName: 'Use NuGet 5.2.0'
+    inputs:
+      versionSpec: 5.2.0
+
+  - task: NuGetCommand@2
+    displayName: 'Restore NuGet packages in solution'
+
+  - task: UseDotNet@2
+    displayName: 'Use .Net Core sdk 2.2.301'
+    inputs:
+      version: 2.2.301
+    continueOnError: true
+
+  - powershell: |
+      # Currently, task groups are not supported in YAML pipelines
+      #https://developercommunity.visualstudio.com/idea/567555/support-custom-task-group-in-yaml.html
+
+      $VersionCode = "${{parameters.version_code}}"
+      $VersionName = "${{parameters.version_name}}"
+        
+      $versionCode = $VersionCode.Replace(".", "")
+      $versionName = "$VersionName"
+
+      Write-Host "Version code $versionCode"
+      Write-Host "Version name $versionName"
+
+      $manifestFiles = Get-ChildItem .\ -recurse -include "Info.plist" 
+
+      if ($manifestFiles) {
+          $count = $manifestFiles.count
+          Write-Host "Will apply $versionCode ($versionName) to $count Info.plist files."
+          foreach ($file in $manifestFiles) {
+              $path = $file.FullName
+              Write-Host "`nCurrent file $path"
+              try {
+                  try {
+                      $ver0 = & /usr/libexec/PlistBuddy -c "Print CFBundleVersion" $file 2>/dev/null || printf '0'
+                  } catch {
+                      $ver0 = "Does Not Exist"
+                  }
+
+                  if ($ver0 -match "Does Not Exist") {
+                      Write-Host "CFBundleVersion doesn't exists"
+                      $null = & /usr/libexec/PlistBuddy -c "Add :CFBundleVersion string $versionCode" $file
+                  } else {
+                      Write-Host "Current CFBundleVersion $ver0"
+                      $null = & /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $versionCode" $file
+                  }
+
+                  try {
+                      $ver1 = & /usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString" $file 2>/dev/null || printf '0'
+                  } catch {
+                      $ver1 = "Does Not Exist"
+                  }
+
+                  if ($ver1 -match "Does Not Exist") {
+                      Write-Host "CFBundleShortVersionString doesn't exists"
+                      $null = & /usr/libexec/PlistBuddy -c "Add :CFBundleShortVersionString string $versionName" $file
+                  } else {
+                      Write-Host "Current CFBundleShortVersionString $ver1"
+                      $null = & /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString $versionName" $file
+                  }
+
+                  Write-Host "Validation:"
+                  $res0 = & /usr/libexec/PlistBuddy -c "Print CFBundleVersion" $file 2>/dev/null || printf '0'
+                  Write-Host "Result CFBundleVersion $res0"
+                  $res1 = & /usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString" $file 2>/dev/null || printf '0'
+                  Write-Host "Result CFBundleShortVersionString $res1"
+
+              } 
+              catch {
+                  Write-Host "Couldn't update version information in $path"
+                  exit 1
+              }
+          }
+      } 
+      else {
+        Write-Host "No Info.plist files found."
+      }
+    displayName: 'Update Info.plist versions'
+
+  - task: DownloadSecureFile@1
+    displayName: 'Download secrets'
+    name: secrets
+    inputs:
+      secureFile:  $(secrets_file_name)
+
+  - powershell: |
+      # Make sure path to secrets file is available
+      if (-not $Env:secretsPath)
+      {
+          Write-Error ("secrets environment variable is missing.")
+          exit 1
+      }
+      
+       if (-not $Env:BUILD_SOURCESDIRECTORY)
+      {
+          Write-Error ("BUILD_SOURCESDIRECTORY environment variable is missing.")
+          exit 1
+      }
+      
+      # Copy file to Configuration project
+      $SecretsFilePath = $Env:secretsPath
+      $SecretsDestinationFilePath =  "$($Env:BUILD_SOURCESDIRECTORY)\src\Covi.Configuration\secrets.json"
+      
+      Copy-Item -Path $SecretsFilePath  -Destination $SecretsDestinationFilePath
+      Write-Verbose "Secrets file copied to $($SecretsDestinationFilePath)" 
+    displayName: 'Replace project secrets file'
+    env:
+      secretsPath: $(secrets.secureFilePath)
+
+  - task: DownloadSecureFile@1
+    displayName: 'Download Firebase configuration file'
+    name: googleservicesconfig
+    inputs:
+      secureFile: $(ios__firebase_config_file_name)
+
+  - powershell: |
+      # Make sure path to secrets file is available
+      if (-not $Env:secretsPath)
+      {
+        Write-Error ("secrets environment variable is missing.")
+        exit 1
+      }
+        
+      # Make sure path to source code directory is available
+      if (-not $Env:BUILD_SOURCESDIRECTORY)
+      {
+        Write-Error ("BUILD_SOURCESDIRECTORY environment variable is missing.")
+        exit 1
+      }
+        
+      # Copy file to Configuration project
+      $SecretsFilePath = $Env:secretsPath
+      $SecretsDestinationFilePath =  "$($Env:BUILD_SOURCESDIRECTORY)\src\Covi.iOS\GoogleService-Info.plist"
+        
+      Copy-Item -Path $SecretsFilePath  -Destination $SecretsDestinationFilePath
+      Write-Verbose "Secrets file copied to $($SecretsDestinationFilePath)" 
+    displayName: 'Replace project Firebase configuration file'
+    env:
+      secretsPath: $(googleservicesconfig.secureFilePath)  
+      
+  - task: XamariniOS@2
+    displayName: 'Build Xamarin.iOS solution **/*.sln'
+    inputs:
+      solutionFile: '**/*.sln'
+      configuration: '$(buildConfiguration)'
+      clean: true
+      args: '/p:langversion=latest /p:MtouchArch="\"ARMv7,ARM64\"'
+      signingIdentity: '$(APPLE_CERTIFICATE_SIGNING_IDENTITY)'
+      signingProvisioningProfileID: '$(APPLE_PROV_PROFILE_UUID)'
+
+  - task: CopyFiles@2
+    displayName: 'Copy Files to:  $(Build.ArtifactStagingDirectory)'
+    inputs:
+      SourceFolder: '$(System.DefaultWorkingDirectory)'
+      Contents: |
+        **/*.ipa
+        **/*.dSYM/**
+      TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publish Artifact: ios'
+    inputs:
+      ArtifactName: ios

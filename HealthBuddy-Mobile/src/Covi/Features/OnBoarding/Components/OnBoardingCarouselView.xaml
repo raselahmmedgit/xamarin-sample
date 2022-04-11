@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CarouselView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:forms="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:local="clr-namespace:Covi.Features.OnBoarding"
+    xmlns:platformSpecific="clr-namespace:Covi.PlatformSpecific;assembly=Covi"
+    x:Class="Covi.Features.OnBoarding.Components.OnBoardingCarouselView"
+    x:Name="OnBoardingCarousel"
+    IsSwipeEnabled="False"
+    ItemsSource="{Binding Source={x:Reference OnBoardingCarousel}, Path=OnBoardingItems}">
+    <CarouselView.Resources>
+        <x:Double x:Key="ScreenHeaderLogoImageHeight">136</x:Double>
+    </CarouselView.Resources>
+    <CarouselView.ItemTemplate>
+        <DataTemplate x:DataType="local:OnBoardingItemViewModel">
+            <ScrollView Orientation="Vertical"
+                        VerticalScrollBarVisibility="Never">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <forms:SvgCachedImage Grid.Row="0"
+                                    Margin="0,24,0,0"
+                                    Source="{Binding IconCode}"
+                                    HeightRequest="{StaticResource ScreenHeaderLogoImageHeight}"/>
+                    <Label Grid.Row="1"
+                             Margin="0, 24, 0, 0"
+                             Text="{Binding Title}" 
+                             Style="{StaticResource TextHeadlineLightH2}"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center" />
+                    <StackLayout Grid.Row="3"
+                                 BindableLayout.ItemsSource="{Binding Instructions}"
+                                 HorizontalOptions="FillAndExpand"
+                                 Padding="16,8,16,8">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate x:DataType="local:InstructionItemViewModel">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <forms:SvgCachedImage Grid.Column="0"
+                                                          Style="{StaticResource IconImageStyle}"
+                                                          Source="{Binding InstructionImageUrl}"
+                                                          Grid.Row="0"
+                                                          Margin="8,8,8,8"
+                                                          VerticalOptions="Start"
+                                                          HorizontalOptions="Start"/>
+                                    <Label Grid.Row="0"
+                                           Grid.Column="1"
+                                           Margin="8,0,0,0"
+                                           VerticalOptions="Start"
+                                           HorizontalOptions="Start"
+                                           Style="{StaticResource TextTitleRegular16Light}"
+                                           Text="{Binding InstructionText}"/>
+                                    <platformSpecific:DashedLine Grid.Row="1"
+                                                                 Grid.Column="0"
+                                                                 Grid.ColumnSpan="2"
+                                                                 Margin="0, 8"
+                                                                 BackgroundColor="Transparent"
+                                                                 Style="{StaticResource DashedLineStyle}"/>
+                                </Grid>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </StackLayout>
+                </Grid>
+            </ScrollView>
+        </DataTemplate>
+    </CarouselView.ItemTemplate>
+</CarouselView>
+

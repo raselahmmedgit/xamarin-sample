@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:components="clr-namespace:Covi.Features.Components;assembly=Covi"
+             mc:Ignorable="d"
+             xmlns:controls="clr-namespace:Covi.Features.Controls;assembly=Covi"
+             xmlns:resources="clr-namespace:Covi.Features.UserLogIn.Resources;assembly=Covi"
+             xmlns:forms="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             xmlns:resources1="clr-namespace:Covi.Features.CreateProfile.Resources;assembly=Covi"
+             xmlns:local="clr-namespace:Covi.Features.UserLogIn"
+             x:Class="Covi.Features.UserLogIn.UserLogInPage"
+             Style="{StaticResource ContentNoSafeAreaPageStyle}">
+    <ContentPage.Content>
+        <Grid x:DataType="local:UserLogInViewModel">
+            <forms:SvgCachedImage Grid.Row="0"
+                                      Aspect="Fill"
+                                      Source="rectangle_info.svg"
+                                      Style="{StaticResource BackgroundImageStyle}"
+                                      HorizontalOptions="End"
+                                      VerticalOptions="Start"/>
+            <Grid Style="{StaticResource ContentContainerStyle}">
+                <Grid Style="{StaticResource NestedSingleContentContainerStyle}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="1"
+                          VerticalOptions="End">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <forms:SvgCachedImage Grid.Column="0"
+                                              Source="resource://Covi.Features.UserLogIn.Resources.Images.sign_in_person.svg"
+                                              HeightRequest="{StaticResource IconImageHeightV6}"
+                                              WidthRequest="{StaticResource IconImageWidthV6}"/>
+                        <Label Grid.Column="1"
+                               Margin="0,0,0,0"
+                               VerticalOptions="Center"
+                               Text="{x:Static resources:Localization.UserLogIn_PageName_Text}"
+                               Style="{StaticResource TextHeadlineH2}"/>
+                    </Grid>
+
+                    <components:CoviEntry HorizontalOptions="FillAndExpand"
+                                          VerticalOptions="Center"
+                                          Grid.Row="2"
+                                          Placeholder="{Static resources:Localization.UserLogIn_NameEntry_Placeholder_Text}"
+                                          ReturnType="Next"
+                                          Text="{Binding UserName, Mode=TwoWay}"
+                                          HasAnError="{Binding HasUsernameErrorMessage}"
+                                          ErrorText="{Binding UsernameErrorText, Mode=TwoWay}"
+                                          Margin="0,44,0,0"/>
+                    <components:CoviEntry HorizontalOptions="FillAndExpand"
+                                          VerticalOptions="Center"
+                                          Grid.Row="3"
+                                          HidePassword="True"
+                                          ShowPasswordEye="True"
+                                          ReturnType="Send"
+                                          ReturnCommand="{Binding LogInCommand}"
+                                          Text="{Binding UserPassword, Mode=TwoWay}"
+                                          Placeholder="{Static resources:Localization.UserLogIn_PasswordEntry_Placeholder_Text}"
+                                          HasAnError="{Binding HasPasswordErrorMessage}"
+                                          ErrorText="{Binding PasswordErrorText, Mode=TwoWay}"
+                                          Margin="0, 28, 0, 0"/>
+
+                    <Button Text="{x:Static resources:Localization.UserLogIn_Btn_Text}"
+                            Margin="0, 36, 0, 0"
+                            Grid.Row="5"
+                            Style="{StaticResource HeroButtonStyle}"
+                            VerticalOptions="End"
+                            Command="{Binding LogInCommand}"/>
+
+                </Grid>
+            </Grid>
+            <controls:BusyIndicatorView Grid.Row="0"
+                                        FadeBackground="True"
+                                        IsActive="{Binding IsBusy}"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

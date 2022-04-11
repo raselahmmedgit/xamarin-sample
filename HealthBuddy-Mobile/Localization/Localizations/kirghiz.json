@@ -1,0 +1,29 @@
+{
+    "localeName": "ky",
+    "items": {
+        "AboutUs": "Covi\\Features\\AboutUs\\Resources\\Localization.ky.resx",
+        "Account": "Covi\\Features\\Account\\Resources\\Localization.ky.resx",
+        "AccountFeaturesInformation": "Covi\\Features\\AccountFeaturesInformation\\Resources\\Localization.ky.resx",
+        "ChangeLanguage": "Covi\\Features\\ChangeLanguage\\Resources\\Localization.ky.resx",
+        "Chat": "Covi\\Features\\Chat\\Resources\\Localization.ky.resx",
+        "CreateProfile": "Covi\\Features\\CreateProfile\\Resources\\Localization.ky.resx",
+        "ExpiredToken": "Covi\\Features\\ExpiredToken\\Resources\\Localization.ky.resx",
+        "Filters": "Covi\\Features\\Filters\\Resources\\Localization.ky.resx",
+        "ForceUpdate": "Covi\\Features\\ForceUpdate\\Resources\\Localization.ky.resx",
+        "Maintenance": "Covi\\Features\\Maintenance\\Resources\\Localization.ky.resx",
+        "Menu": "Covi\\Features\\Menu\\Resources\\Localization.ky.resx",
+        "NewsArticle": "Covi\\Features\\NewsArticle\\Resources\\Localization.ky.resx",
+        "Newsfeed": "Covi\\Features\\Newsfeed\\Resources\\Localization.ky.resx",
+        "OnBoarding": "Covi\\Features\\OnBoarding\\Resources\\Localization.ky.resx",
+        "Polls": "Covi\\Features\\Polls\\Resources\\Localization.ky.resx",
+        "PrivacyPolicy": "Covi\\Features\\PrivacyPolicy\\Resources\\Localization.ky.resx",
+        "Rumours": "Covi\\Features\\Rumours\\Resources\\Localization.ky.resx",
+        "Settings": "Covi\\Features\\Settings\\Resources\\Localization.ky.resx",
+        "SettingsChangeLanguage": "Covi\\Features\\SettingsChangeLanguage\\Resources\\Localization.ky.resx",
+        "UserDeleteAccount": "Covi\\Features\\UserDeleteAccount\\Resources\\Localization.ky.resx",
+        "UserLogIn": "Covi\\Features\\UserLogIn\\Resources\\Localization.ky.resx",
+        "UserLogOut": "Covi\\Features\\UserLogOut\\Resources\\Localization.ky.resx",
+        "Welcome": "Covi\\Features\\Welcome\\Resources\\Localization.ky.resx",
+        "Covi": "Covi\\Resources\\Localization.ky.resx"
+    }
+}

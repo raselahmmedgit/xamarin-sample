@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:forms="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             xmlns:resources="clr-namespace:Covi.Features.Maintenance.Resources;assembly=Covi"
+             xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:local="clr-namespace:Covi.Features.Maintenance"
+             mc:Ignorable="d"
+             x:Class="Covi.Features.Maintenance.MaintenancePage"
+             Style="{StaticResource SingleContentPageStyle}">
+    <ContentPage.Content>
+        <Grid x:DataType="local:MaintenanceViewModel">
+            <forms:SvgCachedImage Grid.Row="0"
+                                  Aspect="Fill"
+                                  Source="resource://Covi.Resources.Images.background_rectangle.svg"
+                                  Style="{StaticResource BackgroundImageStyle}"
+                                  HorizontalOptions="End"
+                                  VerticalOptions="Start"/>
+            <Grid Margin="0,100,0,0"
+                  VerticalOptions="Start"
+                  Padding="16,16">
+                <pancakeView:PancakeView CornerRadius="30"
+                                         BackgroundColor="{StaticResource SurfaceColor}"
+                                         Grid.Row="0">
+                    <Grid Margin="24,48">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <forms:SvgCachedImage Grid.Row="0"
+                                                Source="resource://Covi.Features.Maintenance.Resources.Images.maintenance_logo.svg"
+                                                HorizontalOptions="Center"
+                                                HeightRequest="128"/>
+                        <Label Grid.Row="1"
+                               Style="{StaticResource TextTitleRegular18}"
+                               Text="{Binding Description}"
+                               HorizontalTextAlignment="Center"
+                               Margin="0,8,0,0"/>
+                    </Grid>
+                </pancakeView:PancakeView>
+
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "/1TUsud/30j6JcOVZCfV/mnX7o9Lww6tH2vW0JOxqEk40RGFg4n5JdkZta/jfqw+LpacLMwFldOiYv06ycVmnA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\placo\\OneDrive\\Documents\\GitHub\\HealthBuddy-Mobile\\src\\Covi.Configuration\\Covi.Configuration.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\placo\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\placo\\.nuget\\packages\\mobile.buildtools\\2.0.0.1007-pre\\mobile.buildtools.2.0.0.1007-pre.nupkg.sha512",
+    "C:\\Users\\placo\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\placo\\.nuget\\packages\\stylecop.analyzers\\1.1.118\\stylecop.analyzers.1.1.118.nupkg.sha512"
+  ],
+  "logs": []
+}

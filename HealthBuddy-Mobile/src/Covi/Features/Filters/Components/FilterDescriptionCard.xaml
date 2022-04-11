@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:platformSpecific="clr-namespace:Covi.PlatformSpecific"
+             xmlns:forms="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             xmlns:filters="clr-namespace:Covi.Features.Filters;assembly=Covi"
+             mc:Ignorable="d"
+             x:Class="Covi.Features.Filters.Components.FilterDescriptionCard"
+             x:DataType="filters:FilterDescriptionViewModel">
+    <ContentView.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="1"/>
+            </Grid.RowDefinitions>
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer
+                    NumberOfTapsRequired="1"
+                    Command="{Binding FilterTappedCommand}"
+                ></TapGestureRecognizer>
+            </Grid.GestureRecognizers>
+
+            <Grid
+                Grid.Row="0"
+                Padding="0,16,0,16">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                
+                <Label Grid.Row="0"
+                       Grid.Column="0"
+                       Text="{Binding DisplayName}"
+                       Style="{StaticResource TextTitleRegular18}"/>
+
+                <Label Grid.Row="1"
+                        Grid.Column="0"
+                        Text="{Binding SelectedDisplayValue}"
+                        Style="{StaticResource TextTitleRegular16}"/>
+                    
+                <forms:SvgCachedImage
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Grid.RowSpan="2"
+                    Source="resource://Covi.Features.Filters.Resources.Images.arrow_right.svg"
+                    VerticalOptions="Center"
+                    HorizontalOptions="End"
+                    Style="{StaticResource IconImageStyle}"/>
+
+            </Grid>
+
+            <platformSpecific:DashedLine
+                Grid.Row="1"
+                IsVisible="{Binding IsLast, Converter={StaticResource InvertedBoolConverter}}"
+                Style="{StaticResource DashedLineStyle}"/>
+
+        </Grid>
+    </ContentView.Content>
+</ContentView>

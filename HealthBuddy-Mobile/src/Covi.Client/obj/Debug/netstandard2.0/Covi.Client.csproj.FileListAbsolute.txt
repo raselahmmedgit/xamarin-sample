@@ -1,0 +1,13 @@
+C:\Users\placo\OneDrive\Documents\GitHub\HealthBuddy-Mobile\src\Covi.Client\bin\Debug\netstandard2.0\Covi.Client.deps.json
+C:\Users\placo\OneDrive\Documents\GitHub\HealthBuddy-Mobile\src\Covi.Client\bin\Debug\netstandard2.0\Covi.Client.dll
+C:\Users\placo\OneDrive\Documents\GitHub\HealthBuddy-Mobile\src\Covi.Client\bin\Debug\netstandard2.0\Covi.Client.pdb
+C:\Users\placo\OneDrive\Documents\GitHub\HealthBuddy-Mobile\src\Covi.Client\bin\Debug\netstandard2.0\Covi.Configuration.dll
+C:\Users\placo\OneDrive\Documents\GitHub\HealthBuddy-Mobile\src\Covi.Client\bin\Debug\netstandard2.0\Covi.Configuration.pdb
+C:\Users\placo\OneDrive\Documents\GitHub\HealthBuddy-Mobile\src\Covi.Client\obj\Debug\netstandard2.0\Covi.Client.csproj.AssemblyReference.cache
+C:\Users\placo\OneDrive\Documents\GitHub\HealthBuddy-Mobile\src\Covi.Client\obj\Debug\netstandard2.0\Covi.Client.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\placo\OneDrive\Documents\GitHub\HealthBuddy-Mobile\src\Covi.Client\obj\Debug\netstandard2.0\Covi.Client.AssemblyInfoInputs.cache
+C:\Users\placo\OneDrive\Documents\GitHub\HealthBuddy-Mobile\src\Covi.Client\obj\Debug\netstandard2.0\Covi.Client.AssemblyInfo.cs
+C:\Users\placo\OneDrive\Documents\GitHub\HealthBuddy-Mobile\src\Covi.Client\obj\Debug\netstandard2.0\Covi.Client.csproj.CoreCompileInputs.cache
+C:\Users\placo\OneDrive\Documents\GitHub\HealthBuddy-Mobile\src\Covi.Client\obj\Debug\netstandard2.0\Covi.Client.csproj.CopyComplete
+C:\Users\placo\OneDrive\Documents\GitHub\HealthBuddy-Mobile\src\Covi.Client\obj\Debug\netstandard2.0\Covi.Client.dll
+C:\Users\placo\OneDrive\Documents\GitHub\HealthBuddy-Mobile\src\Covi.Client\obj\Debug\netstandard2.0\Covi.Client.pdb

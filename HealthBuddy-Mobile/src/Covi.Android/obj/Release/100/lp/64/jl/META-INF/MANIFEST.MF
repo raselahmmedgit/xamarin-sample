@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Created-By: 1.8.0_112 (Oracle Corporation)
+
+Name: classes.jar
+SHA-256-Digest: VAGIvjNsuvg9eh6evBj6lQP1ddONi28Ia9V1tfpQY1k=
+
+Name: res/drawable-xhdpi-v4/ic_launcher.png
+SHA-256-Digest: 2cc8ApjpbgivXCiJa4SCUD/OC7m8KWlsrcvcbpghgEE=
+
+Name: res/values/values.xml
+SHA-256-Digest: iCgEE3zv4ZKUbAPkEXuMC6m9pFTfglfarP77M2y6B9s=
+
+Name: AndroidManifest.xml
+SHA-256-Digest: vLp2AAzsNS+O7DMT+fYvspkTC4ZCzW/ibT6cWETg/Y0=
+
+Name: res/drawable-hdpi-v4/ic_launcher.png
+SHA-256-Digest: KMiZGKjSNfyt8ug7sUptnanqueZlhXrUO58A4Djx9hU=
+
+Name: res/drawable-mdpi-v4/ic_launcher.png
+SHA-256-Digest: 6yo5pcDEdaeT6IFPqq9q+pLTA+yfH9ZWlr5D6vuzJg0=
+
+Name: res/drawable-xxhdpi-v4/ic_launcher.png
+SHA-256-Digest: wYmL8xa3BfWcB8pesVcRRpTbQFXLIvwqRUW2e7c1LP0=
+
+Name: R.txt
+SHA-256-Digest: T/Rs3NsQ5AX4/yEfNPJPJYrTfU6ABzdjXt8wWuPiiLY=
+

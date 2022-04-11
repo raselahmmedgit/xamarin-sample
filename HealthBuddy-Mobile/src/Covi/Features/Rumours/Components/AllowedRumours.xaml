@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:hybridWebView="clr-namespace:Covi.Features.Controls.HybridWebView;assembly=Covi"
+             xmlns:forms="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:controls="clr-namespace:Covi.Features.Controls;assembly=Covi"
+             xmlns:resources="clr-namespace:Covi.Features.Rumours.Resources;assembly=Covi"
+             xmlns:components="clr-namespace:Covi.Features.Components.InfoView"
+             xmlns:rumours="clr-namespace:Covi.Features.Rumours;assembly=Covi"
+             mc:Ignorable="d"
+             x:Class="Covi.Features.Rumours.Components.AllowedRumours"
+             x:DataType="rumours:RumoursViewModel">
+    <ContentView.Content>
+        <Grid>
+            <forms:SvgCachedImage Grid.Row="0"
+                                  x:Name="Image"
+                                  Aspect="Fill"
+                                  HeightRequest="{StaticResource SmallBackgroundRectangleHeight}"
+                                  WidthRequest="{StaticResource SmallBackgroundRectangleWidth}"
+                                  Source="resource://Covi.Resources.Images.background_rectangle.svg"
+                                  HorizontalOptions="End"
+                                  VerticalOptions="Start"/>
+            <Grid RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="1"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <ContentView
+                             Style="{StaticResource SingleContentPageHeaderStyle}">
+                    <Label Text="{x:Static resources:Localization.Rumours_Header_TitleText}"
+                           Style="{StaticResource TextPageHeadlineH3}"/>
+                </ContentView>
+                <BoxView Grid.Row="1"
+                         HeightRequest="1"
+                         Margin="16,0"
+                         Color="{StaticResource HeaderSeparatorColor}"/>
+                <Grid Grid.Row="2"
+                      Style="{StaticResource ContentPageContentContainerStyle}"
+                      HorizontalOptions="FillAndExpand"
+                      RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0"
+                          Padding="0">
+
+                        <hybridWebView:HybridWebView x:Name="hybridWebView"
+                                                    Source="{Binding Uri}" />
+                    </Grid>
+                    <Grid Grid.Row="1"
+                          IsVisible="{Binding IsInputVisible, FallbackValue=false, TargetNullValue=false}"
+                          Padding="0,2"
+                          BackgroundColor="{StaticResource SurfaceColor}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <pancakeView:PancakeView Grid.Row="0"
+                                                 CornerRadius="5"
+                                                 BackgroundColor="Transparent"
+                                                 Padding="0"
+                                                 Margin="24,0"
+                                                 BorderThickness="2"
+                                                 BorderColor="{StaticResource SurfaceColor}">
+
+                            <Entry HorizontalOptions="FillAndExpand"
+                                   Placeholder="{x:Static resources:Localization.Rumours_Input_Placeholder_Text}"
+                                   PlaceholderColor="{StaticResource EntryPlaceholderColor}"
+                                   ReturnType="Send"
+                                   ReturnCommand="{Binding SendCommand}"
+                                   Text="{Binding InputText, Mode=TwoWay}"
+                                   TextColor="{StaticResource EntryOnBackgroundColor}"
+                                   BackgroundColor="Transparent"
+                                   FontFamily="OpenSansRegular"
+                                   FontSize="16"/>
+
+                        </pancakeView:PancakeView>
+
+                        <forms:SvgCachedImage Margin="16,16"
+                                            Grid.Column="1"
+                                            Source="send_icon.svg"
+                                            VerticalOptions="Center"
+                                            Style="{StaticResource IconImageStyle}">
+                            <forms:SvgCachedImage.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding SendCommand}" />
+                            </forms:SvgCachedImage.GestureRecognizers>
+                        </forms:SvgCachedImage>
+                    </Grid>
+
+                    <ContentView Grid.Row="0"
+                                Grid.RowSpan="2"
+                                BackgroundColor="Transparent"
+                                IsVisible="{Binding InfoViewModel, Converter={StaticResource NotNullToBoolConverter}}">
+
+                        <components:InfoComponentView BindingContext="{Binding InfoViewModel}"/>
+
+                    </ContentView>
+
+                    <controls:BusyIndicatorView Grid.Row="0"
+                                                Grid.RowSpan="2"
+                                                FadeBackground="True"
+                                                IsActive="{Binding IsBusy}"/>
+                </Grid>
+            </Grid>
+        </Grid>
+
+    </ContentView.Content>
+</ContentView>
